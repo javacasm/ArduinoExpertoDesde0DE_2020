@@ -8,9 +8,29 @@ Veamos las diferentes opciones que tenemos para programar Arduino:
 
 ![Arduino IDE](./images/Arduino_IDE_-_v0011_Alpha.png "Arduino IDE")
 
-[IDE Arduino](http://arduino.cc/en/Main/Software)|entorno multiplataforma que permite la edición, compilación y la programación de Arduino
+[IDE Arduino](http://arduino.cc/en/Main/Software)|entorno multiplataforma que permite la edición, compilación y la programación de Arduino usando código.
+
+
+#### [ArduinoBlocks.com](http://www.arduinoblocks.com)
+
+
+![arduinoblocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
+
+ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
+
+Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
+
+Empezaremos seleccionando el tipo de placa Arduino que vamos a usar y a continuación añadiremos el hardware que usemos conectándolo a las patillas correspondientes.
+
+Tiene la gran ventaja de incluye los bloques para multitud de componentes fácilmente identificables por sus imágenes.
+
+Otra gran ventaja de ArduinoBlocks es que nos permite programar multitud de placas además de Arduino UNO (Mega, micro, nano, ... )  y hasta placas más modernas como nodeMCU o ESP8266
+
+#### BitBloq
 
 ![Bitbloq](./images/curso_bitbloq.png)|[Bitbloq](http://bitbloq.bq.com/ "bitbloq")| Entorno de desarrollo visual basado en la programación con bloques. Es muy sencillo e intuitivo de usar y solo necesitamos el navegador para usarlo. Existen alternativas offline como Visualino.
+
+Tiene el incoveniente de que soporta casi únicamente los componente que vende el fabricante Bq que es quien los ha creado
 
 #### CodeBender
 
@@ -20,9 +40,59 @@ Veamos las diferentes opciones que tenemos para programar Arduino:
 
 Entorno de desarrollo totalmente basado en aplicaciones web, decir, sólo necesitamos un navegador web para poder desarrollar con Arduino. Permite la edición, compilación y la programación de Arduino. Podéis probarlo en [https://codebender.cc/](https://codebender.cc/)
 
-#### Entorno de programación Bitbloq
 
-Bitbloq es un entorno de programación visual que nos permite crear programas para Arduino y placas compatibles y transferir los mismos a las placas de una forma sencilla.
+
+### Introducción a [ArduinoBlocks.com](http://www.arduinoblocks.com)
+
+![arduinoblocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
+
+Para aprovechar todas las ventajas de ArduinoBlocks debes registrarte, pero si no quieres hacerlo puedes trabajar también en el modo de prueba. Las ventajas de estar registrado es que tus programas se guardan automáticamente en la nube, puedes compartirlos y además puedes usar más placas además de Arduino UNO
+
+### Parpadeando el led interno
+
+Vamos a empezar haciendo parpadear el led interno de la placa Arduino
+
+![blink](./images/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
+
+ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
+
+Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
+
+Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente Arduno UNO) y añadimos los siguienres bloques para que produzca el parpadeo.
+
+![Blink13](./images/Blink13.png)
+
+TODO> Ahora tenemos que subir el programa a la placa, para ello s
+
+Puedes utilizar el programa que he compartido haciendo clic en el siguiente enlace[Programa](http://www.arduinoblocks.com/web/project/174285)
+
+
+
+##### Ejercicio: Cambiar la velocidad de parpadeo
+
+#### Envío de datos al PC
+
+La comunicación serie se produce via USB entre Arduino y el PC, vamos a hacer un ejemplo en el enviamos información entre nuestra placa Arduino y el PC
+
+Vamos a enviar "On" y "Off" al PC
+
+![ParpadeoSerie](./images/ParpadeoSerieArduinoBlocks.png)
+
+[Programa](http://www.arduinoblocks.com/web/project/174290)
+
+Ahora abrimos la consola y vemos los mensajes
+
+* Detectamos el puerto
+* Configuramos la velocidad
+* Necesitamos un programa para ver los datos
+
+En todo momento podemos ver el código (pero no editarlo) desplegando la opción Bloques y pulsando **Ver Código**
+
+Ahora vamos a ver como hacer estos ejemplos en otro entorno como es bitbloq y publicaremos la diferencias entre los dos
+
+### Introducción a la programación con Bitbloq
+
+Bitbloq es un entorno de programación visual por bloques que nos permite programar nuestra placa Arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++.
 
 Podemos acceder directamente desde su web <http://bitbloq.bq.com/>
 
@@ -30,14 +100,7 @@ Como verás cuando entres a su página, funciona con Chrome en todos los sistema
 
 A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq/)
 
-### Introducción a la programación con Bitbloq
-
-Bitbloq es un entorno de programación visual por bloques que nos permite programar nuestra placa Arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++.
-
-Además nos permite programar nuestro Arduino sin instalar (prácticamente) nada en nuestro ordenador.
-
 Veamos un ejemplo sencillo:
-
 
 ![parpadeo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/1%20parpadeo.png)
 
@@ -105,7 +168,7 @@ Usaremos la sentencia de control **while** para los bucles donde el número de
 
 [vídeo](https://youtu.be/RTtn_77pZY4)
 
-[ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condiconales.json)\
+[ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condiconales.json)
 
 
 ![condicional](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicionales.png)
@@ -209,7 +272,7 @@ Usaremos las versión 1.8.1 (o superior si se liberara)
 
 #### Instalación del entorno
 
-[Enlace para descarga](https://www.dropbox.com/s/w1i68d5p6jvjqx5/3.2%20-%20Instalaci%C3%B3n%20del%20IDE.pdf)
+[Descarga del tutorial de instalación](https://www.dropbox.com/s/w1i68d5p6jvjqx5/3.2%20-%20Instalaci%C3%B3n%20del%20IDE.pdf)
 
 
 #### Descargando el programar a Arduino
@@ -218,7 +281,7 @@ Vamos a comenzar viendo paso a paso una descarga de un programa a Arduino.
 
 Intentaremos hacer una lista paso a paso para poder detectar errores en el caso de que se produzcan
 
-[Enlace para descarga](https://www.dropbox.com/s/56rfl7nr4ngs8uo/3.3%20-%20Primeras%20Pruebas.pdf)
+[Enlace para descarga: Primeras pruebas con Arduino](https://www.dropbox.com/s/56rfl7nr4ngs8uo/3.3%20-%20Primeras%20Pruebas.pdf)
 
 En el siguiente vídeo podemos ver el paso a paso de la descarga de un programa a una placa Arduino
 
@@ -309,13 +372,22 @@ Quedaría algo así:
       delay(1000);
     }
 
+
+ArduinoBlocks dispone de una categoría entera para **Tiempo**
+
+![Tiempos ArduinoBlocsk](./images/TiemposArduinoBlocks.png)
+
+Me parece especialmente interesante su bloque **Ejecuar cada ...** que nos permite hacer de forma sencilla que algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor) o el que ponga a nuestro arduino a dormir (consiguiendo un bajo consumo) durante un tiempo.
+
+
+
 ### Sonido
 
 Arduino puede reproducir sonido sin más que conectar un altavoz (mejor
 un altavoz piezoelectrico de los que tienen los
 pcs)
 
-![buzzer](http://www.futurlec.com/Pictures/PCB_Mount_Buzzer.jpg "buzzer")
+![buzzer](./images/PCB_Mount_Buzzer.jpg "buzzer")
 
 Uno de los terminales del altavoz a la salida digital que usaremos y el otro a GND. Dependiendo de las características del altavoz pudiera ser conveniente usar una resistencia entre el altavoz y la salida digital.
 
@@ -328,7 +400,7 @@ Podemos hacer sonidos con las siguientes funciones:
 
 Para afinar las frecuencias a las notas podemos consultar tablas como esta:
 
-![tabla frecuemcia](http://3.bp.blogspot.com/_42Ez0bRTcnA/TFi0T87BzfI/AAAAAAAADY0/T7FMvFXNxQE/s1600/frec1.jpg "tabla frecuemcia")
+![tabla frecuemcia](./images/frec1.jpg "tabla frecuemcia")
 
 -   Interfiere con algunas funciones de los pines el 3 y 11 (el pwm que veremos más adelante)
 
@@ -337,7 +409,7 @@ Para afinar las frecuencias a las notas podemos consultar tablas como esta:
 -   detiene la ejecución del tone actual
 -   se utiliza para usar varios pines generando sonido
 
-![como hacer sonido Arduino](http://arduino.cc/en/uploads/Tutorial/speaker_bb.png "como hacer sonido Arduino")
+![como hacer sonido Arduino](./images/speaker_bb.png "como hacer sonido Arduino")
 
 Podemos ver cómo se usan estas funciones en el ejemplo incluido en Arduino sobre el tema. Accederemos a él según la imagen siguiente
 
@@ -354,9 +426,11 @@ En bitbloq existen 2 formas de generar sonidos
 
 Se propone como ejercicio voluntario realizar alguna canción conocida, preferiblemente algo friki con Arduino. Comparte en los foros tu composición/interpretación.
 
+Si quieres trabajar con el sonido en ArduinoBlocks, puedes encontrar los bloques en **Actuadores**
+
+![Sonido con ArduinoBlocks](./images/SonidoArduinoBlocks.png)
 
 ### Librerías
-
 
 Una librería no es más que un conjunto de código empaquetado y al que podemos llamar desde nuestro programa
 
@@ -369,7 +443,26 @@ Si queremos instalarlas sólo hay que descargarlas y copiarlas en la carpeta lib
 
 En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual.
 
-#### Librerías básicas
+Aquí es donde ArduinoBlocks gana por goleada a Bitbloq: de entrada ya incluye multitud de librerías. De hecho cuando seleccionamos un bloque de un sensor ya estamos utilizando su librería
+
+### Uso de un sensor DHT11
+
+Veamos un ejemplo sencillo de como ArduinoBlocks gestiona los sensores y sus correspondientes librerías.
+
+Este es el montaje de un sensor DHT11 que mide la temperatura y la humedad ambiental (no te preocupes que más adelante lo veremos en detalle)
+
+![Incubadora-DHT11](./images/DHHT11Uno_bb.png)
+
+
+Si buscas entre los bloques de sensores de ArduinoBlocks lo encontrarás y verás que un programa sencillo que muestra los valores de humedad y temperatura sería
+
+![DHT11_programa](./images/DHT11_programa.png)
+
+Si ahora pulsas para ver el código verás que ha añadido una sentencia **include** que es la hace referencia a la librería que se necesita para leer los datos del sensor
+
+#### Librerías básicas en el IDE de Arduino
+
+Veamos algunas de las librerías básicas que incluye 
 
 -   EEPROM - permite leer y escribir en almacenamiento duradero
 -   Ethernet - para conectar a internet
