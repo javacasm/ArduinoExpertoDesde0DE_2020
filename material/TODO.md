@@ -1,5 +1,23 @@
 # TODO
 
+## Tema 3
+
+Comparativa 3 IDEs
+
+Instalar y subir programa a ArduinoBlocks
+
+gestor de Librerias en Arduino IDE
+
+Renombrar Ejemplos
+
+
+
+¿Tema 4?
+
+algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor
+
+incluir arduinoblocks
+
 ## Tema 5
 
 * Clases y objetos
