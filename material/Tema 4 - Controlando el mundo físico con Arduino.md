@@ -96,7 +96,7 @@ y para leer el valor usaremos
 
 El montaje sería como el siguiente, utilizando la entrada 2:
 
-![Botón digital](http://Arduino.cc/en/uploads/Tutorial/button.png)
+![Botón digital](./images/button.png)
 
 Existen interruptores que tienen 2 juegos de contactos (4 conectores) que funcionan de forma independiente. Antes de usar el interruptor hay que saber la configuración y cuales son los pines del interruptor que se han de usar.
 
@@ -140,7 +140,7 @@ Veremos como al girar el potenciómetro, cambia la frecuencia de parpadeo del le
 
 El montaje de un potenciómetro sería como el siguiente:
 
-![Potenciómetro](http://arduino.cc/en/uploads/Tutorial/AnalogReadSerial_BB.png)
+![Potenciómetro](./images/AnalogReadSerial_BB.png)
 
 Como ejercicio voluntario podemos hacer que el valor de un potenciómetro cambie la frecuencia o duración de un tono emitido. Comparte en los foros su montaje y programa.
 
