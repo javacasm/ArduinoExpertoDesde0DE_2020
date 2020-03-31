@@ -14,11 +14,11 @@ Veamos las diferentes opciones que tenemos para programar Arduino:
 ### [ArduinoBlocks.com](http://www.arduinoblocks.com)
 
 
-![arduinoblocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
+![ArduinoBlocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
 
-ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
+ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa Arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
 
-Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
+Además nos permite programar nuestro Arduino sin instalar (prácticamente) nada en nuestro ordenador
 
 Empezaremos seleccionando el tipo de placa Arduino que vamos a usar y a continuación añadiremos el hardware que usemos conectándolo a las patillas correspondientes.
 
@@ -32,7 +32,7 @@ Otra gran ventaja de ArduinoBlocks es que nos permite programar multitud de plac
 
 [Bitbloq](http://bitbloq.bq.com/ "bitbloq") es un entorno de desarrollo visual basado en la programación con bloques. Es muy sencillo e intuitivo de usar y solo necesitamos el navegador para usarlo. Existen alternativas offline como Visualino.
 
-Tiene el incoveniente de que soporta casi únicamente los componente que vende el fabricante Bq que es quien los ha creado
+Tiene el inconveniente de que soporta casi únicamente los componente que vende el fabricante Bq que es quien los ha creado
 
 ### CodeBender
 
@@ -45,7 +45,7 @@ Tiene el incoveniente de que soporta casi únicamente los componente que vende e
 ![mBblocks](./images/placas.png)
 
 
-[mBlock](https://ide.mblock.cc/) es una plataforma de programación con bloques (aunque tambiér permite trabajar con código) basada en Scratch que nos permite programar muchos tipos de placas, como Arduino y robots como los de makeBlocks. 
+[mBlock](https://ide.mblock.cc/) es una plataforma de programación con bloques (aunque también permite trabajar con código) basada en Scratch que nos permite programar muchos tipos de placas, como Arduino y robots como los de makeBlocks. 
 
 El que esté integrado dentro de Scratch permite hacer que nuestro hardware interaccione de manera sencilla con el programa en nuestro PC.
 
@@ -55,7 +55,7 @@ En este [vídeo](https://youtu.be/pg4lbbd4DK8) vamos ver qué entorno elegir seg
 
 ### Introducción a [ArduinoBlocks.com](http://www.arduinoblocks.com)
 
-![arduinoblocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
+![ArduinoBlocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
 
 Para aprovechar todas las ventajas de ArduinoBlocks debes registrarte, pero si no quieres hacerlo puedes trabajar también en el modo de prueba. Las ventajas de estar registrado es que tus programas se guardan automáticamente en la nube, puedes compartirlos y además puedes usar más placas además de Arduino UNO
 
@@ -63,19 +63,19 @@ Para aprovechar todas las ventajas de ArduinoBlocks debes registrarte, pero si n
 
 Vamos a empezar haciendo parpadear el led interno de la placa Arduino
 
-![blink](./images/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
+![Parpadeando el led interno](./images/tumblr_mj00x5CdpR1s6tqslo1_500.gif)
 
-ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
+ArduinoBlocks es un entorno de programación visual por bloques que nos permite programar nuestra placa Arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
 
-Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
+Además nos permite programar nuestro Arduino sin instalar (prácticamente) nada en nuestro ordenador
 
-Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente Arduno UNO) y añadimos los siguienres bloques para que produzca el parpadeo.
+Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente Arduno UNO) y añadimos los siguientes bloques para que produzca el parpadeo.
 
 ![Blink13](./images/Blink13.png)
 
 En este [vídeo](https://youtu.be/S5Bf6cmcDs8) vemos cómo subir el [programa](http://www.arduinoblocks.com/web/project/283245) a nuestra placa Arduino UNO.
 
-Puedes utilizar el programa que he compartido haciendo clic en el siguiente enlace[Programa](http://www.arduinoblocks.com/web/project/174285)
+Puedes utilizar el programa que he compartido haciendo clic en el siguiente enlace al [programa](http://www.arduinoblocks.com/web/project/174285)
 
 
 
@@ -83,11 +83,11 @@ Puedes utilizar el programa que he compartido haciendo clic en el siguiente enla
 
 #### Envío de datos al PC
 
-La comunicación serie se produce via USB entre Arduino y el PC, vamos a hacer un ejemplo en el enviamos información entre nuestra placa Arduino y el PC
+La comunicación serie se produce vía USB entre Arduino y el PC, vamos a hacer un ejemplo en el enviamos información entre nuestra placa Arduino y el PC
 
 Vamos a enviar "On" y "Off" al PC
 
-![ParpadeoSerie](./images/ParpadeoSerieArduinoBlocks.png)
+![Parpadeo con datos por serie](./images/ParpadeoSerieArduinoBlocks.png)
 
 En este [vídeo](https://youtu.be/zv9esePKoAo) vamos a ver cómo funciona y como ver los datos que intercambia PC y Arduino usando este [programa](http://www.arduinoblocks.com/web/project/283322)
 
@@ -101,39 +101,39 @@ Ahora abrimos la consola y vemos los mensajes
 
 En todo momento podemos ver el código (pero no editarlo) desplegando la opción Bloques y pulsando **Ver Código**
 
-Ahora vamos a ver como hacer estos ejemplos en otro entorno como es bitbloq y publicaremos la diferencias entre los dos
+Ahora vamos a ver como hacer estos ejemplos en otro entorno como es BitBloq y publicaremos la diferencias entre los dos
 
 ### Introducción a la programación con Bitbloq
 
 Bitbloq es un entorno de programación visual por bloques que nos permite programar nuestra placa Arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++.
 
-Podemos acceder directamente desde su web <http://bitbloq.bq.com/>
+Podemos acceder directamente desde su web <http://BitBloq.bq.com/>
 
 Como verás cuando entres a su página, funciona con Chrome en todos los sistemas operativos, y el se encarga de avisarte si necesitas drivers o cambiar algo en tu sistema.
 
-A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq/)
+A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de BitBloq](http://diwo.bq.com/tag/bitbloq/)
 
 Veamos un ejemplo sencillo:
 
 ![parpadeo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/1%20parpadeo.png)
 
-[vídeo de ejemplo básico ](https://youtu.be/rOdMRhhQTUs)
+[Vídeo de ejemplo básico ](https://youtu.be/rOdMRhhQTUs)
 
 [ejemplo Parpadeo](https://github.com/javacasm/ArduinoBasico/blob/master/bitbloq/1.%20parpadeo.json)
 
 
-[vídeo "Cómo ver código C++ de un programa bitbloq"](https://youtu.be/cg1YNVSprdo)
+[Vídeo "Cómo ver código C++ de un programa BitBloq"](https://youtu.be/cg1YNVSprdo)
 
-Desde bitbloq siempre podemos ver el código Arduino generado. De momento no podemos modificar este código pero si copiarlo y llevarlo al IDE de Arduino
+Desde BitBloq siempre podemos ver el código Arduino generado. De momento no podemos modificar este código pero si copiarlo y llevarlo al IDE de Arduino
 
-[vídeo "Transfiriendo el programa bitbloq a Arduino"](https://youtu.be/gMe2YDgUUQE)
+[Vídeo "Transfiriendo el programa BitBloq a Arduino"](https://youtu.be/gMe2YDgUUQE)
 
 Bitbloq nos permite programar nuestro Arduino sin instalar (prácticamente) nada en nuestro ordenador. Sólo tenemos que pulsar sobre el botón cargar lo que hace que se compile el código, se detecte la placa y se envíe el programa a nuestro Arduino
 
 ## Sentencias de control
 
 
-[video sobre sentencias de control ](https://youtu.be/dakh7MTxpBg)
+[Vídeo sobre sentencias de control ](https://youtu.be/dakh7MTxpBg)
 
 Las sentencias de control son aquellas que nos permite modificar el orden o el modo en el que se ejecutan los bloques de nuestro programa.
 
@@ -141,41 +141,45 @@ Las sentencias de control son aquellas que nos permite modificar el orden o el m
 
 Para utilizar las sentencias de control necesitaremos el concepto de variables: que no es otra cosa que un lugar donde almacenar un valor que puede se modificar si así lo queremos
 
-[video](https://youtu.be/Os-8oHBKsQU)
+[Vídeo sobre variables](https://youtu.be/Os-8oHBKsQU)
 
 Con las variables podemos realizar operaciones matemáticas
 
-[video](https://youtu.be/nvRUCZERScE) 
+[Vídeo sobre operaciones con variables](https://youtu.be/nvRUCZERScE) 
 
 [ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/operaciones%20variables.json)
 
 ![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/operaciones%20variables.png)
 
+### Sentencias de control
 
+Vamos a ver las sentencias de control que nos van a permitir decidr cómo se van ejecutando las órdendes de nuestro programa, si se repiten, si se ejecutan en función de una u otra razón
+
+[Vídeo sobre sentencias de control](http://youtu.be/0Af8VdF6h24)
 
 ### Bucle **for**
 
-[](http://youtu.be/0Af8VdF6h24)
+Empezamos por la sentencias **for** que nos va a permitir decir que una parte de nuestro programa se repita un número determinado de veces.
 
-[\[vídeo\]](https://youtu.be/mIAgTdc4oC8) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.json)
+[\[Vídeo\]](https://youtu.be/mIAgTdc4oC8) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.json)
 
 ![bucle for](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20for.png)
-
-El bucle **for** permite repetir un conjunto de pasos un número de veces determinado. 
 
 Necesitamos declarar una variables que actuará como contador y definir el valor inicial que tendrá la variable y el final, realizándose tantos como pasos como valores enteros haya entre ambas.
 
 ### Bucle **while**
 
-[\[vídeo\]](https://youtu.be/RVcaaz1NYjk) 
+También podemos decidir que se repitan unas sentencias en función de una determinada condición usando la sentencia **while**
 
-[\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20while.json)
+[\[Vídeo\]](https://youtu.be/RVcaaz1NYjk) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20while.json)
 
 ![bucle while](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/bucle%20mientras.png)
 
 Usaremos la sentencia de control **while** para los bucles donde el número de veces que se repite no está definido desde el principio
 
 ### Bloque **if** : sentencias condicionales
+
+Una sentencia condicional permite decidir si se ejecutan o no determinadas órdenes
 
 [Vídeo sobre sentencias condicionales](http://youtu.be/dXpDCOzsO2U)
 
@@ -190,14 +194,14 @@ Las sentencias condicionales permiten ejecutar un código y otro según se cumpl
 
 Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque if) y en caso de que no se cumpla la condición se ejecute otro (bloque else). Veamos un ejemplo
 
-[video](https://youtu.be/-f_htl5TQN8)
+[vídeo](https://youtu.be/-f_htl5TQN8)
 [ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicional%20compleja.json)
 
 ![ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
 ### Condicionales-complejas
 
-[\[vídeo\]](http://youtu.be/en_Y-_wVyO0) [\[ejemplo\]](./ejemplosBitbloq/condiciones_if.xml)
+[\[vídeo\]](http://youtu.be/en_Y-_wVyO0) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/condicional%20compleja.json)
 
 ![Condiciones\_lógicas](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/concional%20compleja.png)
 
@@ -211,7 +215,7 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 
 ### Envio de datos al pc
 
-[Video](http://youtu.be/uAy_reYl8_Y)
+[Vídeo](http://youtu.be/uAy_reYl8_Y)
 
 [\[vídeo\]](https://youtu.be/hy9t76RLeBU) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.json)
 
@@ -221,9 +225,9 @@ Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de c
 
 ### Variables locales vs variables globales
 
-[Video ](http://youtu.be/D82lXUWH1Jg)
+[Vídeo ](http://youtu.be/D82lXUWH1Jg)
 
-[vídeo](https://youtu.be/U3ulo7rAE58) 
+[Vídeo](https://youtu.be/U3ulo7rAE58) 
 
 [ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/variables%20globales.json)
 
@@ -244,34 +248,15 @@ Podemos usar la forma cíclica (y unas variables globales) en la que se ejecutan
 
 ### Usando el IDE de Arduino
 
-![](./images/ArduinoIDE.png) El Entorno de Programación Integrado (IDE) de Arduino es sencillo y a la vez potente, incluyendo casi todas las funcionalidades que uno espera de un IDE actual.
-
-Es un IDE multiplaforma, estando disponible para descargar directamente para Windows, Linux y MaxOS. Al ser una herramienta de código libre podemos descargar también el código fuente para compilarlo.
-
-Está desarrollado en Java y deriva del IDE de Processing y de Wiring.
-
-Ha sido diseñado teniendo en mente que sus usuarios no son expertos desarrolladores y que lo esencial es que los recien llegados sean capaces de familiarizarse con él.
-
-Incluye un editor de código que resalta la sintaxis, indicando cuando es correcta, indicando si las llaves están bien emparejadas y organizando el código de forma clara.
-
-Además el entorno incluye todo lo necesario para compilar y descargar las aplicaciones al microntrolador, sin necesidad de que el usuario conozca la complejidad de este proceso.
-
-El entorno viene con una librería llamada Wiring (procedente de dicho proyecto) que facilita el programar pensando en las entradas y las salidas.
-
-El código que se desarrolla es C/C++, aunque el usuario solo incluye las funciones setup y loop
-
-Usaremos las versión 1.8.1 (o superior si se liberara)
-
-
-![Arduino IDE](./images/ArduinoIDE.png)
+![Arduino IDE](./images/ArduinoIDE.png) 
 
 El Entorno de Programación Integrado (IDE) de Arduino es sencillo y a la vez potente, incluyendo casi todas las funcionalidades que uno espera de un IDE actual.
 
-Es un IDE multiplaforma, estando disponible para descargar directamente para Windows, Linux y MacOS. Al ser una herramienta de código libre podemos descargar también el código fuente para compilarlo.
+Es un IDE multiplataforma, estando disponible para descargar directamente para Windows, Linux y MaxOS. Al ser una herramienta de código libre podemos descargar también el código fuente para compilarlo.
 
 Está desarrollado en Java y deriva del IDE de Processing y de Wiring.
 
-Ha sido diseñado teniendo en mente que sus usuarios no son expertos desarrolladores y que lo esencial es que los recien llegados sean capaces de familiarizarse con él.
+Ha sido diseñado teniendo en mente que sus usuarios no son expertos desarrolladores y que lo esencial es que los recién llegados sean capaces de familiarizarse con él.
 
 Incluye un editor de código que resalta la sintaxis, indicando cuando es correcta, indicando si las llaves están bien emparejadas y organizando el código de forma clara.
 
@@ -279,13 +264,14 @@ Además el entorno incluye todo lo necesario para compilar y descargar las aplic
 
 El entorno viene con una librería llamada Wiring (procedente de dicho proyecto) que facilita el programar pensando en las entradas y las salidas.
 
-El código que se desarrolla es C/C++, aunque el usuario solo incluye las funciones setup y loop
+El código que se desarrolla es C/C++, aunque el usuario solo incluye las funciones **setup** y **loop**
 
-Usaremos las versión 1.8.1 (o superior si se liberara)
+Usaremos las versión 1.8.12 (o superior si se actualizara)
+
 
 #### Instalación del entorno
 
-[Descarga del tutorial de instalación](https://www.dropbox.com/s/w1i68d5p6jvjqx5/3.2%20-%20Instalaci%C3%B3n%20del%20IDE.pdf)
+[Descarga del tutorial de instalación](https://drive.google.com/file/d/1yIsnzA4-WWONr2s-3fD58h0HnHzaARYt/view?usp=sharing)
 
 
 #### Descargando el programar a Arduino
@@ -294,7 +280,7 @@ Vamos a comenzar viendo paso a paso una descarga de un programa a Arduino.
 
 Intentaremos hacer una lista paso a paso para poder detectar errores en el caso de que se produzcan
 
-[Enlace para descarga: Primeras pruebas con Arduino](https://www.dropbox.com/s/56rfl7nr4ngs8uo/3.3%20-%20Primeras%20Pruebas.pdf)
+[Enlace para descarga: Primeras pruebas con Arduino](https://drive.google.com/file/d/15zHSVEUj-ouiWezT7ULY0VgD4JQOQ4Fz/view?usp=sharing)
 
 En el siguiente vídeo podemos ver el paso a paso de la descarga de un programa a una placa Arduino
 
@@ -325,12 +311,12 @@ Introducimos el siguiente programa en el entorno. En el se irá incrementando la
 
 Vamos a analizar el programa:
 
--   Todos los métodos que empiezan con Serial, se refieren a comunicaciones con el pc, en la línea Serial.begin(9600) estamos diciendo que vamos a iniciar (begin) las comunicaciones a una     velocidad de 9600bps (bit por segundo). Serial.print lo que lleva a continuación al pc. Si utilizamos println le estamos indicando de  después de imprimir salte a la siguiente línea.
--   Sabemos el método setup se ejecuta sólo al principio una vez para configurar todo. El método loop en cambio se ejecuta de forma    repetitiva, con lo que el resultado será que nuestra variable i se va incrementando a cada paso en una unidad (podíamos haber abreviado     el programa sustituyendo la linea i=i+1; por i++ que significa lo mismo
+-   Todos los métodos que empiezan con Serial, se refieren a comunicaciones con el pc, en la línea **Serial.begin(9600)** estamos diciendo que vamos a iniciar (**begin**) las comunicaciones a una     velocidad de **9600bps** (baudios o bits por segundo). **Serial.print** lo que lleva a continuación al pc. Si utilizamos println le estamos indicando de  después de imprimir salte a la siguiente línea.
+-   Sabemos el método **setup** se ejecuta sólo al principio una vez para configurar todo. El método **loop** en cambio se ejecuta de forma    repetitiva, con lo que el resultado será que nuestra variable **i** se va incrementando a cada paso en una unidad (podíamos haber abreviado     el programa sustituyendo la linea **i=i+1;** por **i++** que significa lo mismo pero es más corta de escribir (los programadores de C tienen la tendencia hacer su código cuanto más corto mejor, no siempre atendiendo a la claridad...)
 
 Descargamos el programa
 ![](./images/descarga.png)
-depués de haber comprobado que tenemos bien seleccionado nuestro modelo de placa y el puerto donde está conectada. Una vez descargada, abrimos la consola serie para ver el resultado
+después de haber comprobado que tenemos bien seleccionado nuestro modelo de placa y el puerto donde está conectada. Una vez descargada, abrimos la consola serie para ver el resultado
 
 ![Consola](./images/Consola.png)
 
@@ -338,7 +324,7 @@ Cuidando de que la velocidad seleccionada será la misma que hemos indicado en e
 
 Veremos como se producen una sucesión de línea con el texto "hola 1...."
 
-En bitbloq hacemos el siguiente programa
+En BitBloq hacemos el siguiente programa
 
 ![bucle variables globales](./images/ejemplo_bucle_arduino.png)
 
@@ -347,10 +333,10 @@ En bitbloq hacemos el siguiente programa
 
 Podemos ver las líneas se suceden a toda velocidad en el programa anterior. Ahora mismo el micro está funcionando todo lo rápido que puede (la única limitación es la velocidad a la que se envían datos al pc)
 
-Para introducir una pausa podemos usar las funciones delay y delayMicroseconds. Veamos su uso
+Para introducir una pausa podemos usar las funciones **delay** y **delayMicroseconds**. Veamos su uso
 
 -   **delay(milisegundos)**: espera el número de milisegundos indicado
--   **delayMicroseconds(microsegundos)**: espera los microsegundos     indicados El número máximo que soporta es 16383
+-   **delayMicroseconds(microsegundos)**: espera los microsegundos     indicados El número máximo que soporta es 16383 microsegundos
 
 Así con solo introducir la siguiente línea detrás del incremento de la
 variable i, conseguiremos que el programa se retrase
@@ -363,7 +349,7 @@ Arduino relacionadas con el mismo:
 - **long millis()** : devuelve el número de milisegundos desde que se  encendió la placa. Se vuelve a poner a cero cada 50 días aproximadamente.
 - **long micros()** : devuelve el número de microsegundos desde que se  encendió la placa. Se vuelve a poner a cero cada 70 minutos aproximadamente. **Tiene una resolución de 4 microsegundos.**
 
-Con todo esto vamos a hacer un programa que envie cada segundo el número de milisegundos que han pasado desde la ultima iteración. Intenta hacer el programa por ti mismo
+Con todo esto vamos a hacer un programa que envíe cada segundo el número de milisegundos que han pasado desde la ultima iteración. Intenta hacer el programa por ti mismo
 
 Quedaría algo así:
 
@@ -371,13 +357,13 @@ Quedaría algo así:
       Serial.begin(9600);
     }
 
-    long mAnteriores; // Lo usaremos para almacenar el valor anterior\
+    long mAnteriores; // Lo usaremos para almacenar el valor anterior
 
     void loop() {
       long mActuales=millis(); // leemos el valor actual de millis
 
       Serial.println(mActuales-mAnteriores);
-      // restamos el anterior del actual y esos son los que han pasado**
+      // restamos el anterior del actual y esos son los que han pasado
 
       mAnteriores=mActuales;
       // guardamos el dato actual para la siguiente iteración
@@ -390,7 +376,7 @@ ArduinoBlocks dispone de una categoría entera para **Tiempo**
 
 ![Tiempos ArduinoBlocsk](./images/TiemposArduinoBlocks.png)
 
-Me parece especialmente interesante su bloque **Ejecuar cada ...** que nos permite hacer de forma sencilla que algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor) o el que ponga a nuestro arduino a dormir (consiguiendo un bajo consumo) durante un tiempo.
+Me parece especialmente interesante su bloque **Ejecuar cada ...** que nos permite hacer de forma sencilla que algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor) o el que ponga a nuestro Arduino a dormir (consiguiendo un bajo consumo) durante un tiempo.
 
 
 
@@ -429,7 +415,7 @@ Podemos ver cómo se usan estas funciones en el ejemplo incluido en Arduino sobr
 ![Tabla de frecuencias](./images/frec1.jpg)
 
 
-En bitbloq existen 2 formas de generar sonidos
+En BitBloq existen 2 formas de generar sonidos
 
 
 -   Reproducir notas musicales: podemos escoger la nota que vamos a  reproducir y su duración
@@ -456,7 +442,7 @@ Si queremos instalarlas sólo hay que descargarlas y copiarlas en la carpeta lib
 
 En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual.
 
-Aquí es donde ArduinoBlocks gana por goleada a Bitbloq: de entrada ya incluye multitud de librerías. De hecho cuando seleccionamos un bloque de un sensor ya estamos utilizando su librería
+Aquí es donde ArduinoBlocks gana por goleada a BitBloq: de entrada ya incluye multitud de librerías. De hecho cuando seleccionamos un bloque de un sensor ya estamos utilizando su librería
 
 ### Uso de un sensor DHT11
 
@@ -472,6 +458,8 @@ Si buscas entre los bloques de sensores de ArduinoBlocks lo encontrarás y verá
 ![DHT11_programa](./images/DHT11_programa.png)
 
 Si ahora pulsas para ver el código verás que ha añadido una sentencia **include** que es la hace referencia a la librería que se necesita para leer los datos del sensor
+
+No te preocupes si el montaje te parece complejo, en el siguiente tema lo veremos en detalle
 
 #### Librerías básicas en el IDE de Arduino
 
@@ -497,9 +485,9 @@ Veamos algunas de las librerías básicas que incluye
 -   [NewSoftSerial](http://sundial.org/arduino/index.php/newsoftserial/) - una versión mejorada de SoftwareSerial
 -   [OneWire](http://www.arduino.cc/playground/Learning/OneWire) - permite la comunicación con dispositivos de Dallas (fabricante de dispositivos electrónicos) que usan este protocolo. Veremos un ejemplo en el módulo de comunicaciones.
 -   [PS2Keyboard](http://www.arduino.cc/playground/Main/PS2Keyboard) - Lee caracteres desde un teclado PS2.
--   [Simple Message    System](http://www.arduino.cc/playground/Code/SimpleMessageSystem) - facilita la tarea de enviar mensajes entre arduino y el PC
+-   [Simple Message    System](http://www.arduino.cc/playground/Code/SimpleMessageSystem) - facilita la tarea de enviar mensajes entre Arduino y el PC
 -   [SSerial2Mobile](http://code.google.com/p/sserial2mobile/) - envía mensajes de texto y email desde el movil (via comandos AT)
--   [Webduino](http://code.google.com/p/webduino/) - servidor web para usar con arduino ethernet
+-   [Webduino](http://code.google.com/p/webduino/) - servidor web para usar con Arduino ethernet
 -   [X10](http://arduino.cc/en/Tutorial/X10) - Envia señales del protocolo X10**usando los cables electricos domésticos
 -   [XBee](http://code.google.com/p/xbee-arduino/) - Comunicaciones XBees en modo API**
 -   [SerialControl](http://www.arduino.cc/playground/Code/SerialControl) - Control remoto de otros Arduinos por medio de comunicaciones serie
@@ -526,7 +514,7 @@ Estas librerías son compatibles con Wiring, los enlaces apuntan a la documentac
 
 ##### Frequency Generation and Audio:
 
--   [Tone](http://code.google.com/p/arduino-tone/) - genera sonidos de la frecuencia dada
+-   [Tone](https://code.google.com/archive/p/rogue-code/wikis/ToneLibraryDocumentation.wiki) - genera sonidos de la frecuencia dada
 
 ##### Motores  y PWM:
 
@@ -540,7 +528,7 @@ Estas librerías son compatibles con Wiring, los enlaces apuntan a la documentac
 
 ##### Utilidades:
 
--   [PString](http://sundial.org/arduino/index.php/pstring/) - clase ligera para imprimir
+-   [PString](http://arduiniana.org/libraries/PString/) - clase ligera para imprimir
 -   [Streaming](http://arduiniana.org/libraries/streaming/) - simplifica la manera de imprimir caracteres
 
 #### Escribiendo nuestra propia librería
@@ -586,11 +574,14 @@ Veamos un ejemplo
      delay(15);
     }
 
-Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
+Para usar la librería Servo con BitBloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
 
 Veamos este ejemplo:
 
 ![servo](./images/HardwareServo.png)
+
+
+En ArduinoBlocks puedes encontrar las órdenes para el servo en la categoría de **actuadores**
 
 #### Ejemplo: Librería EEPROM
 
