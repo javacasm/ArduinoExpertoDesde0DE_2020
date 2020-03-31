@@ -4,8 +4,6 @@
 
 Comparativa 3 IDEs
 
-Instalar y subir programa a ArduinoBlocks
-
 gestor de Librerias en Arduino IDE
 
 Renombrar Ejemplos
