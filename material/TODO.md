@@ -14,6 +14,16 @@ algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo
 
 incluir arduinoblocks
 
+DHT11
+
+LM35
+
+LDR
+
+micrófono
+
+Rele
+
 ## Tema 5
 
 * Clases y objetos
@@ -21,7 +31,7 @@ incluir arduinoblocks
 * Proyectos con varios ficheros
 * Uso de la librería Time
 
-
+ 
 # Tema 9
 
 * PID
