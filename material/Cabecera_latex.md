@@ -2,7 +2,7 @@
 title:
   - Arduino: conviértete en un experto desde cero
 author:
-   - Vacas Martinez, José Antonio
+   - Vacas Martínez, José Antonio
 date: \today
 documentclass:
    - book
