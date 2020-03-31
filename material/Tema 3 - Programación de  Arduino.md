@@ -4,14 +4,14 @@
 
 Veamos las diferentes opciones que tenemos para programar Arduino:
 
-#### Arduino IDE
+### Arduino IDE
 
 ![Arduino IDE](./images/Arduino_IDE_-_v0011_Alpha.png "Arduino IDE")
 
 [IDE Arduino](http://arduino.cc/en/Main/Software)|entorno multiplataforma que permite la edición, compilación y la programación de Arduino usando código.
 
 
-#### [ArduinoBlocks.com](http://www.arduinoblocks.com)
+### [ArduinoBlocks.com](http://www.arduinoblocks.com)
 
 
 ![arduinoblocks](https://lh3.googleusercontent.com/JvIaf64ZFVdXHSF6tvCxkPl3kjybaag_u1RDn-8CgjplLbYxrwo2MR7JCBdbsqnKGVuMNSAM-GAxKpiojjHvv9ZNW2-6tEDv16wKzTXCKfoY9kvXZFamGB0Zb9Gt4RYltr_-nSvytXmPEIDduMtPbBd6QH5PqOiCRZA3LeonLbH0DS1UsztQQJVTFJFsY_bR4dsEsscbkRBNsUdn6dFaYgSL0zXf-__Wj2HDx2cnL5s4P7G-qZQ9H6-HmSbkrMrDDOYVNt-FSuPB2Jfs1XYlyRLMW6kLbN2Sv15VrMQjFoQxK8_2qkEiP88E6t29Mm-CDBcczdCuH-2nKIbnS5Mte3jV8svZ6G6W1foSyofot0ttTuLeNgf74j3TJt05Nn71e0KrYrIA2IMtWCAtRlwgaBRrt2Y2q9VF-EFYtX3oUGSCNfvJL-i-bWHkQ64YLVUM706Hx0xDWell7Qs7hXqC8jy3JdVIpHimXaY4o4QVN3bBpPzxbmOBcLyULChMHNKpIw_JbevgXoajtwtRNKDl6R39yGaBoEyAQgrvsF8L55iLGz0t01a82xkMbcDfQALVzNT3VIOkda74eP6gwRXSFTRJlBBM3bwqGpQvwyyUoSZ3a13mbYwhb044MFw-rmxwqfX2W_gLjd6Os44R7l3cdQtdmq-ekpBAzuHgEnIpT0-iiIcNwLpyub-BdyIHLWSrbamwe14mQpvg-s_78w=w373-h348-no)
@@ -26,20 +26,31 @@ Tiene la gran ventaja de incluye los bloques para multitud de componentes fácil
 
 Otra gran ventaja de ArduinoBlocks es que nos permite programar multitud de placas además de Arduino UNO (Mega, micro, nano, ... )  y hasta placas más modernas como nodeMCU o ESP8266
 
-#### BitBloq
+### BitBloq
 
-![Bitbloq](./images/curso_bitbloq.png)|[Bitbloq](http://bitbloq.bq.com/ "bitbloq")| Entorno de desarrollo visual basado en la programación con bloques. Es muy sencillo e intuitivo de usar y solo necesitamos el navegador para usarlo. Existen alternativas offline como Visualino.
+![Bitbloq](./images/curso_bitbloq.png)
+
+[Bitbloq](http://bitbloq.bq.com/ "bitbloq") es un entorno de desarrollo visual basado en la programación con bloques. Es muy sencillo e intuitivo de usar y solo necesitamos el navegador para usarlo. Existen alternativas offline como Visualino.
 
 Tiene el incoveniente de que soporta casi únicamente los componente que vende el fabricante Bq que es quien los ha creado
 
-#### CodeBender
+### CodeBender
 
 ![codebender](./images/codebender.png "codebender")
 
-[Codebender](http://codebender.cc "codebender")
+[Codebender](http://codebender.cc "codebender") es un entorno de desarrollo totalmente basado en aplicaciones web, decir, sólo necesitamos un navegador web para poder desarrollar con Arduino. Permite la edición, compilación y la programación de Arduino. Podéis probarlo en [https://codebender.cc/](https://codebender.cc/)
 
-Entorno de desarrollo totalmente basado en aplicaciones web, decir, sólo necesitamos un navegador web para poder desarrollar con Arduino. Permite la edición, compilación y la programación de Arduino. Podéis probarlo en [https://codebender.cc/](https://codebender.cc/)
+### mBlocks
 
+![mBblocks](./images/placas.png)
+
+
+[mBlock](https://ide.mblock.cc/) es una plataforma de programación con bloques (aunque tambiér permite trabajar con código) basada en Scratch que nos permite programar muchos tipos de placas, como Arduino y robots como los de makeBlocks. 
+
+El que esté integrado dentro de Scratch permite hacer que nuestro hardware interaccione de manera sencilla con el programa en nuestro PC.
+
+
+En este [vídeo](https://youtu.be/pg4lbbd4DK8) vamos ver qué entorno elegir según sean nuestros componentes.
 
 
 ### Introducción a [ArduinoBlocks.com](http://www.arduinoblocks.com)
@@ -62,7 +73,7 @@ Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente
 
 ![Blink13](./images/Blink13.png)
 
-TODO> Ahora tenemos que subir el programa a la placa, para ello s
+En este [vídeo](https://youtu.be/S5Bf6cmcDs8) vemos cómo subir el [programa](http://www.arduinoblocks.com/web/project/283245) a nuestra placa Arduino UNO.
 
 Puedes utilizar el programa que he compartido haciendo clic en el siguiente enlace[Programa](http://www.arduinoblocks.com/web/project/174285)
 
@@ -78,13 +89,15 @@ Vamos a enviar "On" y "Off" al PC
 
 ![ParpadeoSerie](./images/ParpadeoSerieArduinoBlocks.png)
 
-[Programa](http://www.arduinoblocks.com/web/project/174290)
+En este [vídeo](https://youtu.be/zv9esePKoAo) vamos a ver cómo funciona y como ver los datos que intercambia PC y Arduino usando este [programa](http://www.arduinoblocks.com/web/project/283322)
 
 Ahora abrimos la consola y vemos los mensajes
 
 * Detectamos el puerto
 * Configuramos la velocidad
 * Necesitamos un programa para ver los datos
+
+
 
 En todo momento podemos ver el código (pero no editarlo) desplegando la opción Bloques y pulsando **Ver Código**
 
