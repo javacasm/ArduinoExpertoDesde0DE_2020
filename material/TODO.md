@@ -2,8 +2,6 @@
 
 ## Tema 3
 
-Comparativa 3 IDEs
-
 gestor de Librerias en Arduino IDE
 
 Renombrar Ejemplos
