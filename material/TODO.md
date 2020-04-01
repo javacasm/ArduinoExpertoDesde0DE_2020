@@ -1,14 +1,23 @@
 # TODO
 
-## Tema 3
-
-gestor de Librerias en Arduino IDE
 
 Renombrar Ejemplos
 
 
+## Tema 3
 
-¿Tema 4?
+gestor de Librerias en Arduino IDE
+
+Ejemplo de DHT11 con Arduino IDE
+
+Error: dice que est'a en actuadores y es en motores 
+video servo de arduinoblocks
+
+
+Tema 4
+
+
+Video sobre sensores d 3-4 pines 
 
 algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor
 
