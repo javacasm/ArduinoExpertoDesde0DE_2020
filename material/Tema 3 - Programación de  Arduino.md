@@ -69,7 +69,7 @@ ArduinoBlocks es un entorno de programación visual por bloques que nos permite 
 
 Además nos permite programar nuestro Arduino sin instalar (prácticamente) nada en nuestro ordenador
 
-Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente Arduno UNO) y añadimos los siguientes bloques para que produzca el parpadeo.
+Empezaremos seleccionando el tipo de placa Arduino que vamos a usar (normalmente Arduino UNO) y añadimos los siguientes bloques para que produzca el parpadeo.
 
 ![Blink13](./images/Blink13.png)
 
@@ -153,7 +153,7 @@ Con las variables podemos realizar operaciones matemáticas
 
 ### Sentencias de control
 
-Vamos a ver las sentencias de control que nos van a permitir decidr cómo se van ejecutando las órdendes de nuestro programa, si se repiten, si se ejecutan en función de una u otra razón
+Vamos a ver las sentencias de control que nos van a permitir decidir cómo se van ejecutando las órdenes de nuestro programa, si se repiten, si se ejecutan en función de una u otra razón
 
 [Vídeo sobre sentencias de control](http://youtu.be/0Af8VdF6h24)
 
@@ -213,9 +213,9 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 
 -   Con que se cumpla una de ellas se dará por válida toda la condición.
 
-### Envio de datos al pc
+### Envío de datos al pc
 
-[Vídeo](http://youtu.be/uAy_reYl8_Y)
+En el siguiente [Vídeo](http://youtu.be/uAy_reYl8_Y) vamos a ver cómo enviar información entre Arduino y el PC usando Bitbloq
 
 [\[vídeo\]](https://youtu.be/hy9t76RLeBU) [\[ejemplo\]](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/comunicacion%20serie.json)
 
@@ -225,9 +225,7 @@ Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de c
 
 ### Variables locales vs variables globales
 
-[Vídeo ](http://youtu.be/D82lXUWH1Jg)
-
-[Vídeo](https://youtu.be/U3ulo7rAE58) 
+En este [Vídeo](https://youtu.be/U3ulo7rAE58) hablamos sobre los diferentes tipos de variables dentro de un programa
 
 [ejemplo](https://raw.githubusercontent.com/javacasm/ArduinoBasico/master/bitbloq/variables%20globales.json)
 
@@ -311,8 +309,8 @@ Introducimos el siguiente programa en el entorno. En el se irá incrementando la
 
 Vamos a analizar el programa:
 
--   Todos los métodos que empiezan con Serial, se refieren a comunicaciones con el pc, en la línea **Serial.begin(9600)** estamos diciendo que vamos a iniciar (**begin**) las comunicaciones a una     velocidad de **9600bps** (baudios o bits por segundo). **Serial.print** lo que lleva a continuación al pc. Si utilizamos println le estamos indicando de  después de imprimir salte a la siguiente línea.
--   Sabemos el método **setup** se ejecuta sólo al principio una vez para configurar todo. El método **loop** en cambio se ejecuta de forma    repetitiva, con lo que el resultado será que nuestra variable **i** se va incrementando a cada paso en una unidad (podíamos haber abreviado     el programa sustituyendo la linea **i=i+1;** por **i++** que significa lo mismo pero es más corta de escribir (los programadores de C tienen la tendencia hacer su código cuanto más corto mejor, no siempre atendiendo a la claridad...)
+-   Todos los métodos que empiezan con Serial, se refieren a comunicaciones con el pc, en la línea **Serial.begin(9600)** estamos diciendo que vamos a iniciar (**begin**) las comunicaciones a una     velocidad de **9600bps** (baudios o bits por segundo). **Serial.print** lo que lleva a continuación al PC. Si utilizamos **println** le estamos indicando de  después de imprimir salte a la siguiente línea.
+-   Sabemos el método **setup** se ejecuta sólo al principio una vez para configurar todo. El método **loop** en cambio se ejecuta de forma repetitiva, con lo que el resultado será que nuestra variable **i** se va incrementando a cada paso en una unidad (podíamos haber abreviado el programa sustituyendo la linea **i=i+1;** por **i++** que significa lo mismo pero es más corta de escribir (los programadores de C tienen la tendencia hacer su código cuanto más corto mejor, no siempre atendiendo a la claridad...)
 
 Descargamos el programa
 ![](./images/descarga.png)
@@ -399,7 +397,7 @@ Podemos hacer sonidos con las siguientes funciones:
 
 Para afinar las frecuencias a las notas podemos consultar tablas como esta:
 
-![tabla frecuemcia](./images/frec1.jpg "tabla frecuemcia")
+![tabla frecuencia](./images/frec1.jpg "tabla frecuencia")
 
 -   Interfiere con algunas funciones de los pines el 3 y 11 (el pwm que veremos más adelante)
 
@@ -463,7 +461,7 @@ No te preocupes si el montaje te parece complejo, en el siguiente tema lo veremo
 
 #### Librerías básicas en el IDE de Arduino
 
-Veamos algunas de las librerías básicas que incluye 
+Veamos algunas de las librerías básicas que incluye el IDE de Arduino
 
 -   EEPROM - permite leer y escribir en almacenamiento duradero
 -   Ethernet - para conectar a internet
@@ -478,6 +476,12 @@ Veamos algunas de las librerías básicas que incluye
 
 
 #### Otras Librerías
+
+Es sencillo añadir más librerías. Para ello el IDE de Arduino incluye un gestor de librerías. Puedes abrirlo desde el menu **Programa**->**Incluir librería**->**Gestor de librerías**
+
+![Gestión de Librerías en el IDE de Arduino](./images/GestionLibrerias.png)
+
+En [este vídeo](https://youtu.be/0X7pUANVNck) puedes ver cómo hacerlo.
 
 ##### Communication (networking and protocols):
 
@@ -533,7 +537,6 @@ Estas librerías son compatibles con Wiring, los enlaces apuntan a la documentac
 
 #### Escribiendo nuestra propia librería
 
-
 -   Para crear nuestra librería tenemos que generar nuestro código en C++
 -   Crearemos una clase con nuestro código
 -   Usaremos un fichero "nuestralibreria.h" donde declararemos nuestro interface (obligatorio que exista el constructor)
@@ -544,8 +547,16 @@ Estas librerías son compatibles con Wiring, los enlaces apuntan a la documentac
 
 #### Ejemplo: Librería Servo
 
-Nos permite controlar hasta 12 servos en un Arduino UNO y 48 en un Arduino Mega
+Un servo es un tipo de motor que permite hacer movimiento controlando el  ángulo de movimiento. Generalmente sólo pueden moverse 180º
 
+![Servomotor](./images/servo.png)
+
+
+(Más adelante veremos más detalles sobre éste y otro tipo de motores)
+
+Si lo hacemos en el IDE de Arduino usaremos la librería **Servo** que nos permite controlar hasta 12 servos en un Arduino UNO y 48 en un Arduino Mega
+
+Tiene las siguientes funciones
 
 -   [attach(pin) : conecta el objeto servo con el pin     dado](http://arduino.cc/en/Reference/ServoAttach)
 -   [write(angul**0**) : establece la posición del     servo](http://arduino.cc/en/Reference/ServoWrite)
@@ -553,25 +564,36 @@ Nos permite controlar hasta 12 servos en un Arduino UNO y 48 en un Arduino Mega
 -   [attached()](http://arduino.cc/en/Reference/ServoAttached) : comprueba si está conectado
 -   [detach()](http://arduino.cc/en/Reference/ServoDetach)[: desconecta el pin del servo](http://arduino.cc/en/Reference/ServoAttached)
 
-
-Veamos un ejemplo
+La gran mayoría de los servos tienen el mismo esquema de conexión (a veces cambia el color negro por marrón y el blanco por amarillo/naranja)
 
 ![Servo Pinout](./images/ServoPinout.png)
 
-    #include <Servo.h>
+![Montaje servo en Arduino Mega](./images/ServoMega_bb.png)
 
-    Servo myservo; // creamos un objeto servo
-    int potpin = 0; // pin donde está conectado el potenciómetro
+Veamos un ejemplo que podemos cargar desde el IDE de Arduino pulsando **Archivo**->**Ejemplos**->**Servo**->**Sweep** (que me he permitido traducir y modificar para usar el pin 2)
+
+
+    #include <Servo.h>  // Incluimos la libreria Servo
+
+    Servo myservo;  // creamos un objeto servo
+
+    int pos = 0;    // guardamos la posicion del servo
+    int potpin = 2; // pin donde está conectado el potenciómetro
 
     void setup() {
-      myservo.attach(9); // asignamos el pin 9 a nuestro servo
+      myservo.attach(potpin);  // asignamos el pin 2 a nuestro servo
     }
 
     void loop() {
-     int val = analogRead(potpin); // valor del potentiometro (entre 0 y 1023)
-     int posicionServo**l = map(val, 0, 1023, 0, 179); // escalamos para el servo (entre 0 y 180)
-     myservo.write(val); // envía la posición al servo
-     delay(15);
+      for (pos = 0; pos <= 180; pos += 1) { // se mueve de 0 a 180
+        // in steps of 1 degree
+        myservo.write(pos);              // le dice al servo que vaya a esa posicion
+        delay(15);                       // le damos al servo tiempo a reaccionar
+      }
+      for (pos = 180; pos >= 0; pos -= 1) { // ahora de 180 a 0
+        myservo.write(pos);              // le dice al servo que vaya a esa posicion
+        delay(15);                       // le damos al servo tiempo a reaccionar
+      }
     }
 
 Para usar la librería Servo con BitBloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
@@ -581,7 +603,12 @@ Veamos este ejemplo:
 ![servo](./images/HardwareServo.png)
 
 
-En ArduinoBlocks puedes encontrar las órdenes para el servo en la categoría de **actuadores**
+En ArduinoBlocks puedes encontrar las órdenes para el servo en la categoría de **Motores**. Vamos a hacer un proyecto sencillo con el montaje inicial
+
+![Ejemplo de servo en ArduinoBlocks](./images/ControlServo.png)
+
+[Programa para Arduino Mega](http://www.arduinoblocks.com/web/project/283739) [Vídeo explicándolo](https://youtu.be/saAvPRxuEV4)
+
 
 #### Ejemplo: Librería EEPROM
 
