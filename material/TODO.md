@@ -22,7 +22,8 @@ LM35
 LDR
 
 micrófono
-
+hacer escalas de color segun el valor del sensor
+semaforo sonoro
 
 ## Tema 5
 
