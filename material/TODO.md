@@ -6,14 +6,6 @@ Renombrar Ejemplos
 
 ## Tema 3
 
-gestor de Librerias en Arduino IDE
-
-Ejemplo de DHT11 con Arduino IDE
-
-Error: dice que est'a en actuadores y es en motores 
-video servo de arduinoblocks
-
-
 Tema 4
 
 
@@ -31,7 +23,6 @@ LDR
 
 micrófono
 
-Rele
 
 ## Tema 5
 
