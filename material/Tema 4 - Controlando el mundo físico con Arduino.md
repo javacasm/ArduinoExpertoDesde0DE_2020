@@ -22,15 +22,16 @@ En la siguiente presentación puedes ver una introducción a la electrónica:
 
 [Enlace para descarga](https://www.dropbox.com/s/heovmlqccxoc9ta/4.0%20-%20Introducci%C3%B3n%20a%20la%20electr%C3%B3nica.pdf?dl=0)
 
-## Múndo digital
+## Mundo digital
 
-![Señales digitales](./images/Senales.png)
+![Señales digitales vs señales reales](./images/Senales.png)
 
 
 En el mundo digital sólo existen dos estados, 0 y 1. Eléctricamente estos estados corresponden con 0 voltios y 5 voltios. En sistemas de bajo consumo, el estado 1 puede bajar a 3.3 voltios.
 
 En sistemas reales las señales no son realmente como esperamos sino que están mezcladas con ruido. Cómo vemos en la imagen, este ruido complica el reconocer los estados. Para evitar esto se definen un nivel por encima de los cual se toma un valor 1 (la línea roja) y otro por debajo del cual se considera el nivel 0 (la línea azul)
 
+Vamos a usar el IDE de arduino para estos ejemplos sencillos. Todas las órdenes están disponibles en los bloques de **Entrada/Salida** en ArduinoBlocks
 
 ### Salidas digitales
 
@@ -64,7 +65,7 @@ El montaje en una placa Arduino sería el siguiente, utilizando la salida digita
 
 Podemos hacer más ejemplos conectando más leds a diferentes pines. Cómo sabemos usar esperas y retardos podremos hacer un semáforo!! Comparte tu montaje en los foros.
 
-Pista: basta alternar las instrucciones en las que se enciende un led concreto con una espera y el apagado del anterior)
+(Pista: basta alternar las instrucciones en las que se enciende un led concreto con una espera y el apagado del anterior)
 
 
 ## Entradas y salidas analógicas
@@ -75,7 +76,7 @@ En electrónica, algo analógico significa algo que puede variar entre dos nivel
 
 Arduino proporciona varias (6 en Arduino UNO) patillas con capacidad para leer valores analógicos. Cuando leamos un valor tenemos una resolución de 10bits, lo que quiere decir que podremos obtener valores entre 0 y 1023.
 
-Leeremos estos valores con la función:
+Leeremos estos valores con la función **analogRead**:
 
     int valor=analogRead(pin);
 
@@ -83,7 +84,7 @@ Hagamos un ejemplo:
 
 ![Entrada analógica](./images/EntradaAnalogica.png)
 
-Veremos como al girar el potenciómetro, cambia la frecuencia de parpadeo del led.
+Veremos como al girar el potenciómetro, cambia la frecuencia de parpadeo del led, ya que estamos usando el valor medido del potenciómetro (entre 0 y 1023) como argumento para la espera (esperamos entre 0 y 1023 milisegundos)
 
 El montaje de un potenciómetro sería como el siguiente:
 
@@ -124,26 +125,26 @@ Un ejemplo típico sería el convertir el rango de lectura de, por ejemplo, un p
     }
 
     void loop() {
-        int potValor = analogRead(potpin);  // leemos el potenciometro (valor entre 0 y 1023)
-        int angulo = map(potValor, 0, 1023, 0, 180);  // escalamos el valor a 0 - 180
-        myservo.write(angulo);                     enviamos la orden al servo
-        delay(15);                           // damos tiempo a que el servo se mueva
+        int potValor = analogRead(potpin);  // valor potenciometro 0-1023
+        int angulo = map(potValor, 0, 1023, 0, 180);  // escalamos a 0-180
+        myservo.write(angulo);         // enviamos la orden al servo
+        delay(15);              // damos tiempo a que el servo se mueva
     }
 
 
 El montaje sería el siguiente
 
-![](./images/Servo-potenciometro_bb.png)
+![Montaje servo y potenciómetro](./images/Servo-potenciometro_bb.png)
 
 Para hacer este montaje vamos a usar una placa de prototipo o protoboard o breadboard o regleta de conexiones.
 
-![](./images/blank_breadboard.png)
+![Placa de prototipo](./images/blank_breadboard.png)
 
 Que recordemos que internamente conecta de esta manera
 
-![Placa de prototipo](./images/breadboard1.gif)
+![Interior de Placa de prototipo](./images/breadboard1.gif)
 
-Veamos en [este vídeo](https://youtu.be/gGWmJ0xXTSk) como usarla
+Veamos en [este vídeo](https://youtu.be/gGWmJ0xXTSk) como usar un placa de prototipo
 
 ### Ejercicio con placa de prototipo
 
@@ -151,13 +152,15 @@ Vamos a aprovechar que ya sabemos usar las placas de prototipo para proponer alg
 
 #### Coche fantástico o Cylon
 
-![Kitt te necesito](./images/giphy_P5EUwFmXQS.gif)
+![¡¡Kitt te necesito!!](./images/giphy_P5EUwFmXQS.gif)
 
 Se trata de hacer que una serie de leds se enciendan en orden. Es un proyecto tan famoso que hasta tiene nombre: [Scanner Larsson](https://www.google.com/search?q=larson+scanner&client=ubuntu&hs=fll&sxsrf=ALeKk01Dq_BCKDeiuGmHIE4IYkGtPDUhPw:1585766951982&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjk7fme8sfoAhUSyIUKHReqDWMQ_AUoAnoECAsQBA&biw=1920&bih=945)
 
 El montaje sería algo así: 
 
-![LED_kit_paralelo.png](./images/LED_kit_paralelo.png)
+![Scanner Larsson](./images/LED_kit_paralelo.png)
+
+(Un truco para hacerlo más sencillo es conectar los leds en pines consecutivos de manera que se pueda hacer un bucle sobre ellos...)
 
 ### Salidas analógicas
 
@@ -168,11 +171,9 @@ Una salida analógica es aquella capaz de dar un valor intermedio entre sus lím
 
 Podremos usar como salidas analógicas aquellas etiquetadas con el símbolo **~** y podremos darle valores entre 0 y 255.
 
-Usaremos la función
+Usaremos la función **analogWrite(pin, valor) **
 
-    analogWrite(pin, valor);
-
-Esta modulación de la potencia en el tiempo se conoce como PWM
+Esta modulación de la potencia en el tiempo se conoce como **PWM**
 
 Veámoslo en un vídeo que grabamos en otro curso de Arduino, donde podemos ver como la señal (en la pantalla del osciloscopio se ven 5 de estas señales para hacer más claro el efecto) va cambiando. El programa iba cambiando el valor de la patilla entre 0 y 255 de forma continua.
 
