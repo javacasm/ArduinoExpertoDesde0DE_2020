@@ -58,7 +58,8 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera.md           \
 					Cabecera_latex.md \
 					$(S4) \
-					"Tema 4 - sensores.md"
+					"Tema 4 - sensores.md" \
+					"Tema 4 - Proyectos sencillos con sensores.md"
 
 
 5:
