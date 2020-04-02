@@ -18,19 +18,11 @@ En la siguiente presentación puedes ver una introducción a la electrónica:
 
 <iframe width="960" height="749" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" src="https://docs.google.com/presentation/embed?id=1mlXV-Wxtx7rHHfaTzzLYdnhHpBFAmaWu-jC891pyYyE&amp;start=false&amp;loop=false&amp;delayms=60000"></iframe>
 
-
 [Presentación: introducción a la electrónica](https://docs.google.com/presentation/embed?id=1mlXV-Wxtx7rHHfaTzzLYdnhHpBFAmaWu-jC891pyYyE&amp;start=false&amp;loop=false&amp;delayms=60000)
-
-
 
 [Enlace para descarga](https://www.dropbox.com/s/heovmlqccxoc9ta/4.0%20-%20Introducci%C3%B3n%20a%20la%20electr%C3%B3nica.pdf?dl=0)
 
-
-
-
-
 ## Múndo digital
-
 
 ![Señales digitales](./images/Senales.png)
 
@@ -286,9 +278,18 @@ Veamos un ejemplo
 
 ![Entrada digital](./images/interruptor.png)
 
+
+
+![Montaje Led y Pulsador](./images/Led_pulsador_bb.png)
+
+Podemos comparar con lo que sería el esquema eléctrico
+
+![Esquema led y pulsador](./images/Led_pulsador_esquema.png)
+
 Veamos este programa en BitBloq
 
 ![Pulsador](./images/Pulsador.png)
+
 
 
 Como ejemplo podéis hacer un programa que cambie el estado de un led con cada pulsación. Para ello tendríamos que mantener el estado del led en una variable y cambiar éste con cada nueva pulsación. En este caso quedará más patente el efecto de los falsos contactos del pulsador.
@@ -297,6 +298,9 @@ Basta con introducir un pequeño retardo de 10ms para evitarlo. Comparte en los 
 
 Otra práctica interesante puede ser hacer un timbre, que para eso ya sabemos hacer sonidos. Comparte en los foros tu montaje.
 
+Prueba a hacer un semáforo que cambie de estado al pulsar el botón
+
+![Montaje semáforo](./images/Semaforo_pulsador_bb.png)
 
 
 ## Sensores
@@ -307,15 +311,15 @@ Todos tiene en común que miden una magnitud física y producen un voltaje propo
 
 Muchas veces es necesario convertir el valor que leemos a otra escala. La función map permite re-escalar (proporcionalmente) un valor desde un rango inicial hasta un rango final.
 
-    valorConvertido=map(valorInicial,minimoRangoInicial,maximoRangoInicial,minimoRangoFinal,maximoRangoFinal);
+    valorConvertido = map(valorInicial, minimoRangoInicial, maximoRangoInicial,minimoRangoFinal, maximoRangoFinal);
 
 
 Imagínate que tienes un sensor del que lees valores entre 50 y 100. Quieres iluminar un led en todo su rango analógico que es 0 255.
 
 Haríamos lo siguiente:
 
-    int valorSensor=analogRead(pinSensor);  
-    int valorLed=map(valorSensor,50,100,0,255);
+    int valorSensor = analogRead(pinSensor);  
+    int valorLed = map(valorSensor, 50, 100, 0, 255);
 
 
 Si tenéis curiosidad por algún sensor y no lo encontráis aquí no dejéis de preguntarlo en el foro e intentaremos entre todos averiguar cómo funciona.
@@ -325,3 +329,4 @@ Si tenéis curiosidad por algún sensor y no lo encontráis aquí no dejéis de 
 [Presentación sobre sensores](https://docs.google.com/presentation/embed?id=1EPN5gyd8S8YHc1wgIeuZONmEshDqNo47xLicAjvd-TY&amp;start=false&amp;loop=false&amp;delayms=5000)
 
 [Enlace para descargar la presentación](https://www.dropbox.com/s/w4wd1asce3dvxox/4.6%20-%20Sensores.pdf?dl=0)
+
