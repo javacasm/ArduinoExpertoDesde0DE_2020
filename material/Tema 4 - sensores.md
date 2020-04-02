@@ -1,4 +1,6 @@
 ### Apéndice sensores
+TODO
+En este [vídeo](                                           ) vamos a hablar sobre algunos sensors y cómo podemos usarlos
 
 Existen multitud de sensores, y muchos de ellos miden magnitudes semejantes. Por ejemplo para medir la inclinación podemos unsar des un simple [Tilt Sensor](http://arduino.cc/es/Tutorial/TiltSensor)  (una bolita que al inclinar el encapsulado hace contacto entre 2 terminales) hasta un avanzado  acelerómetro. Dentro de este último tipo podemos ver varios modelos distintos, cada uno con distinta forma de acceder a sus datos:
 * Uno de los más utilizados es el ADXL, podemos ver en el Playground de Arduino, [cómo  usarlo](http://arduino.cc/en/Tutorial/ADXL3xx)
