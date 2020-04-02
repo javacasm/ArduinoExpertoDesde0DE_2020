@@ -10,30 +10,6 @@ Eliminar vídeos de bitbloq repetidos y completar con las versiones C y ArduinoB
 
 ## Tema 4
 
-
-### Teoría
-
-Todo puede ser pulsadores. Ejemplo del ascensor
-
-### Sensores
-Diferencia entre componente y módulo
-Modulos Sensor de 3/4 pines
-Sensores digitales y analógicos
-Señal de Disparo 
-Sensores Calibrados
-
-### proyectos
-2 Pulsadores para controlar intensidad de cada color
-Potenciómetro para controlar intensidad de cada color
-Controlar velocidad de KIT con potenciómetro
-Datos de temperatura y humedad por el puerto serie
-Termostato LM35
-Semáforo de ruido (problemas de sensor de audio)
-Interruptor crepuscular: digital y progresivo LDR
-Sistema de riego con indicador luminoso o servo >Humedad
-Alarma con pir y/o incendio
-
-
 algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor
 
 ## Tema 5
