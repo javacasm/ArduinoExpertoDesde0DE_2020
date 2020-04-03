@@ -448,7 +448,7 @@ Veamos un ejemplo sencillo de como ArduinoBlocks gestiona los sensores y sus cor
 
 Este es el montaje de un sensor DHT11 que mide la temperatura y la humedad ambiental (no te preocupes que más adelante lo veremos en detalle)
 
-![Incubadora-DHT11](./images/DHHT11Uno_bb.png)
+![Incubadora-DHT11](./images/DHT11Uno_bb.png)
 
 
 Si buscas entre los bloques de sensores de ArduinoBlocks lo encontrarás y verás que un programa sencillo que muestra los valores de humedad y temperatura sería
