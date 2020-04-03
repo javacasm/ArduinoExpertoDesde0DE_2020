@@ -10,7 +10,7 @@ Para hacer cualquiera de ellos puedes usar el entorno que más te guste, y recue
 
 Vamos a medir la temperatura y la humedad ambiental con un sensor DHT11. El montaje es sencillo
 
-![Montaje DHT11](./images/DHHT11Uno_bb.png)
+![Montaje DHT11](./images/DHT11Uno_bb.png)
 
 Con este programa sencillo enviaremos los datos al PC y podremos verlo abriendo el monitor serie
 
