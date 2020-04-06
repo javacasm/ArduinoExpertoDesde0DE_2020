@@ -1,3 +1,4 @@
+
 ## Proyectos sencillos
 
 Ahora que ya hemos visto como utilizar los bloque de control, leer señales y trabajar con algunos sensores vamos a comenzar a hacer proyectos sencillo.
