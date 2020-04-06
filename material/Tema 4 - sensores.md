@@ -18,3 +18,5 @@ Continuamos viendo un [vídeo](http://www.youtube.com/embed/jJxwQ3Zlpyo) sobre d
 Veamos ahora cómo funcionan el sensor de temperatura DS18x20 en [otro vídeo](http://www.youtube.com/embed/8zr2NwaT5AM)
 
 La mayoría de estos sensores están disponibles en ArduinoBlocks
+
+
