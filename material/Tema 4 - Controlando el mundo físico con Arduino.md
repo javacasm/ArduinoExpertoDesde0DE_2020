@@ -92,7 +92,7 @@ El montaje de un potenciómetro sería como el siguiente:
 
 Como ejercicio voluntario podemos hacer que el valor de un potenciómetro cambie la frecuencia o duración de un tono emitido. Comparte en los foros su montaje y programa.
 
-En muchas ocasiones necesitamos convertir el valor inicial a una escala concreta. La función map permite re-escalar (proporcionalmente) un valor desde un rango inicial hasta un rango final.
+En muchas ocasiones necesitamos convertir el valor inicial a una escala concreta. La función **map** permite re-escalar (proporcionalmente) un valor desde un rango inicial hasta un rango final.
 
     valorConvertido = map(valorInicial, minimoRangoInicial, maximoRangoInicial, minimoRangoFinal, maximoRangoFinal);
 
