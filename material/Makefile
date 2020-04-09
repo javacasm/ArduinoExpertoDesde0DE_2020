@@ -71,8 +71,8 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera_latex.md \
 					$(S5) \
 					"Tema 5.1 - Programacion_C++.md" \
-					T5_tiempos.md \
-					T5_ProcesoCompilacion.md \
+					"Tema 5.2 - Tiempos.md" \
+					"Tema 5.3 - ProcesoCompilacion.md" \
 					T5_Interrupciones.md \
 					T5_avanzadoPuertos.md
 
