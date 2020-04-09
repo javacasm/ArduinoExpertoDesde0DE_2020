@@ -1,4 +1,4 @@
-## Apéndice: Introducción a la programación en C++
+## Introducción a la programación en C++
 
 Veamos una breve introducción a la programación, aplicada a Arduino pero que es común con muchos lenguajes en concreto C++
 
@@ -11,26 +11,25 @@ Un comentario es una línea que no influye en nuestro programa pero que nos sirv
 
 Existen 2 tipos de comentarios:
 
-* El comentario de bloque, todo el contenido entre los símbolos /* y */ será tomado como contenido del comentario
+* El comentario de bloque, todo el contenido entre los símbolos /* y */ será tomado como parte del comentario:
 
         /* Hola esto es un comentario tan largo y extenso que no cabe en
         una sola línea. */
 
-* Línea de comentario: a partir de las dos barras // se ignorará el     contenido hasta la siguiente línea
+* Línea de comentario: a partir de las dos barras // se ignorará el     contenido hasta la siguiente línea:
 
         // Este es un comentario de línea
 
 ### Bloques
 
 
-Un bloque es un conjunto de líneas de código que se encuentran encerradas entre dos llaves\
+Un bloque es un conjunto de líneas de código que se encuentran encerradas entre dos llaves:
 
         { … }
 
-Más adelante veremos que determinadas sentencias de control incluyen bloques de instrucciones, como por ejemplo las instrucciones de control o las de decisión
+Más adelante veremos que determinadas sentencias de control incluyen bloques de instrucciones, como por ejemplo las instrucciones de control o las de decisión.
 
 ### Variables
-
 
 Una variables es una forma de etiquetar y guardar un valor. El valor que contiene puede ser de diferentes tipos, como puede ser un número entero, un número decimal, o un carácter.
 
@@ -51,7 +50,7 @@ Las variables tiene un ámbito (scope en inglés) que define la zona del código
         float b = 10.2 * a;
     }
 
-En este ejemplo la variable _b_ sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. En cambio _a_, al estar definida fuera, también puede ser usada dentro.
+En este ejemplo la variable _b_ sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. Diremos que es una variable **local**. En cambio _a_, al estar definida fuera, también puede ser usada dentro de la función y en cualquier parte del programa. Diremos que es una variable **global**
 
 Puedes encontrar más ejemplos en la [página de Arduino](http://www.Arduino.cc/en/Tutorial/Variables).
 
@@ -66,6 +65,12 @@ Veamos algunos de los tipos de variables existentes. Cada tipo determinado, tien
     long: 32bits -2x10^6 a 2x10^6
     float: guarda decimales -3.4x10^34 a 3.4x10^34
 
+Estos tamaños son para Arduino y pueden variar de una arquitectura a otra, por ejemplo en un PC un **int** es de 32 bits mientras que un **long** sería de 64 bits.
+
+También existen otros tipos que que tiene el mismo tamaño que los dichos. Por ejemplo tenemos **char** que es igual a **byte** y también el **short** que tiene también 16 bits.
+
+Además, para complicarlo todo un poquito más podemos definir si queremos que nuestra variable tenga signo anteponiendo la palabra **signed** o que no lo tenga con **unsigned**
+
 **¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!!**
 
 
@@ -74,31 +79,24 @@ Cuando una variable llega a su límite, tanto superior, como inferior se produce
 ### Operadores aritméticos
 
 
-Representa la operación que se realizará entre los valores de la expresión:
-
-
-    +, -, *, /, % (módulo, el resto de la división entre los valores)
-
-Ejemplos:
+Representa la operación que se realizará entre los valores de la expresión: **+**, **-**, **\***, **/**, **%** (módulo, el resto de la división entre los valores). Ejemplos:
 
     a = a + 3;
     b = a / 3;
     c = b % 3;
 
 ### Operadores
-
--   Operadores Booleanos: && (AND / Y), || (OR / O ), !(NOT / NO)   Representan las operaciones lógicas que podemos aplicar a las     condiciones
--   Operadores de acceso a punteros: *, & Los usaremos para acceder a memoria
--   Operadores de bits: &, |, ^, ~, <<, >> Permiten manipular los bits individuales de las variables representadas en [lenguaje binario](http://es.wikipedia.org/wiki/Binario)
--   Operadores compuestos:
--   Incremento/decremento de variables: ++, -- Incrementan/decrementan el valor de la variable
--   Asignación y operación: +=, -=, *=, /=, &=, |= Realizan la     operación indicada y luego la asignación del resultado a la variable
+- Operadores relacionales, que nos permiten comparar entre si distintos valores: **>=**, **>**, **<**, **<=**, **==** (operador igual, ojo con confundir con **=** que es una asignación) y **!=** (operador distinto).
+-   Operadores Booleanos: **&&** (AND / Y), **||** (OR / O ), **!** (NOT / NO)   Representan las operaciones lógicas que podemos usr entre las varias comparaciones en sentencias condiciones.
+-   Operadores de acceso a punteros: *, & Los usaremos para acceder a memoria.
+-   Operadores de bits: **&**, **|**, **^**, **~**, **<<**, **>>** Permiten manipular los bits individuales de las variables representadas en [lenguaje binario](http://es.wikipedia.org/wiki/Binario).
+-   Incremento/decremento de variables: **++**, **--** Incrementan/decrementan el valor de la variable en una unidad.
+-   Asignación y operación: **+=**, **-=**, **\*=**, **/=**, **&=**, **|=** Realizan la operación indicada y luego la asignación del resultado a la variable.
 
 ### Array
 
 
 Un array es una agrupación de variables con un tipo y un tamaño determinados. Podemos acceder a cada elemento individualmente por medio del operador [], indicando la posición. Empiezan en la posición 0 y la última será la que indica su longitud menos 1.
-
 
 
     int miArray[5]; //Declaramos un array de 5 elementos enteros
@@ -118,7 +116,7 @@ Conviene usarlas para evitar confusiones.
 
 Una función es un conjunto de instrucciones agrupadas para un nombre, al que le pasaremos unos argumentos y devolverá un valor.
 
-¿Por qué usamos funciones?
+¿Por qué usamos funciones?:
 
 -   Cuando repetimos un fragmento de código
 -   Ahorro de espacio
@@ -138,7 +136,7 @@ Cuando vamos a reutilizar varias veces un código puede ser buena idea que creem
     #include <Serial.h>
 
 
-Existen muchas librerías cuyo uso iremos viendo a lo largo del curso
+Existen muchas librerías cuyo uso iremos viendo a lo largo del curso.
 
 ### Estructuras de control
 
@@ -151,7 +149,7 @@ Permiten decidir si se ejecutan o no, unas sentencias en función de que se cump
 
 ### Sentencia if
 
-Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple
+Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple:
 
     if (condicion){
     // código si se cumple
@@ -160,7 +158,7 @@ Ejecutaremos un código si se cumple la condición y otro distinto si no se cump
     // código si no se cumple
     }
 
-Ejemplo
+Ejemplo:
 
     if ((valorEntrada < 500) && (valorEntrada > 100)){
         // código A
@@ -171,7 +169,7 @@ Ejemplo
 
 ### Sentencia switch
 
-Dependiendo del valor de una variable ejecutaremos un código distinto
+Dependiendo del valor de una variable ejecutaremos un código distinto:
 
     switch (var) {
         case 1:
@@ -192,7 +190,7 @@ Realizamos un bucle siempre que queremos que se repita un determinado fragmento 
 
 Existen 3 tipos de bucles:
 
-### Bucle for
+#### Bucle for
 
 Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:
 
@@ -202,18 +200,18 @@ Es el más natural para usar cuando la iteración tiene un número claro de repe
     }
 
 
-por ejemplo
+por ejemplo:
 
 
     for (int i = 0 ; i < 20 ; i = i + 1) {
         //sentencia(s);
     }
 
-que se realizará 20 veces
+que se realizará 20 veces.
 
-### Bucle while
+#### Bucle while
 
-El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla
+El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla:
 
     while(expresion){
         // sentencia(s);
@@ -221,26 +219,25 @@ El bucle while ejecutará las sentencias de su bloque mientras que la condición
 
 Si la condición no se cumple inicialmente no se realizará ninguna iteración.
 
-### Bucle do
+#### Bucle do
 
-En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que al menos se ejecutará una vez la iteración
+En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que la iteración se ejecutará al menos una vez:
 
     do    {
     //sentencia(s)
     } while (condicion);
 
-### ¿Como salir de los bucles?
+#### ¿Como salir de los bucles?
 
-De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones
+De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones:
 
-* [break](http://Arduino.cc/en/Reference/Break) // sale del bucle
+* [break](http://Arduino.cc/en/Reference/Break) // sale del bucle.
 
-* [continue](http://Arduino.cc/en/Reference/Continue) // salta el paso actual del bucle
+* [continue](http://Arduino.cc/en/Reference/Continue) // salta la iteración actual pero sigue con el bucle.
 
-* [return](http://Arduino.cc/en/Reference/Return) // sale de la función
+* [return](http://Arduino.cc/en/Reference/Return) // sale de la función.
 
-* [goto](http://Arduino.cc/en/Reference/Goto) label //salta a la etiqueta *label*
-
+* [goto](http://Arduino.cc/en/Reference/Goto) label //salta a la etiqueta **label**.
 
 
         for(int i = 0 ; i < 10 ; i++){
@@ -256,35 +253,33 @@ De un bucle saldremos cuando no se verifique la condición, pero también podemo
 
 Para facilitar el trabajo con cadenas de caracteres, existe la clase [String](http://Arduino.cc/en/Reference/StringObject). Tiene (entre otros muchos) los siguientes métodos:
 
-* [compareTo](http://Arduino.cc/en/Reference/StringCompareTo)() //compara dos cadenas
+* [compareTo](http://Arduino.cc/en/Reference/StringCompareTo)() //compara dos cadenas.
 
-* [concat](http://Arduino.cc/en/Reference/StringConcat)() // concatena
+* [concat](http://Arduino.cc/en/Reference/StringConcat)() // concatena.
 
 * [endsWith](http://Arduino.cc/en/Reference/StringEndsWith)() // comprueba si termina por...
 
-* [equals](http://Arduino.cc/en/Reference/StringEquals)() //comprueba si son iguales
+* [equals](http://Arduino.cc/en/Reference/StringEquals)() //comprueba si son iguales.
 
-* [equalsIgnoreCase](http://Arduino.cc/en/Reference/StringEqualsIgnoreCase)() // comprueba igualdad ignorando mayúsculas y minúsculas
+* [equalsIgnoreCase](http://Arduino.cc/en/Reference/StringEqualsIgnoreCase)() // comprueba igualdad ignorando mayúsculas y minúsculas.
 
-* [indexOf](http://Arduino.cc/en/Reference/StringIndexOf)() // devuelve la primera posición del carácter que le pasamos
+* [indexOf](http://Arduino.cc/en/Reference/StringIndexOf)() // devuelve la primera posición del carácter que le pasamos.
 
-* [lastIndexOf](http://Arduino.cc/en/Reference/StringLastIndexOf)() // devuelve la última posición del carácter que le pasamos
+* [lastIndexOf](http://Arduino.cc/en/Reference/StringLastIndexOf)() // devuelve la última posición del carácter que le pasamos.
 
-* [length](http://Arduino.cc/en/Reference/StringLength)() // longitud de la cadena
+* [length](http://Arduino.cc/en/Reference/StringLength)() // longitud de la cadena.
 
-* [replace](http://Arduino.cc/en/Reference/StringReplace)() // reemplaza
+* [replace](http://Arduino.cc/en/Reference/StringReplace)() // reemplaza.
 
-* [startsWith](http://Arduino.cc/en/Reference/StringStartsWith)() // comprueba si empieza por
+* [startsWith](http://Arduino.cc/en/Reference/StringStartsWith)() // comprueba si empieza por ...
 
-* [substring](http://Arduino.cc/en/Reference/StringSubstring)() // devuelve un fragmento de la cadena original
+* [substring](http://Arduino.cc/en/Reference/StringSubstring)() // devuelve un fragmento de la cadena original.
 
-* [toLowerCase](http://Arduino.cc/en/Reference/StringToLowerCase)() // convierte a minúsculas
+* [toLowerCase](http://Arduino.cc/en/Reference/StringToLowerCase)() // convierte a minúsculas.
 
-* [toUpperCase](http://Arduino.cc/en/Reference/StringToUpperCase)() // convierte a mayúsculas
+* [toUpperCase](http://Arduino.cc/en/Reference/StringToUpperCase)() // convierte a mayúsculas.
 
-* [trim](http://Arduino.cc/en/Reference/StringTrim)() // elimina los espacios iniciales y finales
-
-
+* [trim](http://Arduino.cc/en/Reference/StringTrim)() // elimina los espacios iniciales y finales.
 
 ### Conversiones de tipos
 
@@ -330,9 +325,9 @@ Aunque el procesador de Arduino no excesivamente potente en lo que a cálculo ma
 
 ### Números aleatorios
 
-* [randomSeed](http://Arduino.cc/en/Reference/RandomSeed)(a) // inicializa los número aleatorios con a
+* [randomSeed](http://Arduino.cc/en/Reference/RandomSeed)(a) // inicializa los número aleatorios con la semilla **a**.
 
-* [random](http://Arduino.cc/en/Reference/Random)() // devuelve un número aleatorio
+* [random](http://Arduino.cc/en/Reference/Random)() // devuelve un número aleatorio.
 
 Obviamente, dada la poca capacidad de cálculo de Arduino, el usar estas funciones matemáticas complejas es muy costoso computacionalmente, por lo que se debería de evitar u optimizar su uso.
 
@@ -359,3 +354,10 @@ La mayoría de las librerías de Arduino están formadas por objetos.
 -   [Arduino programing notebook (inglés)](https://archive.org/download/arduino_notebook/arduino_notebook.pdf)
 -   [Guía de programación de Arduino  (español)](https://openlibra.com/es/book/arduino-programming-notebook-ed-espanola)
 
+## Funciones con ArduinoBlocks
+
+En ArduinoBlocks podemos crear funciones. Veamos [un ejemplo](http://www.arduinoblocks.com/web/project/285685) que nos permite crear un bloque para usar el led RGB de manera más sencilla
+
+![Ejemplo de Función](./images/EjemploFuncion.png)
+
+En [este vídeo](https://www.youtube.com/watch?v=bopLffgIItM) explicamos el proceso de creación de la función
