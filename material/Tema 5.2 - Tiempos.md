@@ -6,7 +6,9 @@ Vamos a repasar las funciones relacionadas con la medida del tiempo
 
   delay(espera); // espera expresado en milisegundos
 
-  delayMicroseconds(espera); // espera expresado en microsegundos 						// El número máximo que soporta es 16383. Si se necesita esperar más tiempo usamos delay
+  delayMicroseconds(espera); // espera expresado en microsegundos
+  
+  El número máximo que soporta **delayMicroseconds** es 16383, esto es debido a que la función está optimizada para conseguir precisión en el tiempo y no tiene sentido usarla para duraciones mayores, para eso está **delay**. 
 
 **Ventaja**: son muy fáciles de usar
 
@@ -68,9 +70,15 @@ El código quedaría así:
     }
 
 
+ArduinoBlocks dispone de un bloque que nos permite hacer fácilmente. Se llama **Ejecutar cada ...**. En [este ejemplo](http://www.arduinoblocks.com/web/project/285661) hacemos que cada 5 segundos se lea el valor de un sensor de temperatura DHT11 conectado al pin 2 y cada 3 segundos se invierte el estado del led del pin 13
+
+![Ejecutar cada ...](./images/EjecutarCada.png)
+
+Si vemos el código que se genera veremos que hace algo muy parecido a lo que hemos comentado.
+
 ### Librería Time
 
-Para usar el formato de horas y minutos podemos usar la  librería Time que te permitirá  usar arduino como un reloj (con poca precisión eso sí)
+La librería Time nos permite trabajar cómodamente con tiempos en formato de horas, minutos y fechas. Así podremos usar arduino como un reloj (con poca precisión eso sí)
 
 Un ejemplo sencillo de su uso sería:
 
@@ -97,3 +105,5 @@ Un ejemplo sencillo de su uso sería:
           Serial.println(second(t));
           delay(1000);
       }
+
+Si dejas este ejemplo ejecutándose durante un par de días verás que el reloj se desajusta en varios segundos.... Más adelante veremos cómo podemos usar un RTC (reloj de tiempo real) para conseguir una precisión adecuada.
