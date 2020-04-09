@@ -25,8 +25,6 @@ Eliminar vídeos de bitbloq repetidos y completar con las versiones C y ArduinoB
 
 ## Tema 5
 
-Función/bloque para led RGB con 3 parámetros
-
 * Clases y objetos
 * Cómo hacer librerías
 * Proyectos con varios ficheros
