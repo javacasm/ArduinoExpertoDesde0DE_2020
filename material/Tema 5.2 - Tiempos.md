@@ -1,8 +1,8 @@
 ## Funciones relacionadas con el tiempo
 
-### Esperas ...
+### Esperas 
 
-Vamos a repasar las funciones relacionadas con la medida del tiempo
+Vamos a repasar las funciones relacionadas con la medida del tiempo:
 
   delay(espera); // espera expresado en milisegundos
 
@@ -10,17 +10,19 @@ Vamos a repasar las funciones relacionadas con la medida del tiempo
   
   El número máximo que soporta **delayMicroseconds** es 16383, esto es debido a que la función está optimizada para conseguir precisión en el tiempo y no tiene sentido usarla para duraciones mayores, para eso está **delay**. 
 
-**Ventaja**: son muy fáciles de usar
+**Ventaja**: son muy fáciles de usar.
 
-**Inconveniente**: no nos permiten hacer nada mientras esperamos
+**Inconveniente**: no nos permiten hacer nada mientras esperamos.
 
-Por esto vamos a aprender a medir el tiempo y así no tener que esperar
+Por esto vamos a aprender a medir el tiempo y así no tener que esperar.
 
 ### Medida del tiempo
 
-Arduino nos permite medir el paso del tiempo con su reloj interno, pero no dispone de un reloj "real" que nos permita saber la fecha y hora con precisión
+Arduino nos permite medir el paso del tiempo con su reloj interno, pero no dispone de un reloj "real" que nos permita saber la fecha y hora con precisión:
 
-  long millis() : número de milisegundos desde que se encendió la placa. Al usar un tipo long, su valor vuelve a  cero cada 50 días aproximadamente.
+  long millis() : número de milisegundos desde que se encendió la placa. 
+
+Al usar un tipo long, su valor vuelve a  cero cada 50 días aproximadamente.
 
 
 Lo usaremos así:
@@ -33,15 +35,15 @@ Lo usaremos así:
 
 ### Parpadeo sin Esperas
 
-Vamos a usar lo visto para hacer un programa que  produzca un parpadeo pero sin usar delay y por tanto si hacer esperas (y mientras puedes por ejemplo vigilar el estado de un botón)
+Vamos a usar lo visto para hacer un programa que  produzca un parpadeo pero sin usar delay y por tanto si hacer esperas (y mientras puedes por ejemplo vigilar el estado de un botón).
 
 El algoritmo será:
 
-* Anoto el tiempo actual en que enciendo el led
-* Hago las otras tareas
-* Vuelvo a medir el tiempo y comparo con el anterior
-* Si ha pasado más del intervalo apago el led y anoto el tiempo actual
-* Si no ha pasado sigo haciendo otras tareas
+* Anoto el tiempo actual en que enciendo el led.
+* Hago las otras tareas.
+* Vuelvo a medir el tiempo y comparo con el anterior.
+* Si ha pasado más del intervalo apago el led y anoto el tiempo actual.
+* Si no ha pasado sigo haciendo otras tareas.
 
 El código quedaría así:
 
@@ -70,7 +72,7 @@ El código quedaría así:
     }
 
 
-ArduinoBlocks dispone de un bloque que nos permite hacer fácilmente. Se llama **Ejecutar cada ...**. En [este ejemplo](http://www.arduinoblocks.com/web/project/285661) hacemos que cada 5 segundos se lea el valor de un sensor de temperatura DHT11 conectado al pin 2 y cada 3 segundos se invierte el estado del led del pin 13
+ArduinoBlocks dispone de un bloque que nos permite hacer fácilmente. Se llama **Ejecutar cada ...**. En [este ejemplo](http://www.arduinoblocks.com/web/project/285661) hacemos que cada 5 segundos se lea el valor de un sensor de temperatura DHT11 conectado al pin 2 y cada 3 segundos se invierte el estado del led del pin 13.
 
 ![Ejecutar cada ...](./images/EjecutarCada.png)
 
@@ -78,7 +80,7 @@ Si vemos el código que se genera veremos que hace algo muy parecido a lo que he
 
 ### Librería Time
 
-La librería Time nos permite trabajar cómodamente con tiempos en formato de horas, minutos y fechas. Así podremos usar arduino como un reloj (con poca precisión eso sí)
+La librería Time nos permite trabajar cómodamente con tiempos en formato de horas, minutos y fechas. Así podremos usar arduino como un reloj (con poca precisión eso sí).
 
 Un ejemplo sencillo de su uso sería:
 
