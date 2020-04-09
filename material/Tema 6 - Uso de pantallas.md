@@ -2,21 +2,21 @@
 
 Muchas son las posibilidades de visualización de datos. En este capítulo vamos a hablar de 2 básicamente: LCD y LED. Son tecnologías bastante conocidas, cada una con sus ventajas e inconvenientes.
 
-En el siguiente [vídeo](https://www.youtube.com/embed/MciTbzmYwsc) vamos a ver algunas de las posibilidades de visualización que existen para Arduino
+En el siguiente [vídeo](https://www.youtube.com/embed/MciTbzmYwsc) vamos a ver algunas de las posibilidades de visualización que existen para Arduino.
 
 ## LCD
 
 Un LCD es la típica pantalla de las máquinas de vending, seguro que lo has visto miles de veces.
 
-Se conecta con Arduino de la siguiente forma
+Se conecta con Arduino de la siguiente forma:
 
 ![LCD](./images/LCD.png)
 
 El potenciómetro nos sirve para controlar el contraste.
 
-Para programarlo se usará la librería LiquidCrystal que viene instala por defecto en Arduino
+Para programarlo se usará la librería LiquidCrystal que viene instala por defecto en Arduino.
 
-El código es del ejemplo "Hello world" de la librería es muy sencillo
+El código es del ejemplo "Hello world" de la librería es muy sencillo:
 
 ![LCD code](./images/LCD_code.png)
 
@@ -28,22 +28,22 @@ Como ventaja tiene que su consumo es realmente bajo, por contra requiere de much
 
 ### LCD I2C
 
-Para ahorrar pines podemos usar LCD con una placa externa de tipo I2C
+Para ahorrar pines podemos usar LCD con una placa externa de tipo I2C:
 
-[LCD I2C - LiquidCrystal-I2C](https://www.youtube.com/embed/nIJpE4oVX1Y)
+[Vídeo sobre LCD I2C - LiquidCrystal-I2C](https://www.youtube.com/embed/nIJpE4oVX1Y)
 
 Para ello instalaremos una librería llamada "LiquidCrytal I2C"
-Desde el menú Programa -> Incluir librerías -> Gestor de Librerias
+Desde el menú **Programa** -> **Incluir librerías** -> **Gestor de Librerias**
 
 ![Gestor de librerías](./images/GestorLibrerias.png)
 
-En el buscador ponemos "LiquidCrystal I2C" e instalamos la librería que queremos usar. En este caso os recomiendo la de Frank Brabander que aparece como "Installed" en la imagen
+En el buscador ponemos "LiquidCrystal I2C" e instalamos la librería que queremos usar. En este caso os recomiendo la de Frank Brabander que aparece como "Installed" en la imagen.
 
 El uso de la librería I2C es el mismo, solo cambiando el include.
 
 Para empezar a usarla, abrimos el ejemplo de la libreria "LiquidCrystal I2C" HelloWorld , cambiamos la direccion del LCD ( Puede ser 0x27 o 0x30 o 0x3F) (Podemos buscar el valor usando "[I2C Scanner](https://github.com/javacasm/ArduinoAvanzadoPriego/blob/master/codigo/i2c_scanner/i2c_scanner.ino)"), conectamos el LCD y ajustamos el contraste con el potenciómetro de la placa.
 
-Vamos a ver ahora un ejemplo más complejo
+Vamos a ver ahora un ejemplo más complejo:
 
     #include <Wire.h>
     #include <LiquidCrystal_I2C.h>
@@ -52,7 +52,7 @@ Vamos a ver ahora un ejemplo más complejo
     uint8_t heart[8] = {0x0,0xa,0x1f,0x1f,0xe,0x4,0x0};
     uint8_t bell[8]  = {0x4,0xe,0xe,0xe,0x1f,0x0,0x4};
 
-    LiquidCrystal_I2C lcd(0x3F,16,2);  //
+    LiquidCrystal_I2C lcd(0x3F, 16, 2);  //
 
     void setup() {
       lcd.init();
@@ -80,7 +80,7 @@ Vamos a ver ahora un ejemplo más complejo
 
 ### Más sobre LCDs
 
-Existen muchas posibilidades de ampliar el uso de los LCD, como por ejemplo utilizando  gráficos de barras con  la librería lcdBarGraph  http://playground.arduino.cc/Code/LcdBarGraph.  Lo que hace es usar caracteres definidos por el usuario con pequeños rectángulos de tamaños progresivos y cuando dibuja una barra, muestra todas los cuadrados enteros y el resto con el carácter correspondiente. Aunque esta librería funciona con la básica LiquidCrystal se puede implementar sin problema en cualquier versión de liquidcrystal.
+Existen muchas posibilidades de ampliar el uso de los LCD, como por ejemplo utilizando  gráficos de barras con  la [librería lcdBarGraph](http://playground.arduino.cc/Code/LcdBarGraph).  Lo que hace es usar caracteres definidos por el usuario con pequeños rectángulos de tamaños progresivos y cuando dibuja una barra, muestra todas los cuadrados enteros y el resto con el carácter correspondiente. Aunque esta librería funciona con la básica LiquidCrystal se puede implementar sin problema en cualquier versión de liquidcrystal.
 
 Algo en lo que también se puede mejorar el aspecto al trabajar en Menús, dentro de nuestra aplicación.
 
@@ -94,7 +94,7 @@ Veamos las diferentes opciones:
 
 Otra forma de visualización bastante utilizada son las matrices de Leds. En ellas un gran número de leds se colocan normalmente en forma de matriz y realizamos imágenes controlando sus encendidos. 
 
-Veamos en este [vídeo](https://www.youtube.com/embed/EkwyEPTeuI8) el funcionamiento de algunas de ellas y ejemplos de uso y el código asociado.
+Veamos en [este vídeo](https://www.youtube.com/embed/EkwyEPTeuI8) el funcionamiento de algunas de ellas y ejemplos de uso y el código asociado.
 
 La mayoría de estos programas que hemos visto funcionan con lo que se suele llamar arquitectura framebuffer. En ella existen dos variables de tipo matriz que contienen una, la imagen dibujada en un momento dado y la otra la siguiente imagen que queremos dibujar. Cuando esta segunda esté terminada, las intercambiamos  pasando a dibujar la actual. De esta manera minimizamos el tiempo de repintado, evitando parpadeos indeseados.
 
@@ -113,7 +113,7 @@ Existen determinados chips que nos pueden facilitar el utilizar estas matrices, 
 
 Un ejemplo sencillo de este hardware específico sería usar **ShiftRegisters** (Registro de desplazamiento) que nos permiten encadenando varios de ellos controlar un alto número de leds con pocas salidas.
 
-![Pinout_595,png](./images/Pinout_595.png)
+![Pinout 595](./images/Pinout_595.png)
 
 * PINS 1-7, 15 Q0 " Q7 Pines de salidas
 * PIN 8 GND Ground, Vss
