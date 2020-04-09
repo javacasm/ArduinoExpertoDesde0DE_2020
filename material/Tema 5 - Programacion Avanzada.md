@@ -4,4 +4,4 @@ En este tema vamos a empezar con un repaso sobre la programación con Arduino (y
 
 A continuación veremos como medir tiempos lo que nos permitirá hacer programas sin esperas (delay)
 
-Veremos el concepto de interrupción y cómo utilizar las interrupciones de tipo software (por tiempo). Terminaremos viendo cómo utilizar los puertos de arduino de un modo avanzado (Registros).
+Veremos el concepto de interrupción y cómo utilizar las interrupciones de tipo software (por tiempo). Terminaremos viendo cómo utilizar los puertos de Arduino de un modo avanzado (Registros).
