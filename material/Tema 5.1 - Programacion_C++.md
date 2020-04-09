@@ -46,9 +46,9 @@ El tipo de la variable será definido cuando declaramos la variable por primera 
 
 Las variables tiene un ámbito (scope en inglés) que define la zona del código donde existen. Fuera de esta zona no podemos acceder a su valor.
 
-    int a=10;
+    int a = 10;
     void prueba()  {
-        float b=10.2*a;
+        float b = 10.2 * a;
     }
 
 En este ejemplo la variable _b_ sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. En cambio _a_, al estar definida fuera, también puede ser usada dentro.
@@ -63,8 +63,8 @@ Veamos algunos de los tipos de variables existentes. Cada tipo determinado, tien
     byte: 8bits 0 a 255
     int: 16bits -32768 a 32767
     word: 16bits 0 a 65535
-    long: 32bits -2x10\^6 a 2x10\^6
-    float: guarda decimales -3.4x10\^34 a 3.4x10\^34
+    long: 32bits -2x10^6 a 2x10^6
+    float: guarda decimales -3.4x10^34 a 3.4x10^34
 
 **¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!!**
 
@@ -77,22 +77,22 @@ Cuando una variable llega a su límite, tanto superior, como inferior se produce
 Representa la operación que se realizará entre los valores de la expresión:
 
 
-    +, -, \*, /, % (módulo, el resto de la división entre los valores)
+    +, -, *, /, % (módulo, el resto de la división entre los valores)
 
 Ejemplos:
 
-    a=a+3;
-    b=a/3;
-    c=b%3;
+    a = a + 3;
+    b = a / 3;
+    c = b % 3;
 
 ### Operadores
 
 -   Operadores Booleanos: && (AND / Y), || (OR / O ), !(NOT / NO)   Representan las operaciones lógicas que podemos aplicar a las     condiciones
--   Operadores de acceso a punteros: \*, & Los usaremos para acceder a memoria
--   Operadores de bits: &, |, \^, \~, \<\<, \>\> Permiten manipular los bits individuales de las variables representadas en [lenguaje     binario](http://es.wikipedia.org/wiki/Binario)
+-   Operadores de acceso a punteros: *, & Los usaremos para acceder a memoria
+-   Operadores de bits: &, |, ^, ~, <<, >> Permiten manipular los bits individuales de las variables representadas en [lenguaje binario](http://es.wikipedia.org/wiki/Binario)
 -   Operadores compuestos:
 -   Incremento/decremento de variables: ++, -- Incrementan/decrementan el valor de la variable
--   Asignación y operación: +=, -=, \*=, /=, &=, |= Realizan la     operación indicada y luego la asignación del resultado a la variable
+-   Asignación y operación: +=, -=, *=, /=, &=, |= Realizan la     operación indicada y luego la asignación del resultado a la variable
 
 ### Array
 
@@ -102,7 +102,7 @@ Un array es una agrupación de variables con un tipo y un tamaño determinados. 
 
 
     int miArray[5]; //Declaramos un array de 5 elementos enteros
-    int miOtroArray[]={1,23,2}; // Declaramos un array de 3 elementos con sus valores asignados
+    int miOtroArray[] = { 1, 23, 2}; // Declaramos un array de 3 elementos con sus valores asignados
 
 ### Constantes
 
@@ -144,8 +144,8 @@ Existen muchas librerías cuyo uso iremos viendo a lo largo del curso
 
 Son aquellas estructuras que nos permiten modificar el flujo de ejecución de nuestro programa, es decir el orden en el que se ejecutan las sentencias.
 
-Sentencias condicionales
-------------------------
+## Sentencias condicionales
+
 
 Permiten decidir si se ejecutan o no, unas sentencias en función de que se cumplan determinadas condiciones
 
@@ -153,7 +153,7 @@ Permiten decidir si se ejecutan o no, unas sentencias en función de que se cump
 
 Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple
 
-    if (condición){
+    if (condicion){
     // código si se cumple
     }
     else{
@@ -162,7 +162,7 @@ Ejecutaremos un código si se cumple la condición y otro distinto si no se cump
 
 Ejemplo
 
-    if ((valorEntrada < 500) && (valorEntrada>100)){
+    if ((valorEntrada < 500) && (valorEntrada > 100)){
         // código A
     }
     else{
@@ -205,7 +205,7 @@ Es el más natural para usar cuando la iteración tiene un número claro de repe
 por ejemplo
 
 
-    for (int i=0;i\<20;i=i+1) {
+    for (int i = 0 ; i < 20 ; i = i + 1) {
         //sentencia(s);
     }
 
@@ -243,8 +243,8 @@ De un bucle saldremos cuando no se verifique la condición, pero también podemo
 
 
 
-        for(int i=0;i\<10;i++){
-            if (bsalto\>0)
+        for(int i = 0 ; i < 10 ; i++){
+            if (bsalto > 0)
                 continue; // Se salta el código del resto de la iteración
             else
                 break; //sale del bucle
@@ -290,7 +290,7 @@ Para facilitar el trabajo con cadenas de caracteres, existe la clase [String](ht
 
 Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en Arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:
 
-    char() // Convierte a un carácterer
+    char() // Convierte a un carácter
     byte() // Convierte a un byte
     int() // Convierte a un int
     word() // Convierte a un word
@@ -300,8 +300,8 @@ Muchas veces es necesario convertir valores de variables de tipos diferentes. Pa
 
 Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.
 
-    float a=2.4;
-    int b=int(a);
+    float a = 2.4;
+    int b = int(a);
 
 
 ### Funciones matemáticas
@@ -358,4 +358,4 @@ La mayoría de las librerías de Arduino están formadas por objetos.
 -   [Arduino](http://Arduino.cc/)
 -   [Arduino programing notebook (inglés)](https://archive.org/download/arduino_notebook/arduino_notebook.pdf)
 -   [Guía de programación de Arduino  (español)](https://openlibra.com/es/book/arduino-programming-notebook-ed-espanola)
--   [Freeduino page](http://www.freeduino.org/)
+
