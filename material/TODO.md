@@ -22,7 +22,6 @@ Eliminar vídeos de bitbloq repetidos y completar con las versiones C y ArduinoB
 
 ## Tema 4
 
-algo se ejecute periódicamente (por ejemplo podíamos hacer que un led parpadeo cada 3 segundos mientras leemos los valores de un sensor
 
 ## Tema 5
 
