@@ -4,24 +4,24 @@ Es importante saber cómo es el proceso de compilación de nuestro código para 
 
 ### Fases del proceso de compilación
 
-Se realiza en 3 fases y es muy importante el orden
+Se realiza en 3 fases y es muy importante el orden:
 
 #### Preprocesado
-* Includes: se includen todos los ficheros (de manera recursiva, el include  que include un fichero...)
-* Defines: se sustituyen las etiquetas por su valor
-* Directivas de preprocesado: se validan y se decide qué código se usa y cual no
+* Includes: se includen todos los ficheros (de manera recursiva, el include  que include un fichero...).
+* Defines: se sustituyen las etiquetas por su valor.
+* Directivas de preprocesado: se validan y se decide qué código se usa y cuál no.
 
 ### Compilado
 
 * Se valida la sintaxis, se revisan la declaración de todas las variables, se validan los tipos, expresiones, etc...
-* Se genera un código objeto
+* Se genera un código objeto.
 
 ### Enlazado ("Linkado")
-* Se juntan todos los códigos objetos (de los diferentes ficheros) y de las librerías usadas
-* Se verifica que no falten símbolos
-* Se genera el ejecutable
+* Se juntan todos los códigos objetos (de los diferentes ficheros) y de las librerías usadas.
+* Se verifica que no falten símbolos.
+* Se genera el ejecutable.
 
-En este vídeo explicamos el proceso con un [Ejemplo](./Preprocesador/Preprocesador.ino)
+En este vídeo explicamos el proceso con un [ejemplo](./Preprocesador/Preprocesador.ino)
 
 
     #define verde 7
@@ -62,6 +62,6 @@ En este vídeo explicamos el proceso con un [Ejemplo](./Preprocesador/Preprocesa
     }
 
 
-[Vídeo](https://youtu.be/ODG07Y9SIHc)
+En este [vídeo](https://youtu.be/ODG07Y9SIHc) puedes ver el proceso explicado.
 
 ![1](./images/ProcesoCompilacion.png)
