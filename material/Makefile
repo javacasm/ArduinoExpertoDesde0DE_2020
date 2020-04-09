@@ -74,7 +74,7 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					"Tema 5.2 - Tiempos.md" \
 					"Tema 5.3 - ProcesoCompilacion.md" \
 					"Tema 5.4 - Interrupciones.md" \
-					T5_avanzadoPuertos.md
+					"Tema 5.5 - UsoAvanzadoPuertos.md"
 
 6:
 	pandoc --latex-engine=xelatex       \
