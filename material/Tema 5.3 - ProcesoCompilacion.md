@@ -7,7 +7,7 @@ Es importante saber cómo es el proceso de compilación de nuestro código para 
 Se realiza en 3 fases y es muy importante el orden:
 
 #### Preprocesado
-* Includes: se includen todos los ficheros (de manera recursiva, el include  que include un fichero...).
+* Includes: se incluyen todos los ficheros (de manera recursiva, el include  que include un fichero...).
 * Defines: se sustituyen las etiquetas por su valor.
 * Directivas de preprocesado: se validan y se decide qué código se usa y cuál no.
 
