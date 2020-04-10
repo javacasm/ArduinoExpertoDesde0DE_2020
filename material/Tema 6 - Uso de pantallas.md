@@ -1,14 +1,14 @@
 ## Tipos de pantalals
 
-Muchas son las posibilidades de visualización de datos. En este capítulo vamos a hablar de 2 básicamente: LCD y LED. Son tecnologías bastante conocidas, cada una con sus ventajas e inconvenientes.
+Son muchas las posibilidades que tenemos para visualizar nuestros datos. En este capítulo vamos a hablar de 2 básicamente: LCD y LED. Son tecnologías bastante conocidas, cada una con sus ventajas e inconvenientes.
 
-En el siguiente [vídeo](https://www.youtube.com/embed/MciTbzmYwsc) vamos a ver algunas de las posibilidades de visualización que existen para Arduino.
+En el [siguiente vídeo](https://www.youtube.com/embed/MciTbzmYwsc) vamos a ver algunas de las posibilidades de visualización que existen para Arduino.
 
 ## LCD
 
 Un LCD es la típica pantalla de las máquinas de vending, seguro que lo has visto miles de veces.
 
-Se conecta con Arduino de la siguiente forma:
+Podemos conectarla a Arduino de la siguiente forma:
 
 ![LCD](./images/LCD.png)
 
@@ -22,13 +22,13 @@ El código es del ejemplo "Hello world" de la librería es muy sencillo:
 
 Vemos que la instrucción para mostrar algo (lcd.print) se parece mucho a la instrucción para enviar datos por el puerto serie (Serial.print),  y no es casualidad.
 
-Como ventaja tiene que su consumo es realmente bajo, por contra requiere de muchos pines de conexión, podemos rebajar a 4 bit y 4 de control. Para solucionar este problema podemos usar I2C o SPI o un 595. Por eso existen muchas versiones de la clase LiquidCrystal, incluida en la librería del mismo nombre. La mayoría de estas clases implementan casi todos los métodos, definiendo así una jerarquía de clases. 
+La tecnología LCD tiene como ventaja que su consumo es realmente bajo, por contra requiere de muchos pines de conexión, podemos rebajar a 4 bit de datos y 4 de control. Para solucionar este problema podemos usar otras formas de comunicación I2C o SPI o un 595. Por eso existen muchas versiones de la clase LiquidCrystal, incluida en la librería del mismo nombre. La mayoría de estas clases implementan casi todos los métodos, definiendo así una jerarquía de clases. 
 
 [Vídeo sobre LCD](https://www.youtube.com/embed/c4qsdo6XrnE)
 
 ### LCD I2C
 
-Para ahorrar pines podemos usar LCD con una placa externa de tipo I2C:
+Vamos a ver como ahorrar pines usando LCD con una placa externa de tipo I2C:
 
 [Vídeo sobre LCD I2C - LiquidCrystal-I2C](https://www.youtube.com/embed/nIJpE4oVX1Y)
 
@@ -41,7 +41,7 @@ En el buscador ponemos "LiquidCrystal I2C" e instalamos la librería que queremo
 
 El uso de la librería I2C es el mismo, solo cambiando el include.
 
-Para empezar a usarla, abrimos el ejemplo de la libreria "LiquidCrystal I2C" HelloWorld , cambiamos la direccion del LCD ( Puede ser 0x27 o 0x30 o 0x3F) (Podemos buscar el valor usando "[I2C Scanner](https://github.com/javacasm/ArduinoAvanzadoPriego/blob/master/codigo/i2c_scanner/i2c_scanner.ino)"), conectamos el LCD y ajustamos el contraste con el potenciómetro de la placa.
+Para empezar a usarla, abrimos el ejemplo de la libreria "LiquidCrystal I2C" HelloWorld , cambiamos la direccion del LCD (Puede ser 0x27 o 0x30 o 0x3F) (Podemos buscar el valor usando "[I2C Scanner](https://github.com/javacasm/ArduinoAvanzadoPriego/blob/master/codigo/i2c_scanner/i2c_scanner.ino)"), conectamos el LCD y ajustamos el contraste con el potenciómetro de la placa.
 
 Vamos a ver ahora un ejemplo más complejo:
 
