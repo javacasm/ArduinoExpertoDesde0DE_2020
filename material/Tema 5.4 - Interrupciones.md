@@ -11,7 +11,7 @@ Para ellos crearemos una función que se encargará de realizar el procesamiento
     }
 
 
-El código de estas funciones debe ser lo más breve posible ya que mientras el se procesa una interrupción no se atienden otras tareas que el micro debe hacer (como controlar las señales pwm, de servos, medir el tiempo, etc) Por tanto dentro del código de estas funciones está desaconsejado usar métodos como delay y los relacionados con el envío de datos vía Serial.
+El código de estas funciones debe ser lo más breve posible ya que mientras se procesa una interrupción no se atienden otras tareas que el micro debe hacer (como controlar las señales pwm, de servos, medir el tiempo, etc) Por tanto dentro del código de estas funciones está desaconsejado usar métodos como delay y los relacionados con el envío de datos vía Serial.
 
 Estos eventos pueden estar originados por el hardware (cambios en el estado de algún pin) o por un temporizador (parecido a una alarma) que llamaremos de tipo Software.
 
