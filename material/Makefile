@@ -13,7 +13,7 @@ S5="Tema 5 - Programacion Avanzada.md"
 F5="Tema 5 - Programación Avanzada.docx"
 S6="Tema 6 - Uso de pantallas.md"
 F6="Tema 6 - Uso de pantallas.docx"
-S7="Tema 7 - Lectura de sensores.md"
+S7="Tema 7.2 - Lectura de sensores.md"
 F7="Tema 7 - Lectura de sensores.docx"
 F8="Tema 8 - Ampliando Arduino.docx"
 S8="Tema 8 - Expandiendo Arduino.md"
@@ -92,7 +92,7 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					-o $(F7) \
 					Cabecera.md           \
 					Cabecera_latex.md \
-					T7_electronica.md \
+					"Tema 7.1 - Electronica.md" \
 					$(S7)
 
 8:
