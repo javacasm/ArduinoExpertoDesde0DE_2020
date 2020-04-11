@@ -11,7 +11,7 @@ S4="Tema 4 - Controlando el mundo físico con Arduino.md"
 F4="Tema 4 - Controlando el mundo físico con Arduino.docx"
 S5="Tema 5 - Programacion Avanzada.md"
 F5="Tema 5 - Programación Avanzada.docx"
-S6="Tema 6 - Uso de pantallas.md"
+S6="Tema 6.1 - Uso de pantallas.md"
 F6="Tema 6 - Uso de pantallas.docx"
 S7="Tema 7.2 - Lectura de sensores.md"
 F7="Tema 7 - Lectura de sensores.docx"
@@ -83,7 +83,8 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					-o $(F6) \
 					Cabecera.md           \
 					Cabecera_latex.md \
-					$(S6)
+					$(S6) \
+					"Tema 6.2 - Proyectos sencillos con pantallas.md"
 
 7:
 	pandoc --latex-engine=xelatex       \
