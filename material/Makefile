@@ -16,7 +16,7 @@ F6="Tema 6 - Uso de pantallas.docx"
 S7="Tema 7.2 - Lectura de sensores.md"
 F7="Tema 7 - Lectura de sensores.docx"
 F8="Tema 8 - Ampliando Arduino.docx"
-S8="Tema 8 - Expandiendo Arduino.md"
+S8="Tema 8.0 - Expandiendo Arduino.md"
 S9="Tema 9 - Control de potencia.md"
 F9="Tema 9 - Control de potencia y motores.docx"
 S10="Tema 10 - Comunicaciones.md"
@@ -104,9 +104,9 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera.md           \
 					Cabecera_latex.md \
 					$(S8) \
-					T8_ADC.md \
-					T8_DAC.md \
-					T8_Interrupciones_Hardware.md
+					"Tema 8.1 - ADC.md" \
+					"Tema 8.2 - DAC.md" \
+					"Tema 8.3 - Interrupciones Hardware.md"
 
 9:
 	pandoc --latex-engine=xelatex       \
