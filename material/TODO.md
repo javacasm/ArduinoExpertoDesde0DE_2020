@@ -29,15 +29,29 @@ Eliminar vídeos de bitbloq repetidos y completar con las versiones C y ArduinoB
 * Cómo hacer librerías
 * Proyectos con varios ficheros
 * Uso de la librería Time
-
+añadir chuletas https://duckduckgo.com/?q=arduino+cheat+sheet&t=lm&iax=images&ia=images
 ## Tema 6 
-Añadir display a todo
-Juntar 2 ejemplos de arduino
+ display MAX7119
+ nokia 5050
+ oled
+
+## Tema 8
+
+
+## Tema 9
+
 Añadir relés a todo sustituyendo a los leds 
+
 
 ## Tema motores
 
 Ejemplo cochecito
+control de motor con transistor
+
+cuando usar rele y cuando motores
+
+controlar tiras de leds con transistores
+matriz led con transistores
 
 # Tema python
 
