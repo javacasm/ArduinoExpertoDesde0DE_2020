@@ -40,19 +40,6 @@ añadir chuletas https://duckduckgo.com/?q=arduino+cheat+sheet&t=lm&iax=images&i
 
 ## Tema 9
 
-Añadir relés a todo sustituyendo a los leds 
-
-
-## Tema motores
-
-Ejemplo cochecito
-control de motor con transistor
-
-cuando usar rele y cuando motores
-
-controlar tiras de leds con transistores
-matriz led con transistores
-
 # Tema python
 
 Ejemplo qt del respirador en python
