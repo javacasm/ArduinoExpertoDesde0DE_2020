@@ -116,7 +116,7 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera.md           \
 					Cabecera_latex.md \
 					$(S9) \
-					T9_motores.md
+					"Tema 9.1 - Motores.md"
 
 10:
 	pandoc --latex-engine=xelatex       \
