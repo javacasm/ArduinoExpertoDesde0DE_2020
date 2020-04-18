@@ -3,7 +3,7 @@
 
 ![Funcionamiento del ADC](./images/ADC.png)
 
-Un ADC es un sistema electrónico que mide una magnitud analógica proporcionando un valor digital. Se utilizan para medir voltajes normalmente y es el sistema que se usan en las patillas de las entradas analógicas A0-A5 de Arduino UNO y en A0-A14 de Arduino Mega.
+Un ADC es un sistema electrónico que mide una magnitud analógica proporcionando un valor digital. Se utilizan para medir voltajes normalmente y es el sistema que se usan en las patillas de las entradas analógicas A0 - A5 de Arduino UNO y en A0 - A14 de Arduino Mega.
 
 Puesto que algunos formatos del microcontrolador ATMega328 de Arduino tienen 8 entradas analógicas, hay placas compatibles de Arduino tiene 2 entradas analógicas extras, la A6 y la A8.
 
