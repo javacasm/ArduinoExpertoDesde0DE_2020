@@ -49,7 +49,7 @@ Vamos a ver cómo usar un relé en corriente alterna como interruptor electróni
 
 # ¡¡ CUIDADO AL USAR VOLTAJES DOMÉSTICOS !!
 
-![Danger!!](./images/Dangers-of-electric-shock.jpg)
+[¡¡Danger!!](./images/Dangers-of-electric-shock.jpg)
 
 Para activarlo basta con usar la instrucción **digitalWrite** sobre la patilla al que lo hemos conectado
 
@@ -119,5 +119,3 @@ Si queremos controlar un relé usando el componente (no un módulo que ya trae e
 ![Rele contrlado por Arduino](./images/ReleArduino.png)
 
 En el circuito aparece también un diodo que actúa como protección de nuestra placa Arduino.
-
-
