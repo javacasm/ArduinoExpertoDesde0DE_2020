@@ -14,11 +14,12 @@ Para controlarlos se suele usar un driver de tipo L298 o L293
 
 Veamos como se hace con el L298, capaz de controlar 2 motores, aunque nosotros en el esquema solo usamos 1
 
-![Motor_L298_bb.png](./images/Motor_L298_bb.png)
+![Control de motor con L298](./images/Motor_L298_bb.png)
 
 Para controlarlo usaremos los pines IN3 y IN4 con los controlaremos la dirección de giro del motor y el EnB que nos permitirá controlar la velocidad.
 
-Este sería el código
+Este sería el código:
+
 ```C++
     // Variables globales
 
@@ -87,8 +88,7 @@ Este sería el código
 
 En [este vídeo](https://www.youtube.com/embed/wYrhoYnbLmo) hablamos de los motores paso a paso o Steppers
 
-Son muchas las librerías que existen para ayudarnos a manejar los motores paso a paso
-Enlaces a librerías
+Son muchas las librerías que existen para ayudarnos a manejar los motores paso a paso:
 
 * [Stepper](http://arduino.cc/en/Reference/Stepper)
 
