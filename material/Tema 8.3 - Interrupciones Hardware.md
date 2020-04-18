@@ -24,6 +24,7 @@ Para activar una interrupción sólo tenemos que llamar al método **attachInter
 Veamos un ejemplo donde hemos conectado un led al pin 11 (con su resistencia) y un pulsador en el pin 2 (interrupción hardware 0)
 
 Para obtener el número de interrupción correspondiente a un pin podemos usar la función **digitalPinToInterrupt(PinInterrupcion)**
+
 ```C++
 const int  led_pin = 11;
 volatile int estado = LOW ;
