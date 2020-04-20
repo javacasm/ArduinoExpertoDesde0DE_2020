@@ -37,18 +37,21 @@ Las variables conservan su valor hasta que lo modificamos. Podemos modificar su 
 
 El tipo de la variable será definido cuando declaramos la variable por primera vez y a partir de ahí no se modificará. Definiremos la asignación como el momento en que le damos valor a la variable. Podemos declarar y asignar un valor en la misma sentencia. Veamos ejemplos de declaraciones y asignaciones:
 
-    int a = 10;
-    float c = 10.2;  // se usa el punto como separador decimal
-    int b;
-    b = 15;
-
+```C++
+int a = 10;
+float c = 10.2;  // se usa el punto como separador decimal
+int b;
+b = 15;
+```
 
 Las variables tiene un ámbito (scope en inglés) que define la zona del código donde existen. Fuera de esta zona no podemos acceder a su valor.
 
-    int a = 10;
-    void prueba()  {
-        float b = 10.2 * a;
-    }
+```C++
+int a = 10;
+void prueba()  {
+    float b = 10.2 * a;
+}
+```
 
 En este ejemplo la variable _b_ sólo está definida dentro de la función prueba, es decir, no podremos usarla fuera de la misma. Diremos que es una variable **local**. En cambio _a_, al estar definida fuera, también puede ser usada dentro de la función y en cualquier parte del programa. Diremos que es una variable **global**
 
@@ -81,10 +84,11 @@ Cuando una variable llega a su límite, tanto superior, como inferior se produce
 
 Representa la operación que se realizará entre los valores de la expresión: **+**, **-**, **\***, **/**, **%** (módulo, el resto de la división entre los valores). Ejemplos:
 
-    a = a + 3;
-    b = a / 3;
-    c = b % 3;
-
+```C++
+a = a + 3;
+b = a / 3;
+c = b % 3;
+```
 ### Operadores
 - Operadores relacionales, que nos permiten comparar entre si distintos valores: **>=**, **>**, **<**, **<=**, **==** (operador igual, ojo con confundir con **=** que es una asignación) y **!=** (operador distinto).
 -   Operadores Booleanos: **&&** (AND / Y), **||** (OR / O ), **!** (NOT / NO)   Representan las operaciones lógicas que podemos usr entre las varias comparaciones en sentencias condiciones.
@@ -98,10 +102,10 @@ Representa la operación que se realizará entre los valores de la expresión: *
 
 Un array es una agrupación de variables con un tipo y un tamaño determinados. Podemos acceder a cada elemento individualmente por medio del operador [], indicando la posición. Empiezan en la posición 0 y la última será la que indica su longitud menos 1.
 
-
-    int miArray[5]; //Declaramos un array de 5 elementos enteros
-    int miOtroArray[] = { 1, 23, 2}; // Declaramos un array de 3 elementos con sus valores asignados
-
+```C++
+int miArray[5]; //Declaramos un array de 5 elementos enteros
+int miOtroArray[] = { 1, 23, 2}; // Declaramos un array de 3 elementos con sus valores asignados
+```
 ### Constantes
 
 Son variables a las que no podemos modificar al valor. Algunos ejemplos:
@@ -124,9 +128,11 @@ Una función es un conjunto de instrucciones agrupadas para un nombre, al que le
 
 El formato siempre es:
 
-    tipo funcion(tipo argumento 1, tipo argumento 2)  {
-      // Codigo
-    }
+```C++
+tipo funcion(tipo argumento 1, tipo argumento 2)  {
+    // Codigo
+}
+```
 
 ### Librerías
 
@@ -151,38 +157,42 @@ Permiten decidir si se ejecutan o no, unas sentencias en función de que se cump
 
 Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple:
 
-    if (condicion){
-    // código si se cumple
-    }
-    else{
-    // código si no se cumple
-    }
+```C++
+if (condicion){
+// código si se cumple
+}
+else{
+// código si no se cumple
+}
+   
+```
 
 Ejemplo:
-
-    if ((valorEntrada < 500) && (valorEntrada > 100)){
-        // código A
-    }
-    else{
-      // código B
-    }
-
+```C++
+if ((valorEntrada < 500) && (valorEntrada > 100)){
+    // código A
+}
+else{
+    // código B
+}
+```
 ### Sentencia switch
 
 Dependiendo del valor de una variable ejecutaremos un código distinto:
 
-    switch (var) {
-        case 1:
-            //hacemos algo si var es 1
-            break;
-        case 2:
-            //hacemos algo si var es 2
-            break;
-        default:
-            // si nada concuerda, default
-            // default es opcional
-        }
-
+```C++
+switch (var) {
+    case 1:
+        //hacemos algo si var es 1
+        break;
+    case 2:
+        //hacemos algo si var es 2
+        break;
+    default:
+        // si nada concuerda, default
+        // default es opcional
+}
+```
 ### Bucles
 
 
@@ -194,18 +204,19 @@ Existen 3 tipos de bucles:
 
 Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:
 
-
-    for (inicializacion; condicion; incremento) {
-        //sentencia(s);
-    }
-
+```C++
+for (inicializacion; condicion; incremento) {
+    //sentencia(s);
+}
+```
 
 por ejemplo:
 
-
-    for (int i = 0 ; i < 20 ; i = i + 1) {
-        //sentencia(s);
-    }
+```C++
+for (int i = 0 ; i < 20 ; i = i + 1) {
+    //sentencia(s);
+}
+```
 
 que se realizará 20 veces.
 
@@ -213,9 +224,11 @@ que se realizará 20 veces.
 
 El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla:
 
-    while(expresion){
-        // sentencia(s);
-    }
+```C++
+while(expresion){
+    // sentencia(s);
+}
+```
 
 Si la condición no se cumple inicialmente no se realizará ninguna iteración.
 
@@ -223,9 +236,11 @@ Si la condición no se cumple inicialmente no se realizará ninguna iteración.
 
 En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que la iteración se ejecutará al menos una vez:
 
-    do    {
-    //sentencia(s)
-    } while (condicion);
+```C++
+do    {
+//sentencia(s)
+} while (condicion);
+```
 
 #### ¿Como salir de los bucles?
 
@@ -239,14 +254,14 @@ De un bucle saldremos cuando no se verifique la condición, pero también podemo
 
 * [goto](http://Arduino.cc/en/Reference/Goto) label //salta a la etiqueta **label**.
 
-
-        for(int i = 0 ; i < 10 ; i++){
-            if (bsalto > 0)
-                continue; // Se salta el código del resto de la iteración
-            else
-                break; //sale del bucle
-        }
-
+```C++
+for(int i = 0 ; i < 10 ; i++){
+    if (bsalto > 0)
+        continue; // Se salta el código del resto de la iteración
+    else
+        break; //sale del bucle
+}
+```
 
 ### String: o cadenas de caracteres
 
@@ -285,19 +300,21 @@ Para facilitar el trabajo con cadenas de caracteres, existe la clase [String](ht
 
 Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en Arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:
 
-    char() // Convierte a un carácter
-    byte() // Convierte a un byte
-    int() // Convierte a un int
-    word() // Convierte a un word
-    long() // Convierte a un long
-    float() // Convierte a un número decimal
-
+```C++
+char() // Convierte a un carácter
+byte() // Convierte a un byte
+int() // Convierte a un int
+word() // Convierte a un word
+long() // Convierte a un long
+float() // Convierte a un número decimal
+```
 
 Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.
 
-    float a = 2.4;
-    int b = int(a);
-
+```C++
+float a = 2.4;
+int b = int(a);
+```
 
 ### Funciones matemáticas
 
@@ -342,8 +359,8 @@ A los que los usamos nos facilitan el trabajo al agrupar las funcionalidades.
 
 Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado con el manejo de los puertos serie:
 
--   Serial.print enviará por el puerto serie
--   Serial.read leerá por el puerto serie
+-   Serial.print enviará por el puerto serie.
+-   Serial.read leerá por el puerto serie.
 -   Serial.write escribirá...
 
 La mayoría de las librerías de Arduino están formadas por objetos.
@@ -356,8 +373,8 @@ La mayoría de las librerías de Arduino están formadas por objetos.
 
 ## Funciones con ArduinoBlocks
 
-En ArduinoBlocks podemos crear funciones. Veamos [un ejemplo](http://www.arduinoblocks.com/web/project/285685) que nos permite crear un bloque para usar el led RGB de manera más sencilla
+En ArduinoBlocks podemos crear funciones. Veamos [un ejemplo](http://www.arduinoblocks.com/web/project/285685) que nos permite crear un bloque para usar el led RGB de manera más sencilla.
 
-![Ejemplo de Función](./images/EjemploFuncion.png)
+![Ejemplo de función en ArduinoBlocks](./images/EjemploFuncion.png)
 
-En [este vídeo](https://www.youtube.com/watch?v=bopLffgIItM) explicamos el proceso de creación de la función
+En [este vídeo](https://www.youtube.com/watch?v=bopLffgIItM) explicamos el proceso de creación de la función.
