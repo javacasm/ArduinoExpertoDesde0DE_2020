@@ -22,7 +22,7 @@ Cada puerto está controlado por 3 registros donde cada bit representa a un pin:
 
 Otra ventaja que tiene acceder de esta manera que es que el acceso es mucho más rápido.
 
-![TiemposPuertos.png](./images/TiemposPuertos.png)
+![Tiempos de acceso a los puertos](./images/TiemposPuertos.png)
 
 [Detalles](https://hackaday.com/2010/01/06/arduino-io-speed-breakdown/) y [Más detalles](https://jeelabs.org/2010/01/06/pin-io-performance/)
 
@@ -34,15 +34,15 @@ Veamos la estructura de los pines de un Arduino UNO:
 
 Para un arduino Leonardo el diagrama es parecido aunque con diferencias, como por ejemplo los pines SDA y SCL y sobre todo la disposición e los pines de puerto agrupados:
 
-![Pinout_Leonardo.png](./images/Pinout_Leonardo.png)
+![Pinout Arduino Leonardo](./images/Pinout_Leonardo.png)
 
 Y no podía faltar el esquema para el Arduino Mega (En el que vemos que los diseñadores no tuvieron mucho cuidado a la hora de colocar cercanos entre sí los pines de un mismo puerto...):
 
-![Pinout_Mega.png](./images/Pinout_Mega.png)
+![Pinout Arduino Mega](./images/Pinout_Mega.png)
 
 Arduino Yun:
 
-![Pinout_yun.png](./images/Pinout_yun.png)
+![Pinout Arduino Yun](./images/Pinout_yun.png)
 
 (Esquemas del gran Alberto Piganti @pighixxx)
 
@@ -80,16 +80,19 @@ Hemos dicho que PortD mapea los digital pins 0 to 7 (pins 0 y 1 son TX y RX).
 
 DDRD es la dirección del Port D (pines 0 - 7 digitales de Arduino Uno) controla si PORTD se configura como entrada o salidas.
 
-Si en nuestro código hacemos
+Si en nuestro código hacemos:
 
-    DDRD = B11111110; // 1 to 7 as outputs, pin 0 as input
+```C++
+DDRD = B11111110; // 1 to 7 as outputs, pin 0 as input
+```
 
 Estaremos haciendo que los pines 1-7 sean salidas y el 0 entrada.
 
 Si ahora hacemos:
 
-    PORTD = B10101000; // ponemos los pin 7, 5, 3 HIGH
-
+```
+PORTD = B10101000; // ponemos los pin 7, 5, 3 HIGH
+```
 Estamos poniendo los pines 7, 5 y 3 en estado alto.
 
 Hay que tener cuidado con los pines 0 y 1 puesto que si los manipulamos con el registro PORTD podemos producir problemas de comunicación puesto que son los pines que se encargan de ello.
@@ -106,32 +109,34 @@ El resultado de este operador es multiplicar por 2 el valor orignal.
 
 Del mismo modo existe el operador **>>** que rota en sentido contrario  y que equivale a dividir por 2.
 
-![LED_kit_paralelo.png](./images/LED_kit_paralelo.png)
+![Montaje leds para use de un mismo puerto](./images/LED_kit_paralelo.png)
 
 El [código](https://github.com/javacasm/ArduinoCompletoDE2018/blob/master/material/codigo/CylonInterrupcionesHardware.ino) sería
 
-        unsigned char upDown = 1;  // Indica si vamos hacia arriba o hacia abajo
+```C++
+unsigned char upDown = 1;  // Indica si vamos hacia arriba o hacia abajo
 
-        unsigned char cylon = 0; // será el led que encendemos de 0 a 4
+unsigned char cylon = 0; // será el led que encendemos de 0 a 4
 
-        void setup() {
-            DDRB = B00011111; // Arduino port B pines 0 to 4 como salida
-        }
+void setup() {
+    DDRB = B00011111; // Arduino port B pines 0 to 4 como salida
+}
 
-        void loop() {
-          if ( upDown == 1 ) { // Vamos hacia arriba
-            cylon++;  // Pasamos al siguiente
-            if(cylon >= 4) {  // Si llegamos a 4 tenemos que empezar a ir hacia abajo
-                upDown = 0;
-            }
-          } else {
-            cylon--;  // Vamos hacia abajo
-            if ( cylon == 0 ) {  // Si llevamos abajo (0) empezamos a subir
-              upDown = 1;
-            }
+void loop() {
+  if ( upDown == 1 ) { // Vamos hacia arriba
+    cylon++;  // Pasamos al siguiente
+    if(cylon >= 4) {  // Si llegamos a 4 tenemos que empezar a ir hacia abajo
+        upDown = 0;
+    }
+  } else {
+    cylon--;  // Vamos hacia abajo
+    if ( cylon == 0 ) {  // Si llevamos abajo (0) empezamos a subir
+      upDown = 1;
+    }
 
-          }
-          PORTB = 1 << cylon; // Rotamos a la derecha determinado numero de veces el led
-          delay(150); // Esperamos un poquito
+  }
+  PORTB = 1 << cylon; // Rotamos a la derecha determinado numero de veces el led
+  delay(150); // Esperamos un poquito
 
-        }
+}
+```
