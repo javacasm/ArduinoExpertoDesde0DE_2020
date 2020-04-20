@@ -1,4 +1,4 @@
-## DAC: Digital To Analog Converter
+## DAC: Digital to Analog Converter
 
 
 ![Funcionamiento del DAC](./images/DAC.png)
@@ -22,6 +22,6 @@ Si conectamos este montaje al puerto B (pines 0-7), escribiendo un valor en el p
 * Generar señales de vídeo ... Utilizando un sistema de refresco suficientemente rápido y bien sincronizado y un montaje, muy, muy sencillo (sólo 2 resistencias)  se puede generar una señal analógica capaz de visualizarse como vídeo en una TV. Más detalles en [este instructable](http://www.instructables.com/id/MRETV-Video-Stereo-Sound-and-much-more-from-a-s/)
 
 
-![Video generado con DAC.png](./images/DAC_Video.png)
+![Video generado con DAC](./images/DAC_Video.png)
 
 En [este vídeo](https://www.youtube.com/embed/ZNeFd8kK9h0) hablamos del DAC.
