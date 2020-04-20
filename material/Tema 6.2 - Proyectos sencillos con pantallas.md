@@ -24,16 +24,15 @@ Al conectarla la pantalla se encenderá. Si al cargar el programa no se ven los 
 
 [Programa ArduinoBlocks para Arduino Mega](http://www.arduinoblocks.com/web/project/286080)
 
-
 ### Mostrando temperatura y humedad en el LCD I2C
 
 Vamos a añadir al montaje un sensor DHT11 para mostrar los valores en el LCD
 
-![](./images//DHT11LCDMega_bb.png)
+![Montaje LCD y DHT11 con Arduino Mega](./images//DHT11LCDMega_bb.png)
 
 El programa es sencillo
 
-![](./images/LCDDHT11MEga.png)
+![Programa de ArduinoBlocks para LCD y DHT11 con Arduino Mega](./images/LCDDHT11MEga.png)
 
 Sí que puede ocurrir que a veces se queden valores de una escritura para otra (no se borra el LCD y sólo se sobrescriben los caracteres necesarios). Por ello puede ser interesante añadir un bloque **LCD Limpiar**
 
