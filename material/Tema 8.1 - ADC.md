@@ -1,4 +1,4 @@
-## ADC: Analog TO Digital   Converter
+## ADC: Analog to Digital Converter
 
 
 ![Funcionamiento del ADC](./images/ADC.png)
