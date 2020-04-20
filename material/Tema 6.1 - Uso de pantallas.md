@@ -10,7 +10,7 @@ Un LCD es la típica pantalla de las máquinas de vending, seguro que lo has vis
 
 Podemos conectarla a Arduino de la siguiente forma:
 
-![LCD](./images/LCD.png)
+![Conexión LCD](./images/LCD.png)
 
 El potenciómetro nos sirve para controlar el contraste.
 
@@ -45,38 +45,39 @@ Para empezar a usarla, abrimos el ejemplo de la libreria "LiquidCrystal I2C" Hel
 
 Vamos a ver ahora un ejemplo más complejo:
 
-    #include <Wire.h>
-    #include <LiquidCrystal_I2C.h>
+```C++
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
-    // Los usaremos para definir caracteres personalizados
-    uint8_t heart[8] = {0x0,0xa,0x1f,0x1f,0xe,0x4,0x0};
-    uint8_t bell[8]  = {0x4,0xe,0xe,0xe,0x1f,0x0,0x4};
+// Los usaremos para definir caracteres personalizados
+uint8_t heart[8] = {0x0,0xa,0x1f,0x1f,0xe,0x4,0x0};
+uint8_t bell[8]  = {0x4,0xe,0xe,0xe,0x1f,0x0,0x4};
 
-    LiquidCrystal_I2C lcd(0x3F, 16, 2);  //
+LiquidCrystal_I2C lcd(0x3F, 16, 2);  //
 
-    void setup() {
-      lcd.init();
+void setup() {
+  lcd.init();
 
-      lcd.backlight();
-      lcd.createChar(0, heart);
-      lcd.createChar(1, bell);
+  lcd.backlight();
+  lcd.createChar(0, heart);
+  lcd.createChar(1, bell);
 
 
-      lcd.setCursor(6, 0);  // fila 1, columna 6
-      lcd.write(0);  // Mostramos el caracter personalizado 0
-      lcd.print("Ejemplo 1");
-      lcd.write(0);
+  lcd.setCursor(6, 0);  // fila 1, columna 6
+  lcd.write(0);  // Mostramos el caracter personalizado 0
+  lcd.print("Ejemplo 1");
+  lcd.write(0);
 
-      lcd.setCursor(8, 1); // fila 2, columna 8
-      lcd.print("Otro texto");
-      lcd.write(1); // Mostramos el caracter personalizado 1
-    }
+  lcd.setCursor(8, 1); // fila 2, columna 8
+  lcd.print("Otro texto");
+  lcd.write(1); // Mostramos el caracter personalizado 1
+}
 
-    void loop() {
-      lcd.scrollDisplayLeft();  // Movemos hacie la derecha el texto
-      delay(1000);
-    }
-
+void loop() {
+  lcd.scrollDisplayLeft();  // Movemos hacie la derecha el texto
+  delay(1000);
+}
+```
 
 ### Más sobre LCDs
 
@@ -85,6 +86,7 @@ Existen muchas posibilidades de ampliar el uso de los LCD, como por ejemplo util
 Algo en lo que también se puede mejorar el aspecto al trabajar en Menús, dentro de nuestra aplicación.
 
 Veamos las diferentes opciones:
+
 * Menús en librería serie http://playground.arduino.cc/Code/Menu
 * Menus en lcd http://forum.arduino.cc/index.php?topic=96104.0
 * Menus en lcd http://forum.arduino.cc/index.php?topic=104762.0
@@ -131,38 +133,38 @@ Veamos un vídeo donde se usa un  [registro de desplazamiento 595](https://www.y
 
 con el código
 
-    //Pin connected to ST_CP of 74HC595
-    int latchPin = 8;
-    //Pin connected to SH_CP of 74HC595
-    int clockPin = 12;
-    ////Pin connected to DS of 74HC595
-    int dataPin = 11;
+```C++
+//Pin connected to ST_CP of 74HC595
+int latchPin = 8;
+//Pin connected to SH_CP of 74HC595
+int clockPin = 12;
+////Pin connected to DS of 74HC595
+int dataPin = 11;
 
+void setup() {
+  //set pins to output so you can control the shift register
+  pinMode(latchPin, OUTPUT);
+  pinMode(clockPin, OUTPUT);
+  pinMode(dataPin, OUTPUT);
+}
 
+void loop() {
+  // count from 0 to 255 and display the number
+  // on the LEDs
+  for (int numberToDisplay = 0; numberToDisplay < 256; numberToDisplay++) {
+    // take the latchPin low so
+    // the LEDs don't change while you're sending in bits:
+    digitalWrite(latchPin, LOW);
+    // shift out the bits:
+    shiftOut(dataPin, clockPin, MSBFIRST, numberToDisplay);  
 
-    void setup() {
-      //set pins to output so you can control the shift register
-      pinMode(latchPin, OUTPUT);
-      pinMode(clockPin, OUTPUT);
-      pinMode(dataPin, OUTPUT);
-    }
-
-    void loop() {
-      // count from 0 to 255 and display the number
-      // on the LEDs
-      for (int numberToDisplay = 0; numberToDisplay < 256; numberToDisplay++) {
-        // take the latchPin low so
-        // the LEDs don't change while you're sending in bits:
-        digitalWrite(latchPin, LOW);
-        // shift out the bits:
-        shiftOut(dataPin, clockPin, MSBFIRST, numberToDisplay);  
-
-        //take the latch pin high so the LEDs will light up:
-        digitalWrite(latchPin, HIGH);
-        // pause before next value:
-        delay(500);
-      }
-    }
+    //take the latch pin high so the LEDs will light up:
+    digitalWrite(latchPin, HIGH);
+    // pause before next value:
+    delay(500);
+  }
+}
+```
 
 Otro chip que se usa mucho (por ejemplo en las enormes pantallas Leds de los centros comerciales) es el TLC5940.
 
@@ -172,35 +174,36 @@ Veamos un ejemplo usando el chip TLC5940 capaz de controlar 16 led con 4096 nive
 
 Ejemplo de montaje de TLC5940
 
-![tlc5940_bb.png](./images/tlc5940_bb.png)
+![Montaje TLC5940](./images/tlc5940_bb.png)
 
 El código usando la librería TLC5940 es sencillo, por ejemplo para repetir nuestro querido ejemplo Kit
 
+```C++
+#include "Tlc5940.h"
 
-    #include "Tlc5940.h"
+void setup(){
+  Tlc.init();
+}
 
-    void setup(){
-      Tlc.init();
+void loop()
+{
+  int direction = 1;  // Vamos hacia abrriba o abajo
+  for (int channel = 0; channel <  16; channel += direction) {
+
+    Tlc.clear();  // apagamos todos
+
+    if (channel == 0) {  // llegamos a un extremo invertimos la direccion
+      direction = 1;
+    }
+    Tlc.set(channel, 4095);  // iluminamos a maximo brillo el que toca
+    if (channel == 15) {  // Llegamos al otro extremo invertimos
+      direction = -1;
     }
 
-    void loop()
-    {
-            int direction = 1;  // Vamos hacia abrriba o abajo
-            for (int channel = 0; channel <  16; channel += direction) {
+    Tlc.update();  // actualiza los leds con los valores actuales
 
-                    Tlc.clear();  // apagamos todos
+    delay(75);
+  }
 
-                    if (channel == 0) {  // llegamos a un extremo invertimos la direccion
-                            direction = 1;
-                    }
-                    Tlc.set(channel, 4095);  // iluminamos a maximo brillo el que toca
-                    if (channel == 15) {  // Llegamos al otro extremo invertimos
-                            direction = -1;
-                    }
-
-                    Tlc.update();  // actualiza los leds con los valores actuales
-
-                    delay(75);
-            }
-
-    }
+}
+```
