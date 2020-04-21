@@ -176,6 +176,8 @@ Vamos a usar ahora un 595 para hacer un indicador luminoso (como los que tenían
 
 ![Indicador luminoso con 595](./images/595Vumetro.png)
 
+(La resistencia entre GND de Arduino y el GND del 795 es necesaria para limitar la corriente que este envía a los leds. El simulador que es muy puntilloso nos obliga. En un montaje real no sería necesario.)
+
 El programa sería el siguiente:
 
 ```C++
@@ -230,8 +232,119 @@ void loop()
 
 Lo he montado [en el simulador de Tinkercad](https://www.tinkercad.com/things/g48ROAUai6A)
 
+### 595 y display de 7 segmentos
+
+Vamos a usar ahora el 595 para visualizar un dígito en un display de 7 segmentos. Estos displays no son más 8 leds conectado con una patilla en común, el negativo en nuestro ejemplo. El octavo led es el del punto (DP)
+
+![Pantalla de 1 dígito de 7 segmentos](./images/7SegmentsDisplay.png)
+
+Para mostrar un dígito encenderemos y apagaremos unos leds concretos. Podemos definir en un array el estado de cada leds usando 8 bits que almacenaremos en un byte. Si conectamos las salidas Q0 - Q7 del 595 a los segmentos a - g y DP, el array puede ser el siguiente:
+
+```C++
+//    74HC595 pin     Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7 
+//    Segment         a, b, c, d, e, f, g  DP
+byte seven_seg_digits[10] = { B11111100,  // = 0
+                              B01100000,  // = 1
+                              B11011010,  // = 2
+                              B11110010,  // = 3
+                              B01100110,  // = 4
+                              B10110110,  // = 5
+                              B10111110,  // = 6
+                              B11100000,  // = 7
+                              B11111110,  // = 8
+                              B11100110   // = 9
+                             };
+
+```
+
+Así podemos ver que el para mostrar el **1** sólo tenemos que activar las salidas Q1 y Q2 conectadas a los segmentos B y C
+
+Podemos transformar el montaje anterior cambiando los 8 leds por el display.
+
+![Montaje de 595 con display de 7 segmentos](./images/7Segments595.png)
+
+```C++
+
+int potPin = A0;
+  
+int LP = 11;      
+int CP = 9;   
+int DP = 12;   
+
+//    74HC595 pin     Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7 
+//    Segment         a, b, c, d, e, f, g  DP
+byte seven_seg_digits[10] = { B11111100,  // = 0
+                              B01100000,  // = 1
+                              B11011010,  // = 2
+                              B11110010,  // = 3
+                              B01100110,  // = 4
+                              B10110110,  // = 5
+                              B10111110,  // = 6
+                              B11100000,  // = 7
+                              B11111110,  // = 8
+                              B11100110   // = 9
+                             };
 
 
+void updateShiftRegister(byte leds)
+{
+   digitalWrite(LP, LOW);
+   shiftOut(DP, CP, LSBFIRST, leds);
+   digitalWrite(LP, HIGH);
+}
+
+void test7Segments(){
+  for (byte digit = 10; digit > 0; --digit) {
+    updateShiftRegister(seven_seg_digits[digit-1]);
+    Serial.println(digit-1);
+    delay(1000);
+  }
+}
+
+void setup() 
+{
+  pinMode(LP, OUTPUT);
+  pinMode(DP, OUTPUT);  
+  pinMode(CP, OUTPUT);
+  Serial.begin(9600);
+  
+ // test7Segments();
+}
+
+void loop() 
+{
+  int valorSensor = analogRead(potPin); // entre 0 y 1023
+  int numero = map(valorSensor,0,1023,0,9);
+  updateShiftRegister(seven_seg_digits[numero]); 
+  Serial.println(valorSensor);
+  delay(500);
+}
+
+
+```
+
+Ejercicio: define otros caracteres y añadelos al array para poder mostrarlos.
+
+### Encadenando 595
+
+Como hemos dicho podemos encadenar varios 595, sin mas que conectar el **pin 9 Q7" Serial Out** al **pin 14 DS Serial data input**. De esta manera cuando enviemos los datos, el primero pasará los datos sobrantes al siguiente 595
+
+A nivel de programa sólo tenemos que añadir otra llamada a **shiftOut** para enviar todos los datos. A nivel de montaje quedaría algo así:
+
+![Montaje de 2 595 encadenados](./images/ShftOutExmp2_3.gif)
+
+Puedes encontrar más detalles en la [página de shiftout de Arduino](https://www.arduino.cc/en/tutorial/ShiftOut)
+
+
+### Display de 4 segmentos
+
+Si ahora queremos contorlar 4 segmentos tendremos que usar un pequeño truco: encendemos un digito durante un tiempo corto, apagando los otros 3 y vamos rotando. Si lo hacemos suficientemente rápido dará la sensación de que los 4 están encendidos a la vez.
+
+El montaje electrónico requiere de unos transistores para no cargar demasiado los pines de Arduino
+
+![Montaje display 4 dígitos de 7 segmentos](https://www.prometec.net/wp-content/uploads/2014/10/Img_31_2.jpg)
+
+Puedes ver todos los detalles en [la página de prometec](https://www.prometec.net/display-4digitos/)
 
 ### Controlador de leds TLC5940
 
