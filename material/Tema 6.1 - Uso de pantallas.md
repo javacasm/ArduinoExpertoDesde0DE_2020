@@ -1,4 +1,4 @@
-## Tipos de pantalals
+## Tipos de pantallas
 
 Son muchas las posibilidades que tenemos para visualizar nuestros datos. En este capítulo vamos a hablar de 2 básicamente: LCD y LED. Son tecnologías bastante conocidas, cada una con sus ventajas e inconvenientes.
 
@@ -263,7 +263,7 @@ Este tipo de hardaware se llama multiplexores, pues nos permiten controlar (dire
 
 Veamos un vídeo donde se usa un  [registro de desplazamiento 595](https://www.youtube.com/embed/FH3hNBZOvBY)
 
-![595_montaje.png](./images/595_montaje.png)
+![Montaje del 595](./images/595_montaje.png)
 
 Si conectamos 8 leds (junto con sus resistencias alas salidas Q0 - Q7 y con este código vamos a hacer un contador que cuenta en binario
 
