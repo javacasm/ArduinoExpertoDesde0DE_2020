@@ -102,17 +102,17 @@ Las matrices leds están formadas por un conjunto de leds interconectados entre 
 
 ![Estructura interna de una matrix de leds 8x8](./images/matriz-led.jpg)
 
-Las llamadas "Code N" tienen conectado el ánodo de los leds y las llamadas "Code M" el cátodo. Nosotros vamos a hacer el ejemplo corresponidente a una de tipo **Cátodo común**.
+Las llamadas "Code N" tienen conectado el ánodo de los leds y las llamadas "Code M" el cátodo. Nosotros vamos a hacer el ejemplo correspondiente a una de tipo **Cátodo común**.
 
 Para controlarla necesitaremos por lo tanto 8 pines para las filas y 8 para las columnas
 
-Para activar por ejemplo el led de la fila 4, columna 5 tendremos que poner la patilla de la fila 4 en estado alto y la de la columna 5 en estado bajo de manera que el led se active, manteniento todas las demás patillas de las columnas en estado alto para que no se activen.
+Para activar por ejemplo el led de la fila 4, columna 5 tendremos que poner la patilla de la fila 4 en estado alto y la de la columna 5 en estado bajo de manera que el led se active, manteniendo todas las demás patillas de las columnas en estado alto para que no se activen los otros leds.
 
 Si varias columnas estuvieran en estado bajo, se encenderían todos esos led. Si varias filas estuvieran en estado alto se activarán todos los leds correspondientes. 
 
 Por tanto para usar toda la matriz tendremos que ir activando cada fila y sus correspondientes columnas de manera sucesiva.
 
-Cada fabriante conecta los leds como le resulta más sencillo y desgraciadamente los pines no se corresponden siempre de manera directa con las filas y las columnas, con lo que si no lo tenemos tendremos que investigarlo. En este [tutorial de prometec](https://www.prometec.net/matriz-led-8x8/) nos explican como hacerlo.
+Cada fabricante conecta los leds como le resulta más sencillo y desgraciadamente los pines no se corresponden siempre de manera directa con las filas y las columnas, con lo que si no lo tenemos tendremos que investigarlo. En este [tutorial de prometec](https://www.prometec.net/matriz-led-8x8/) nos explican como hacerlo.
 
 Una vez conocido el patillaje de la matriz, podemos conectar de una forma similar a esta:
 
@@ -241,7 +241,7 @@ Este planteamiento se puede usar tanto en matrices como en segmentos. Los segmen
 
 Existen determinados chips que nos pueden facilitar el utilizar estas matrices, puesto que se encargan de las tareas de refresco, descargando de esta tarea a Arduino.
 
-### Registros de deplazamiento o 595
+### Registros de desplazamiento o 595
 
 Con el Arduino UNO es frecuente que nos quedemos sin pines disponibles. 
 
@@ -249,17 +249,17 @@ Ahí es donde el chip como el 595 nos ayuda pues con solo 3 pines de Arduino pod
 
 Este tipo de hardaware se llama multiplexores, pues nos permiten controlar (direccionar) muchas salidas con pocos pines de Arduino
 
-![Pinout 595](./images/Pinout_595.png)
+![Patillaje del 595](./images/Pinout_595.png)
 
 * PINS 1-7, 15 Q0 " Q7 Pines de salidas
-* PIN 8 GND Ground, Vss
+* PIN 8 GND Ground
 * PIN 9 Q7" Serial Out
 * PIN 10 MR Master Reclear, active low
 * PIN 11 SH_CP Shift register clock pin
 * PIN 12 ST_CP Storage register clock pin (latch pin)
 * PIN 13 OE Output enable, active low
 * PIN 14 DS Serial data input
-* PIN 16 Vcc Positive supply voltage
+* PIN 16 Vcc 
 
 Veamos un vídeo donde se usa un  [registro de desplazamiento 595](https://www.youtube.com/embed/FH3hNBZOvBY)
 
@@ -300,7 +300,7 @@ void loop() {
 }
 ```
 
-Vamos a usar ahora un 595 para hacer un indicador luminoso (como los que tenían los equipos de sonido antiguos) que encenderá más o menos leds segun el valor del sensor analógico conectado a A0.
+Vamos a usar ahora un 595 para hacer un indicador luminoso (como los que tenían los equipos de sonido antiguos) que encenderá más o menos leds según el valor del sensor analógico conectado a A0.
 
 ![Indicador luminoso con 595](./images/595Vumetro.png)
 
@@ -466,17 +466,96 @@ Puedes encontrar más detalles en la [página de shiftout de Arduino](https://ww
 
 ### Display de 4 segmentos
 
-Si ahora queremos contorlar 4 segmentos tendremos que usar un pequeño truco: encendemos un digito durante un tiempo corto, apagando los otros 3 y vamos rotando. Si lo hacemos suficientemente rápido dará la sensación de que los 4 están encendidos a la vez.
+Si ahora queremos controlar 4 segmentos tendremos que usar un pequeño truco: encendemos un digito durante un tiempo corto, apagando los otros 3 y vamos rotando. Si lo hacemos suficientemente rápido dará la sensación de que los 4 están encendidos a la vez.
 
-El montaje electrónico requiere de unos transistores para no cargar demasiado los pines de Arduino
+El montaje electrónico requiere de unos transistores para no cargar demasiado los pines de Arduino. Si no tenemos o no queremos usar los transistores, conectaremos directamente los pines correspondientes de Arduino a los pines que seleccionan los dígitos, pero no es conveniente hacerlo porque estamos sobrecargando estos pines y podríamos llegar a estropear nuestra placa.
 
-![Montaje display 4 dígitos de 7 segmentos](https://www.prometec.net/wp-content/uploads/2014/10/Img_31_2.jpg)
+![Esquema del display 4 dígitos de 7 segmentos](https://www.prometec.net/wp-content/uploads/2014/10/Img_31_2.jpg)
 
 Puedes ver todos los detalles en [la página de prometec](https://www.prometec.net/display-4digitos/)
 
+
+El montaje sería el siguiente:
+
+![Montaje del display de 4 dígitos con transistores](./images/contador4x7seg.jpg)
+
+El código sólo se tiene que encargar de ir recorriendo rápidamente los 4 dígitos, activando los segmentos correspondientes de cada uno. Este ejemplo de Inven lo hace así
+
+```C++
+
+// DECLARACIÓN DE VARIABLES 
+byte  Digit[10][8] =                // Arduino UNO va muy justo de memoria. Por eso lo
+{                                   // definimos como byte y no como int
+   { 1,1,1,1,1,1,0,0 },    // 0   
+   { 0,1,1,0,0,0,0,0 },    // 1
+   { 1,1,0,1,1,0,1,0 },    // 2
+   { 1,1,1,1,0,0,1,0 },    // 3
+   { 0,0,1,0,0,1,1,0 },    // 4
+   { 1,0,1,1,0,1,1,0 },    // 5
+   { 1,0,1,1,1,1,1,0 },    // 6
+   { 1,1,1,0,0,0,0,0 },    // 7
+   { 1,1,1,1,1,1,1,0 },    // 8
+   { 1,1,1,0,0,1,1,0 }     // 9
+};
+
+// DECLARACIÓN DE FUNCIONES
+void Display(int pos, int N)
+   {  
+       digitalWrite(9 ,LOW);        // Apaga todos los digitos
+       digitalWrite(10,LOW);
+       digitalWrite(11,LOW);
+       digitalWrite(12,LOW);
+ 
+      for (int i= 0 ; i<8 ; i++)    // Esto no cambia de la session anterior
+            digitalWrite(i+2 , Digit[N][i]) ;
+
+      digitalWrite(pos + 9, HIGH);      // Enciende el digito pos
+  }
+void CalculaDigitos( int Num)
+   {
+    //2386 % 10 = 6          Porque el %  nos devuelve el resto de dividir por 10, o sea 6.
+    //2386 % 100 = 86        Ahora hacemos la división entera por 10 o sea 8,los decimales se tiran
+    //2386 % 1000 = 386      386 / 100 = 3
+    //2386  / 1000 = 2       Directamente, para eso se inventó la división entera.
+      int Digit0 = Num %10 ;
+      int Digit1 = (Num % 100) / 10 ;
+      int Digit2 = (Num % 1000) / 100 ;
+      int Digit3 = Num  / 1000)  ;
+
+      Display(3 , Digit3);
+      Display(2 , Digit2);
+      Display(1 , Digit1);
+      Display(0 , Digit0);
+   }
+
+// INICIALIZACIÓN DEL PROGRAMA (SE EJECUTA SOLO UNA VEZ)
+void setup()
+    {
+      for (int i= 2; i<13; i++){
+        pinMode(i, OUTPUT);
+      }
+    }
+
+
+// LOOP CENTRAL DEL PROGRAMA (SE EJECUTA CONSTANTEMENTE DE FORMA SECUENCIAL) 
+void loop()
+   {
+       int n = millis() / 1000 ;       // Lo pasamos a segundos
+       int segundos = n % 60  ;
+       int minutos =  n / 60  ;
+
+       int k = minutos * 100 + segundos ;
+       CalculaDigitos(k) ;
+   }
+
+
+```
+
+
+
 ### Controlador de leds TLC5940
 
-Otro chip que se usa mucho (por ejemplo en las enormes pantallas Leds de los centros comerciales) es el TLC5940.
+Otro chip que se usa mucho (por ejemplo en las enormes pantallas leds de los centros comerciales) es el TLC5940.
 
 Veamos un ejemplo usando el chip TLC5940 capaz de controlar 16 led con 4096 niveles de intensidad y con posibilidad de establecer un nivel de iluminación particular para cada uno.
 
