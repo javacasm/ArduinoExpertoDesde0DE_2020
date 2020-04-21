@@ -98,6 +98,134 @@ Otra forma de visualización bastante utilizada son las matrices de Leds. En ell
 
 Veamos en [este vídeo](https://www.youtube.com/embed/EkwyEPTeuI8) el funcionamiento de algunas de ellas y ejemplos de uso y el código asociado.
 
+Las matrices leds están formadas por un conjunto de leds interconectados entre sí, de manera que cuando alimentamos de la manera correcta una fila y una columna, sólo uno de los leds se activará
+
+![Estructura interna de una matrix de leds 8x8](./images/matriz-led.jpg)
+
+Las llamadas "Code N" tienen conectado el ánodo de los leds y las llamadas "Code M" el cátodo. Nosotros vamos a hacer el ejemplo corresponidente a una de tipo **Cátodo común**.
+
+Para controlarla necesitaremos por lo tanto 8 pines para las filas y 8 para las columnas
+
+Para activar por ejemplo el led de la fila 4, columna 5 tendremos que poner la patilla de la fila 4 en estado alto y la de la columna 5 en estado bajo de manera que el led se active, manteniento todas las demás patillas de las columnas en estado alto para que no se activen.
+
+Si varias columnas estuvieran en estado bajo, se encenderían todos esos led. Si varias filas estuvieran en estado alto se activarán todos los leds correspondientes. 
+
+Por tanto para usar toda la matriz tendremos que ir activando cada fila y sus correspondientes columnas de manera sucesiva.
+
+Cada fabriante conecta los leds como le resulta más sencillo y desgraciadamente los pines no se corresponden siempre de manera directa con las filas y las columnas, con lo que si no lo tenemos tendremos que investigarlo. En este [tutorial de prometec](https://www.prometec.net/matriz-led-8x8/) nos explican como hacerlo.
+
+Una vez conocido el patillaje de la matriz, podemos conectar de una forma similar a esta:
+
+![Montaje matrix 8x8](./images/ConexionMatrizLed.png)
+
+
+Un programa sencillo sería el siguiente (Tomado de la web de Inven.es)
+
+```C++
+// DECLARACIÓN DE VARIABLES 
+// En el siguiente array pin[0..16] (la posición 0 es ficticia y sirve para iniciar el indice de la matriz en 1) 
+// Se trata de esquematizar la conexión de pines en la matriz LED
+// Tenga presente que los pines 14 ... 17 corresponden respectivamente a:
+//    A0 => 14-esimo pin de arduino
+//    A1 => 15-esimo pin de arduino
+//    A2 => 16-esimo pin de arduino
+//    A3 => 17-esimo pin de arduino
+int pins[17]= {-1, 5, 4, 3, 2, 14, 15, 16, 17, 13, 12, 11, 10, 9, 8, 7, 6};
+
+int cols[8] = {pins[13], pins[3], pins[4], pins[10], pins[06], pins[11], pins[15], pins[16]};
+int rows[8] = {pins[9], pins[14], pins[8], pins[12], pins[1], pins[7], pins[2], pins[5]};
+
+// DECLARACIÓN DE FUNCIONES
+void AllLedOFF()  // Creamos una función que apaga todos los LEDS
+{
+  for (int i = 1; i <= 8; i++)
+  {
+        digitalWrite(cols[i - 1], LOW);
+        digitalWrite(rows[i - 1], HIGH);
+  }
+}
+
+void LedON(int r, int c)      //Encendemos el LED en la posición fila R y columna R
+{
+  AllLedOFF();
+  digitalWrite(cols[c - 1], HIGH);
+  digitalWrite(rows[r - 1], LOW);
+  delay(100);
+}
+
+void AllLedON()     // Creamos una función que enciende todos los LEDS
+{
+  for (int i = 1; i <= 8; i++)
+  {
+        digitalWrite(cols[i - 1], HIGH);
+        digitalWrite(rows[i - 1], LOW);
+  }
+  delay(1000);
+  AllLedOFF();
+}
+
+// INICIALIZACIÓN DEL PROGRAMA (SE EJECUTA SOLO UNA VEZ)
+void setup() 
+{
+  // Definimos todos los pin de Arduino como pines de salida
+  for (int i = 1; i <= 16; i++)
+      pinMode(pins[i], OUTPUT);
+  // Ponemos todos los LED la matriz apagados
+  AllLedOFF();
+}
+
+// LOOP CENTRAL DEL PROGRAMA (SE EJECUTA CONSTANTEMENTE DE FORMA SECUENCIAL) 
+void loop()
+{
+  int i, c, r;
+
+  // Vamos encendiendo los LED por columnas de izquierda a derecha
+  for (c=1; c<=8; c++)
+  {
+    for (r=1; r<=8; r++)
+       digitalWrite(rows[r - 1], LOW);
+    digitalWrite(cols[c - 1], HIGH);
+    delay(300);
+    digitalWrite(cols[c - 1], LOW);
+    for (r=1; r<=8; r++)
+       digitalWrite(rows[r - 1], HIGH);
+  }
+  
+  // Vamos enciando los LED por filas de abajo a arriba
+  for (r=1; r<=8; r++)
+  {
+    for (c=1; c<=8; c++)
+       digitalWrite(cols[c - 1], HIGH);
+    digitalWrite(rows[r - 1], LOW);
+    delay(300);
+    digitalWrite(rows[r - 1], HIGH);
+    for (i=1; i<=8; i++)
+      digitalWrite(cols[i - 1], LOW);
+  }
+  
+  // Encendemenos cada led independiente desde la primera posición hasta la 64 
+  for (r=1; r<=8; r++)
+    for (c=1; c<=8; c++)
+      LedON(r,c);
+  AllLedOFF();
+  // AllLedON();   
+}
+
+```
+
+### Matrices Leds con max7219
+
+Salvo para practicar el cableado, hoy en día no se suelen montar las matrices leds como hemos visto, sino que se utilizan chips que hacen por nosotros el trabajo complicado. 
+
+Uno de los más utilizado es el llamado MAX7129 que sólo requiere 3 pines de conexión con Arduino y que además podemos encadenar entre sí, de manera que los mismos 3 pines nos permiten conectar hasta 64 matrices al mismo tiempo
+
+![Max7219](./images/matriz_led_8x8-e1527180015362.jpg)
+
+Para programarlo usaremos una librería como la **LedControl** (buscar en el gestor de librerías 7219) cuyo ejemplo **LedDemoMatrix** nos enseña cómo usarlo
+
+### Programación avanzada
+
+
 La mayoría de estos programas que hemos visto funcionan con lo que se suele llamar arquitectura framebuffer. En ella existen dos variables de tipo matriz que contienen una, la imagen dibujada en un momento dado y la otra la siguiente imagen que queremos dibujar. Cuando esta segunda esté terminada, las intercambiamos  pasando a dibujar la actual. De esta manera minimizamos el tiempo de repintado, evitando parpadeos indeseados.
 
 Tenemos 2 tareas:
