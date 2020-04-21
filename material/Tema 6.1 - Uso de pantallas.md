@@ -111,9 +111,15 @@ Este planteamiento se puede usar tanto en matrices como en segmentos. Los segmen
 
 ## Hardware específico
 
-Existen determinados chips que nos pueden facilitar el utilizar estas matrices, puesto que se encargan de las tareas de refresco, descargando de esta tarea a Arduino
+Existen determinados chips que nos pueden facilitar el utilizar estas matrices, puesto que se encargan de las tareas de refresco, descargando de esta tarea a Arduino.
 
-Un ejemplo sencillo de este hardware específico sería usar **ShiftRegisters** (Registro de desplazamiento) que nos permiten encadenando varios de ellos controlar un alto número de leds con pocas salidas.
+### Registros de deplazamiento o 595
+
+Con el Arduino UNO es frecuente que nos quedemos sin pines disponibles. 
+
+Ahí es donde el chip como el 595 nos ayuda pues con solo 3 pines de Arduino podemos controlar 8 salidas. Más aún, los 595 se pueden encadenar y cada 595 que añadamos a la cadena sólo nos costaría 1 pin más y nos daría otros 8 pines mas...
+
+Este tipo de hardaware se llama multiplexores, pues nos permiten controlar (direccionar) muchas salidas con pocos pines de Arduino
 
 ![Pinout 595](./images/Pinout_595.png)
 
@@ -131,7 +137,7 @@ Veamos un vídeo donde se usa un  [registro de desplazamiento 595](https://www.y
 
 ![595_montaje.png](./images/595_montaje.png)
 
-con el código
+Si conectamos 8 leds (junto con sus resistencias alas salidas Q0 - Q7 y con este código vamos a hacer un contador que cuenta en binario
 
 ```C++
 //Pin connected to ST_CP of 74HC595
@@ -165,6 +171,69 @@ void loop() {
   }
 }
 ```
+
+Vamos a usar ahora un 595 para hacer un indicador luminoso (como los que tenían los equipos de sonido antiguos) que encenderá más o menos leds segun el valor del sensor analógico conectado a A0.
+
+![Indicador luminoso con 595](./images/595Vumetro.png)
+
+El programa sería el siguiente:
+
+```C++
+
+int potPin = A0;
+  
+int LP = 11;      
+int CP = 9;   
+int DP = 12;   
+
+void updateShiftRegister(byte leds)
+{
+   digitalWrite(LP, LOW);
+   shiftOut(DP, CP, LSBFIRST, leds);
+   digitalWrite(LP, HIGH);
+}
+
+void setup() 
+{
+  pinMode(LP, OUTPUT);
+  pinMode(DP, OUTPUT);  
+  pinMode(CP, OUTPUT);
+}
+
+void loop() 
+{
+  int valorSensor = analogRead(potPin); // entre 0 y 1023
+  // En función del valor vamos a encender más o menos sensores
+  // uso binario para que se vean los leds que se encienden y los que se apagan
+  if (valorSensor<10) {  // Apagamos todos los leds 
+     updateShiftRegister(B00000000); 
+  } else if (valorSensor<200) { // Encendemos el primer led
+     updateShiftRegister(B00000001); 
+  } else if (valorSensor<400) { // Encendemos los 2 primeros
+     updateShiftRegister(B00000011); 
+  } else if (valorSensor<500) { // Encendemos los 3 primeros
+     updateShiftRegister(B00000111); 
+  } else if (valorSensor<600) { // Encendemos los 4 primeros
+     updateShiftRegister(B00001111);     
+  } else if (valorSensor<700) { // Encendemos los 5 primeros
+     updateShiftRegister(B00111111); 
+  } else if (valorSensor<800) { // Encendemos los 6 primeros
+     updateShiftRegister( B00111111);     
+  } else if (valorSensor<900) { // Encendemos los 7 primeros
+     updateShiftRegister(B01111111); 
+  } else { // Encendemos todos los leds
+  	 updateShiftRegister(B11111111); 
+  }
+}
+
+```
+
+Lo he montado [en el simulador de Tinkercad](https://www.tinkercad.com/things/g48ROAUai6A)
+
+
+
+
+### Controlador de leds TLC5940
 
 Otro chip que se usa mucho (por ejemplo en las enormes pantallas Leds de los centros comerciales) es el TLC5940.
 
