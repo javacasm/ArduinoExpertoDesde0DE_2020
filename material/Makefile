@@ -19,7 +19,7 @@ F8="Tema 8 - Ampliando Arduino.docx"
 S8="Tema 8.0 - Expandiendo Arduino.md"
 S9="Tema 9 - Control de potencia.md"
 F9="Tema 9 - Control de potencia y motores.docx"
-S10="Tema 10 - Comunicaciones.md"
+S10="Tema 10.0 - Comunicaciones.md"
 F10="Tema 10 - Comunicaciones.docx"
 S11="Tema 11 - Procesado de datos desde el PC.md"
 F11="Tema 11 - Procesado de datos desde el PC.docx"
@@ -126,7 +126,7 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera.md           \
 					Cabecera_latex.md \
 					$(S10) \
-					T10_Serie.md \
+					"Tema 10.1 - Serie.md" \
 					T10_Bluetooth.md \
 					T10_Infrarrojos.md \
 					T10_comunicaciones.md \

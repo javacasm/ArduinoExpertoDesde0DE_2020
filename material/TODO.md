@@ -32,11 +32,7 @@ Eliminar vídeos de bitbloq repetidos y completar con las versiones C y ArduinoB
 añadir chuletas https://duckduckgo.com/?q=arduino+cheat+sheet&t=lm&iax=images&ia=images
 
 ## Tema 6 
- matrices leds  https://docs.google.com/presentation/d/19SGicY8ZHEswp1kXs8UM5MCTHodaa8A1prGFBW79Bh0/edit#slide=id.gbccf88cc_2_14
- display MAX7119
- 7 segmentos https://docs.google.com/presentation/d/1bEurXuS6b-fBeRQK24qKRDogMCxqQ006cmB3L9BFetc/edit#slide=id.gde74bc0f_00
- 7 segmentos con 595 https://docs.google.com/presentation/d/1AoHt91xbRhG15H2LUvXzkfdbhnEGmsvbAn_X6zkN29o/edit#slide=id.g1ff60f2bb3_0_230
-
+ 
  nokia 5050
  oled
 
