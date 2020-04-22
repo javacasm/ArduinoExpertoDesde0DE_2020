@@ -10,18 +10,16 @@ Para realizar la comunicación necesitaremos un emisor
 
 Y un receptor
 
-![Receptor_Ir.png](./images/Receptor_Ir.png)
+![Receptor IR](./images/Receptor_Ir.png)
 
 Los montajes eléctricos son muy sencillos. Para el emisor:
 
 
-![Montaje_EmisorIR.png](./images/Montaje_EmisorIR.png)
+![Montaje Emisor IR](./images/Montaje_EmisorIR.png)
 
 Y el montaje para el receptor (hay que ver el patillaje concreto de nuestro modelo)
 
-![Montaje_Receptor_IR.png](./images/Montaje_Receptor_IR.png)
-
-
+![Montaje Receptor IR](./images/Montaje_Receptor_IR.png)
 
 Para controlarlo con Arduino la forma más sencilla es usar la librería IRremote.
 

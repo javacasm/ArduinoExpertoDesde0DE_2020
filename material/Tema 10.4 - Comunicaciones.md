@@ -1,6 +1,6 @@
 
 
-## Procotocolos de comunicaciones
+## Protocolos de comunicaciones
 
 En el [siguiente vídeo](https://www.youtube.com/embed/DePCak9WNPM) hablaremos sobre algunos de los protocolos de comunicaciones más usados, como son I2C y SPI.
 
@@ -27,13 +27,13 @@ Si de verdad queremos comunicar nuestro proyecto con internet necesitamos un shi
 
 Existen básicamente dos tipos de shields, los basados en el chip Wiznet W5100.
 
-[Ethernet_5100.png](./images/Ethernet_5100.png)
+![Arduino Ethernet con W5100](./images/Ethernet_5100.png)
 
-y en la librería  Ethernet de  Arduino’s IDE  (cuya documentación podemos encontrar http://arduino.cc/en/Reference/Ethernet) y los basados en el chip enc28J60 http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en022889   
+Que usan la librería Ethernet de Arduino’s IDE (cuya documentación podemos encontrar http://arduino.cc/en/Reference/Ethernet) y los basados en el chip [enc28J60](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en022889)   
 
-![c28j60.png](./images/c28j60.png)
+![Módulo Ethernet enc28j60](./images/c28j60.png)
 
-y que utilizan la librería ethercard https://github.com/jcw/ethercard (de JeeLabs).
+Estos últimos utilizan la librería [ethercard](https://github.com/jcw/ethercard) de JeeLabs.
 
 Las dos admiten esencialmente la misma funcionalidad y se conectan a Arduino por SPI. Sin embargo la diferencia de coste es sorprendente. ¿A qué se debe?:
 

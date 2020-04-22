@@ -72,37 +72,37 @@ void Velocidad(int velocidad){
 
 void loop()
 {
-    char inDat;   
-    //Serial.println("No data");
-    while(Serial.available()>0)
-    {   
-      int iChar=Serial.read();  // Leemos un caracter
-      delay(1000);
-      Serial.println((char)iChar);
-      switch(iChar){
-        case 'L':   //- Izquierda
-          Izquierda();
-          break;
-        case 'R':   //- Derecha
-          Derecha();
-          break;
-        case 'F':   //- Derecha
-          Adelante();
-          break;          
-        case '0':   //- Parada del motor
-          Parar();
-          break;
-        case '1':   //- Velocidad lenta
-          Velocidad(100);
-          break;
-        case '9':
-          Velocidad(100); //- Velocidad rápida
-        // ..... Demas casos
+  char inDat;   
+  //Serial.println("No data");
+  while(Serial.available()>0)
+  {   
+    int iChar=Serial.read();  // Leemos un caracter
+    delay(1000);
+    Serial.println((char)iChar);
+    switch(iChar){  // Segun el caracter ejecutamos una accion
+      case 'L':   //- Izquierda
+        Izquierda();
         break;
-        default:
+      case 'R':   //- Derecha
+        Derecha();
         break;
-        }
-    }
+      case 'F':   //- Derecha
+        Adelante();
+        break;          
+      case '0':   //- Parada del motor
+        Parar();
+        break;
+      case '1':   //- Velocidad lenta
+        Velocidad(100);
+        break;
+      case '9':
+        Velocidad(100); //- Velocidad rápida
+      // ..... Demas casos
+      break;
+      default:
+      break;
+      }
+  }
 }
 
 ```
@@ -123,7 +123,7 @@ Para controlar desde el móvil, debemos emparejar el Bluetooth con nuestro móvi
 ![Arduino Bluetooth Controller - All in One](./images/ArduinoBluetoothController-AllinOne.webp)
 
 
-También podemos crear nuestra aplicación el un dispositivo Android usando la plataforma [App Inventor](http://ai2.appinventor.mit.edu/ que nos permite hacerlo mediante bloques. 
+También podemos crear nuestra aplicación para un dispositivo Android usando la plataforma [App Inventor](http://ai2.appinventor.mit.edu/) que nos permite hacerlo mediante bloques. 
 
 Puedes probar [esta sencilla aplicación para manejar relés](http://ai2.appinventor.mit.edu/?galleryId=5486377139044352&locale=es_ES).
 

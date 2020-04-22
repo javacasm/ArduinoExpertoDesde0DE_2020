@@ -131,10 +131,10 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					"Tema 10.3 - Infrarrojos.md" \
 					"Tema 10.4 - Comunicaciones.md" \
 					"Tema 10.5  - Wifi.md" \
-					T10_esp8266.md \
-					T10_comunicaciones_radio.md \
-					T10_gps.md \
-					T10_rfids.md
+					"Tema 10.6 - esp8266.md" \
+					"Tema 10.7 - Comunicaciones radio.md" \
+					"Tema 10.8 - GPS.md" \
+					"Tema 10.9 - rfids.md"
 
 11:
 	pandoc --latex-engine=xelatex       \

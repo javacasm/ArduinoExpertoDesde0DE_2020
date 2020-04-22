@@ -4,11 +4,11 @@ El sistema RFID está pensado para permitir la lectura de etiquetas a distancia 
 
 Las hay de corta distancia como las NFC, de media distancia como las de los sistemas antirrobo de los comercios (los aparatos que hay en la salidas son enormes antenas) y de larga distancia, como las que se usan en los parkings de los aeropuertos para reconocer los vehículos autorizados o en los autobuses para detectar que están en una parada.
 
-El sistema está formador por un lector/emisor de radiofrecuencia que incluye una antena (que puede ser de mayor o menor tamaño)
+El sistema está formador por un lector/emisor de radiofrecuencia que incluye una antena, que puede ser de mayor o menor tamaño (Lo que hay en la entrada salida de las tiendas también son antenas RFid)):
 
 ![Lector RFIDs](https://www.prometec.net/wp-content/uploads/2016/03/VUPN6326.jpg)
 
-y unas etiquetas (Tags) que son de diferentes formatos, según la frecuencia a la que funcionan y de la cantidad de información que permiten almacenar. Vemos que todas las etiquetas tienen un circuito que actua como antena receptora, con una frecuencia determinada para la que resuena
+Y unas etiquetas (Tags) que son de diferentes formatos, según la frecuencia a la que funcionan y de la cantidad de información que permiten almacenar. Vemos que todas las etiquetas tienen un circuito que actua como antena receptora, con una frecuencia determinada para la que resuena:
 
 ![RFID Tag](http://www.ravirajtech.com/rfid-tags.jpg)
 
@@ -26,7 +26,6 @@ El montaje es sencillo y sólo necesita el lector de RFIDs, un arduino y 7 cable
 |Sck    | 13
 |Mosi |  11
 |Miso |  12
-|||
 |GND | GND
 |Rst    |    9
 |3.3V|3.3V
@@ -39,16 +38,16 @@ Para este tipo de lectores usaremos la librería MFRC522 que podemos instalar de
 
 Una vez instalada tendremos ejemplos para hacer todas las funciónes disponibles:
 
-* Ejemplo ReadNUID: lee el ID de la tarjeta y lo muestra
+* Ejemplo ReadNUID: lee el ID de la tarjeta y lo muestra:
 
-  ![RFID_Lectura.png](./images/RFID_Lectura.png)
+  ![Ejemplo de lectura con RFid](./images/RFID_Lectura.png)
 
-* Ejemplo DumpInfo: lee toda la información de la tarjeta y la envía al monitor serie
+* Ejemplo DumpInfo: lee toda la información de la tarjeta y la envía al monitor serie:
 
   ![RFID_Dump.png](./images/RFID_Dump.png)
 * Ejemplo ReadAndWrite: lee la información y cambia el bloque 4 escribiendo 0, 1,2, ... 15 en él
 
-  ![RFID_Escritura.png](./images/RFID_Escritura.png)
+  ![Ejemplo de escritura con RFid](./images/RFID_Escritura.png)
 
 
 En [este vídeo](https://youtu.be/suunQECfMM8) hablamos de RFIDs.
