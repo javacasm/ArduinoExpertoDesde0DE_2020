@@ -127,10 +127,10 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera_latex.md \
 					$(S10) \
 					"Tema 10.1 - Serie.md" \
-					T10_Bluetooth.md \
-					T10_Infrarrojos.md \
-					T10_comunicaciones.md \
-					T10_wifi.md \
+					"Tema 10.2 - Bluetooth.md" \
+					"Tema 10.3 - Infrarrojos.md" \
+					"Tema 10.4 - Comunicaciones.md" \
+					"Tema 10.5  - Wifi.md" \
 					T10_esp8266.md \
 					T10_comunicaciones_radio.md \
 					T10_gps.md \

@@ -6,14 +6,13 @@ La forma natural de comunicarse con Arduino es utilizando el puerto serie, siend
 
 En el [siguiente vídeo](https://youtu.be/A6BH4cfqS4k) veremos detalles sobre este protocolo, cómo usarlo en Arduino y cómo leer datos desde Arduino.
 
-Actualización: en el vídeo no aparecen los métodos readString y readStringUntil, muy útiles de la librería Serial. Nos facilitan enormemente el recuperar cadena desde el puerto serie.
+Actualización: en el vídeo no aparecen los métodos [**readString**](https://www.arduino.cc/en/Reference.StreamReadString) y [**readStringUntil**](https://www.arduino.cc/en/Reference.StreamReadStringUntil), muy útiles de la librería Serial. Nos facilitan enormemente el recuperar cadena desde el puerto serie.
 
-Os dejo una presentación donde se trata en más detalle 
-"Tema 10 - Comunicaciones serie.pdf"
+Os dejo una presentación donde se trata en más detalle "Tema 10 - Comunicaciones serie.pdf"
 
 ### Ejemplos de comunicación serie
 
-Control de un led RGB vía serie. Por el monitor seríe enviaremos 3 numeros separados por comas o espacios correspondientes a los niveles de rojo, verde y azul. Al pulsar enter y enviar el led cambiará de color.
+Control de un led RGB vía serie. Por el monitor serie enviaremos 3 números separados por comas o espacios correspondientes a los niveles de rojo, verde y azul. Al pulsar 'Enter' y enviar el led cambiará de color.
 
 ```C++
 

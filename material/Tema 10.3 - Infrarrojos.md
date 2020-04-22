@@ -28,35 +28,36 @@ Para controlarlo con Arduino la forma más sencilla es usar la librería IRremot
 
 Ejemplo de código para enviar códigos para encender una TV de marca Sony (emisor en el pin 12)
 
-      #include <IRremote.h>
+```C++
+#include <IRremote.h>
 
-      IRsend irsend;
+IRsend irsend;
 
-      // Sony TV power code
-      irsend.sendSony(0xa90, 12);
-
+// Sony TV power code
+irsend.sendSony(0xa90, 12);
+```
 
 
 Código para recibir códigos (receptor en pin 11) y mostrarlos por el monitor Serie
 
-    #include <IRremote.h>
+```C++
+#include <IRremote.h>
 
-    int RECV_PIN = 11;
+int RECV_PIN = 11;
 
-    IRrecv irrecv(RECV_PIN);
+IRrecv irrecv(RECV_PIN);
 
-    decode_results results;
+decode_results results;
 
-    void setup()
-    {   Serial.begin(9600);
-      irrecv.enableIRIn(); // Start the receiver}
+void setup()
+{   Serial.begin(9600);
+  irrecv.enableIRIn(); // Start the receiver}
 
-    void loop() {
-      if (irrecv.decode(&results)) {
-        Serial.println(results.value, HEX);
-        irrecv.resume(); // Receive the next value   }
-    }
+void loop() {
+  if (irrecv.decode(&results)) {
+    Serial.println(results.value, HEX);
+    irrecv.resume(); // Receive the next value   }
+}
+```
 
-
-
-En el [siguiente vídeo](https://www.youtube.com/embed/S-wWNDfEPqw) vemos todo esto en detalle
+En el [siguiente vídeo](https://www.youtube.com/embed/S-wWNDfEPqw) vemos todo esto en detalle.

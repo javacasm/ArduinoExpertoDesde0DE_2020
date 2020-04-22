@@ -25,7 +25,7 @@ Uno de los protocolos de comunicaciones más usados en Arduino es el SPI. Se uti
 
 Si de verdad queremos comunicar nuestro proyecto con internet necesitamos un shield ethernet.
 
-Existen básicamente dos tipos de shields, los basados en el chip Wiznet W5100 
+Existen básicamente dos tipos de shields, los basados en el chip Wiznet W5100.
 
 [Ethernet_5100.png](./images/Ethernet_5100.png)
 
@@ -44,4 +44,4 @@ Por tanto si tenemos que realizar un proyecto donde se usará mucho acceso a int
 En [este vídeo](https://youtu.be/s8D1DZWbubg) vamos a ver los detalles de como usar cada uno de ellos.
 
 
-En el [siguiente vídeo](https://youtu.be/6W_2I--XwrY) comentamos el hardware necesario para comunicarnos por internet
+En el [siguiente vídeo](https://youtu.be/6W_2I--XwrY) comentamos el hardware necesario para comunicarnos por internet.
