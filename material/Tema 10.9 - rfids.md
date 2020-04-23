@@ -8,7 +8,7 @@ El sistema está formador por un lector/emisor de radiofrecuencia que incluye un
 
 ![Lector RFIDs](https://www.prometec.net/wp-content/uploads/2016/03/VUPN6326.jpg)
 
-Y unas etiquetas (Tags) que son de diferentes formatos, según la frecuencia a la que funcionan y de la cantidad de información que permiten almacenar. Vemos que todas las etiquetas tienen un circuito que actua como antena receptora, con una frecuencia determinada para la que resuena:
+Y unas etiquetas (Tags) que son de diferentes formatos, según la frecuencia a la que funcionan y de la cantidad de información que permiten almacenar. Vemos que todas las etiquetas tienen un circuito que actúa como antena receptora, con una frecuencia determinada para la que resuena:
 
 ![RFID Tag](http://www.ravirajtech.com/rfid-tags.jpg)
 
@@ -18,25 +18,28 @@ Algunas tarjetas permiten la escritura, pudiendo guardar información en ellas (
 
 ### Montaje
 
-El montaje es sencillo y sólo necesita el lector de RFIDs, un arduino y 7 cables macho-hembra. Para conectarlos seguimos el típico esquema de conexión de un dispositivo SPI:
+El montaje es sencillo y sólo necesita el lector de RFIDs, un Arduino y 7 cables macho-hembra. Para conectarlos seguimos el típico esquema de conexión de un dispositivo SPI:
 
 |Lector RFID|arduino
 |---|---|
-|Sda   | 10
-|Sck    | 13
-|Mosi |  11
-|Miso |  12
-|GND | GND
-|Rst    |    9
+|Sda|10
+|Sck|13
+|Mosi|11
+|Miso|12
+|GND|GND
+|Rst|9
 |3.3V|3.3V
 
+
+
 ![](./images/RFid_bb.png)
+
 
 ### Programación
 
 Para este tipo de lectores usaremos la librería MFRC522 que podemos instalar desde el gestor de librerías de Arduino.
 
-Una vez instalada tendremos ejemplos para hacer todas las funciónes disponibles:
+Una vez instalada tendremos ejemplos para hacer todas las funciones disponibles:
 
 * Ejemplo ReadNUID: lee el ID de la tarjeta y lo muestra:
 
@@ -57,4 +60,3 @@ En [este vídeo](https://youtu.be/suunQECfMM8) hablamos de RFIDs.
 
 [Tutorial de Luis Llamas](https://www.luisllamas.es/arduino-rfid-mifare-rc522/)
 
-El ejemplo de "Valida Tarjeta" no es correcto, falta copiar lo leído y comparar con ese valor leído

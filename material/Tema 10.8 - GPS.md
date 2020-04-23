@@ -9,7 +9,7 @@ Su consumo es muy bajo (25mA) lo que lo hace ideal para sistemas desatendidos.
 
 Su conexión es muy sencilla pues basta con alimentarlo y conectar sus pines Tx y Rx a Arduino y hacer un programa que lea las tramas.
 
-![hConexión GPS](https://i1.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/01/NEO_6M_Arduino.png?resize=1024%2C551&ssl=1)
+![Conexión GPS](https://i1.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/01/NEO_6M_Arduino.png?resize=1024%2C551&ssl=1)
 
 En el programa usaremos la librería SoftwareSerie para poder usar otros pines de Arduino, en concreto vamos a usar los pines 3 y 4
 
@@ -62,6 +62,7 @@ Cuando empiecen a recibirse tramas serán algo así:
       $GPGGA,140817.00,4105.2344,N,00831.54761,W,1,05,2.68,129.0,M,50.1,M,,*42
       $GPGSA,A,3,06,09,30,07,23,,,,,,,,4.43,2.68,3.53*02
       $GPGSV,3,1,11,02,48,298,24,03,05,101,24,05,17,292,20,06,71,227,30*7C
+
 
 Que nos informa de la posición, altura, etc... Por ejemplo la primera línea nos dice
 
