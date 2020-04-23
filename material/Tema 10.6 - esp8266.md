@@ -134,29 +134,29 @@ OK
 * **AT+CWLAP** Escanea las redes wifis y nos da un listado con la intensidad, el canal ,...
 
 
-      >>>> AT+CWLAP
+        >>>> AT+CWLAP
 
-      AT+CWLAP
+        AT+CWLAP
 
-      +CWLAP:(3,"MiFibra-6538-",-76,"0c:8e:29:9e:e1:f1",1,32767,0)
-      +CWLAP:(3,"vodafone9558",-87,"78:94:b4:a1:95:59",2,35,0)
-      +CWLAP:(4,"wifi_bajo2,4g",-90,"b8:69:f4:22:83:eb",1,61,0)
-      +CWLAP:(3,"MiFibra-8310",-91,"0c:8e:29:40:dc:bc",1,46,0)
-      +CWLAP:(3,"jazzBajo",-26,"ec:f4:51:69:44:7b",6,36,0)
-      +CWLAP:(4,"jazzBajo_plus",-57,"34:ce:00:1b:12:b7",6,58,0)
-      +CWLAP:(3,"Invitado-4479",-27,"62:f4:51:69:44:78",6,35,0)
-      +CWLAP:(3,"MOVISTAR_DFB1",-77,"e4:ab:89:38:df:b2",6,48,0)
-      +CWLAP:(3,"devolo-bcf2afb14e3e",-90,"bc:f2:af:b1:4e:3e",6,45,0)
-      +CWLAP:(4,"JAZZTEL_jGyf",-93,"08:3f:bc:df:6d:f6",6,46,0)
-      +CWLAP:(3,"DIRECT-c8-HP M130f LaserJet",-87,"fa:da:0c:1a:67:c8",6,32767,0)
-      +CWLAP:(4,"OpenWrt",-77,"f8:8e:85:53:2f:cb",9,48,0)
-      +CWLAP:(3,"PPARAMO",-80,"48:8d:36:d0:b7:74",11,45,0)
-      +CWLAP:(4,"MIWIFI_U3UQ",-82,"8c:68:c8:d3:36:42",11,60,0)
-      +CWLAP:(4,"TP-LINK_3F73E2",-92,"84:16:f9:3f:73:e2",11,35,0)
-      +CWLAP:(4,"MiFibra-B972",-81,"70:4f:57:9f:95:01",11,38,0)
-      +CWLAP:(3,"vodafoneBA1821",-89,"74:9d:79:6d:21:00",11,60,0)
+        +CWLAP:(3,"MiFibra-6538-",-76,"0c:8e:29:9e:e1:f1",1,32767,0)
+        +CWLAP:(3,"vodafone9558",-87,"78:94:b4:a1:95:59",2,35,0)
+        +CWLAP:(4,"wifi_bajo2,4g",-90,"b8:69:f4:22:83:eb",1,61,0)
+        +CWLAP:(3,"MiFibra-8310",-91,"0c:8e:29:40:dc:bc",1,46,0)
+        +CWLAP:(3,"jazzBajo",-26,"ec:f4:51:69:44:7b",6,36,0)
+        +CWLAP:(4,"jazzBajo_plus",-57,"34:ce:00:1b:12:b7",6,58,0)
+        +CWLAP:(3,"Invitado-4479",-27,"62:f4:51:69:44:78",6,35,0)
+        +CWLAP:(3,"MOVISTAR_DFB1",-77,"e4:ab:89:38:df:b2",6,48,0)
+        +CWLAP:(3,"devolo-bcf2afb14e3e",-90,"bc:f2:af:b1:4e:3e",6,45,0)
+        +CWLAP:(4,"JAZZTEL_jGyf",-93,"08:3f:bc:df:6d:f6",6,46,0)
+        +CWLAP:(3,"DIRECT-c8-HP M130f LaserJet",-87,"fa:da:0c:1a:67:c8",6,32767,0)
+        +CWLAP:(4,"OpenWrt",-77,"f8:8e:85:53:2f:cb",9,48,0)
+        +CWLAP:(3,"PPARAMO",-80,"48:8d:36:d0:b7:74",11,45,0)
+        +CWLAP:(4,"MIWIFI_U3UQ",-82,"8c:68:c8:d3:36:42",11,60,0)
+        +CWLAP:(4,"TP-LINK_3F73E2",-92,"84:16:f9:3f:73:e2",11,35,0)
+        +CWLAP:(4,"MiFibra-B972",-81,"70:4f:57:9f:95:01",11,38,0)
+        +CWLAP:(3,"vodafoneBA1821",-89,"74:9d:79:6d:21:00",11,60,0)
 
-      OK
+        OK
 
 
 * **AT+CWJAP=you ssid, password** Nos conecta a una de estas redes.

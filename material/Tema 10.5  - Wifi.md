@@ -20,31 +20,31 @@ Estos dos dispositivos están conectados por un interface llamado Bridge, tanto 
 
 Veamos las características del Arduino  YUN:
 
-|Arduino ||
-|---|---|
-|Microcontroller|ATmega32u4
-|Operating Voltage|5V
-|Input Voltage|5V
-|Digital I/O Pins|20
-|PWM Channels|7
-|Analog Input Channels|12
-|DC Current per I/O Pin|40 mA
-|DC Current for 3.3V Pin|50 mA
-|Flash Memory|32 KB (of which 4 KB used by bootloader)
-|SRAM|2.5 KB
-|EEPROM|1 KB
-|Clock Speed|16 MHz
-|Linux ||
-|Processor|Atheros AR9331
-|Architecture|MIPS @400MHz
-|Operating Voltage|3.3V
-|Ethernet|IEEE 802.3 10/100Mbit/s
-|WiFi|IEEE 802.11b/g/n
-|USB Type-A|2.0 Host/Device
-|Card Reader|Micro-SD only
-|RAM|64 MB DDR2
-|Flash Memory|16 MB
-|PoE| compatible 802.3af card support
+    Módulo Arduino
+    Microcontroller:ATmega32u4
+    Operating Voltage:5V
+    Input Voltage:5V
+    Digital I/O Pins:20
+    PWM Channels:7
+    Analog Input Channels:12
+    DC Current per I/O Pin:40 mA
+    DC Current for 3.3V Pin:50 mA
+    Flash Memory:32 KB (of which 4 KB used by bootloader)
+    SRAM:2.5 KB
+    EEPROM:1 KB
+    Clock Speed:16 MHz
+
+    Módulo Linux 
+    Processor:Atheros AR9331
+    Architecture:MIPS @400MHz
+    Operating Voltage:3.3V
+    Ethernet:IEEE 802.3 10/100Mbit/s
+    WiFi:IEEE 802.11b/g/n
+    USB Type-A:2.0 Host/Device
+    Card Reader:Micro-SD only
+    RAM:64 MB DDR2
+    Flash Memory:16 MB
+    PoE: compatible 802.3af card support
 
  
 Yun dispone de un interface Ethernet y Wifi y USB Host, lo que le proporciona una conectividad extraordinaria. En breve seguro que se publican aplicaciones donde se conecta una cámara al USB pudiendo acceder a ella por Wifi.
@@ -54,9 +54,11 @@ Dada la complejidad del equipo dispone de muchos LEDs indicadores:
 ![Leds del Arduino YUN](./images/ArduinoYUNLeds.png)
 
 Y de 3 pulsadores Reset:
-    • Uno para el equipo Arduino.
-    • Otro para el equipo Linux.
-    • Otro para el wifi.
+
+• Uno para el equipo Arduino.
+• Otro para el equipo Linux.
+• Otro para el wifi.
+
 Si realizamos una pulsación suficientemente larga sobre ellos se devuelve al sistema hasta su configuración y estado por defecto (borrando los cambios que hayamos hecho):
 
 ![Botones del Arduino YUN](./images/ArduinoYUNButtons.png)
@@ -92,17 +94,17 @@ Como hemos dicho la placa incluye un ESP8266 que nos permite tanto crear una red
 
 ### Características
 
-    Microcontrolador: ATMega328 @ 16 MHz
-    Módulo Wifi ESP8266EX @ 80 MHz 802.11 b/g/n 2.4 GHz
-    Voltaje de funcionamiento (pines I/O): 5V
-    Alimentación: 7 a 12 V
-    Memoria Flash: 32 Kb
-    SRAM: 2Kb
-    Pines I/O: 20
-    Salidas PWM: 6
-    Consumo: 93 mA
-    Pines analógicos: 6
-    EEPROM: 1Kb
+      Microcontrolador: ATMega328 @ 16 MHz
+      Módulo Wifi ESP8266EX @ 80 MHz 802.11 b/g/n 2.4 GHz
+      Voltaje de funcionamiento (pines I/O): 5V
+      Alimentación: 7 a 12 V
+      Memoria Flash: 32 Kb
+      SRAM: 2Kb
+      Pines I/O: 20
+      Salidas PWM: 6
+      Consumo: 93 mA
+      Pines analógicos: 6
+      EEPROM: 1Kb
 
 
 ### Uso

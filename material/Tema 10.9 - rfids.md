@@ -20,15 +20,13 @@ Algunas tarjetas permiten la escritura, pudiendo guardar información en ellas (
 
 El montaje es sencillo y sólo necesita el lector de RFIDs, un Arduino y 7 cables macho-hembra. Para conectarlos seguimos el típico esquema de conexión de un dispositivo SPI:
 
-|Lector RFID|arduino
-|---|---|
-|Sda|10
-|Sck|13
-|Mosi|11
-|Miso|12
-|GND|GND
-|Rst|9
-|3.3V|3.3V
+      Sda -> D10
+      Sck -> D13
+      Mosi -> D11
+      Miso -> D12
+      GND -> GND
+      Rst -> D9
+      3.3V -> 3.3V
 
 
 
