@@ -21,7 +21,7 @@ S9="Tema 9 - Control de potencia.md"
 F9="Tema 9 - Control de potencia y motores.docx"
 S10="Tema 10.0 - Comunicaciones.md"
 F10="Tema 10 - Comunicaciones.docx"
-S11="Tema 11 - Procesado de datos desde el PC.md"
+S11="Tema 11.0 - Procesado de datos desde el PC.md"
 F11="Tema 11 - Procesado de datos desde el PC.docx"
 
 1:
@@ -49,7 +49,10 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					-o $(F3) \
 					Cabecera.md     \
 					Cabecera_latex.md \
-					$(S3)
+					$(S3) \
+					"Tema 3.1 - vscode.md" \
+					"Tema 3.2 - Otros entornos de bloques.md"
+
 4:
 	pandoc --latex-engine=xelatex       \
 					-V papersize:a4paper        \
@@ -143,7 +146,13 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					-o $(F11) \
 					Cabecera.md           \
 					Cabecera_latex.md \
-					$(S11)
+					$(S11) \
+					"Tema 11.1 - MonitorSerie.md" \
+					"Tema 11.2 - python.md" \
+					"Tema 11.3 - Java.md" \
+					"Tema 11.4 - Servicios Externos.md" \
+					"Tema 11.5 - IOT.md"
+					
 
 clean:
 	rm $(F1) $(F2) $(F3) $(F4) $(F5) $(F6) $(F7) $(F8) $(F9) $(F10) $(F11)
