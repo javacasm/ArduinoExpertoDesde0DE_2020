@@ -2,7 +2,7 @@
 
 Existen diversas formas de dar funcionalidad Wifi a una placa Arduino:
 
-* Podemos usar placas Arduino que lo incorporan, como son la Arduino Uno Wifi, la Arduino YUN o MKR.
+* Podemos usar placas Arduino que lo incorporan, como son la Arduino Uno Wifi, la Arduino Yún o MKR.
 * Usar un shield Wifi.
 * Conectar un dispositivo Wifi que nos proporcione esa funcionalidad con el ESP8266.
 
@@ -16,9 +16,9 @@ De esta forma podemos usar todo lo desarrollado previamente, tanto en software c
 
 Estos dos dispositivos están conectados por un interface llamado Bridge, tanto a nivel hardware como software (la librería bridge):
 
-![Arquitectura Arduino YUN](./images/ArquitecturaYUN.png)
+![Arquitectura Arduino Yún](./images/ArquitecturaYUN.png)
 
-Veamos las características del Arduino  YUN:
+Veamos las características del Arduino  Yún:
 
     Módulo Arduino
     Microcontroller:ATmega32u4
@@ -51,7 +51,7 @@ Yún dispone de un interface Ethernet y Wifi y USB Host, lo que le proporciona u
 
 Dada la complejidad del equipo dispone de muchos LEDs indicadores:
 
-![Leds del Arduino YUN](./images/ArduinoYUNLeds.png)
+![Leds del Arduino Yún](./images/ArduinoYUNLeds.png)
 
 Y de 3 pulsadores Reset:
 
@@ -61,13 +61,13 @@ Y de 3 pulsadores Reset:
 
 Si realizamos una pulsación suficientemente larga sobre ellos se devuelve al sistema hasta su configuración y estado por defecto (borrando los cambios que hayamos hecho):
 
-![Botones del Arduino YUN](./images/ArduinoYUNButtons.png)
+![Botones del Arduino Yún](./images/ArduinoYUNButtons.png)
 
 Una de las novedades de Arduino Yún es que permite ser programado inalámbricamente, via Wifi, lo que se conoce como OTA (igual que los móviles). Al conectarse a nuestro wifi aparecerá un puerto más que representa esta conexión wifi.
 
 Vamos a incluir el pinout completo de la placa
 
-![Patillaje del Arduino YUN](./images/Pinout_yun.png)
+![Patillaje del Arduino Yún](./images/Pinout_yun.png)
 
 
 A continuación un par de vídeos sobre Yún
@@ -79,10 +79,10 @@ A continuación un par de vídeos sobre Yún
 
 ## Arduino Uno Wifi
 
-Vamos a ver ahora otra placa que incorpora wifi la  [Arduino UNO Wifi](http://www.arduino.org/products/boards/arduino-uno-wifi).
+Vamos a ver ahora otra placa que incorpora wifi la  [Arduino UNO Wifi](https://store.arduino.cc/arduino-uno-wifi-rev2).
 
 
-La placa [Arduino UNO Wifi](http://www.arduino.org/products/boards/arduino-uno-wifi) no es otra cosa que una placa Arduino UNO con un [ESP8266](http://www.esp8266.com/) integrado que le proporciona la conectividad Wifi y que están conectados entre si por medio I2C con lo que tenemos disponible todos  los pines.
+La placa [Arduino UNO Wifi](https://store.arduino.cc/arduino-uno-wifi-rev2) no es otra cosa que una placa Arduino UNO con un [ESP8266](http://www.esp8266.com/) integrado que le proporciona la conectividad Wifi y que están conectados entre si por medio I2C con lo que tenemos disponible todos  los pines.
 
 ![Parte delantera del Arduino Uno Wifi](./images/ArduinoWifi_front.jpg)     
 ![Parte de atrás del Arduino Uno Wifi](./images/ArduinoWifi_back.jpg)
@@ -90,7 +90,7 @@ La placa [Arduino UNO Wifi](http://www.arduino.org/products/boards/arduino-uno-w
 
 ### Wifi
 
-Como hemos dicho la placa incluye un ESP8266 que nos permite tanto crear una red Wifi como conectarnos a una dada. [¿Cómo configurar el wifi?](http://www.arduino.org/learning/getting-started/getting-started-with-arduino-uno-wifi).
+Como hemos dicho la placa incluye un ESP8266 que nos permite tanto crear una red Wifi como conectarnos a una dada. [¿Cómo configurar el wifi?](https://www.arduino.cc/en/Guide/ArduinoUnoWiFiRev2).
 
 ### Características
 
