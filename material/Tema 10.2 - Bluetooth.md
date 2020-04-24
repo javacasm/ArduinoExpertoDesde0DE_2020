@@ -116,11 +116,11 @@ Para controlar desde el móvil, debemos emparejar el Bluetooth con nuestro móvi
 
 * [Arduino Bluetooth RC Car](https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller) Está pensada para controlar remotamente un robot de tipo coche. Permite configurar los caracteres que se envían con cada botón.
 
-![Arduino Bluetooth RC Car](./images/arduinoRCCar.webp)
+![Arduino Bluetooth RC Car](./images/ArduinoBluettohRCCar.png)
 
 * [Arduino Bluetooth Controller - All in One](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) que dispone de diferentes tipos de controles, incluso permite controlar dispositivos Bluetooth usando la voz.
 
-![Arduino Bluetooth Controller - All in One](./images/ArduinoBluetoothController-AllinOne.webp)
+![Arduino Bluetooth Controller - All in One](./images/ArduinoBluetoothControllerAllinOne.png)
 
 
 También podemos crear nuestra aplicación para un dispositivo Android usando la plataforma [App Inventor](http://ai2.appinventor.mit.edu/) que nos permite hacerlo mediante bloques. 
