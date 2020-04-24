@@ -6,7 +6,7 @@ Existen diversas formas de dar funcionalidad Wifi a una placa Arduino:
 * Usar un shield Wifi.
 * Conectar un dispositivo Wifi que nos proporcione esa funcionalidad con el ESP8266.
 
-## Arduino YUN
+## Arduino Yún
 
 Yún significa nube y precisamente esa es la vocación de esta placa, conectar con servicios en la nube de una forma sencilla para el usuario.
 
@@ -47,7 +47,7 @@ Veamos las características del Arduino  YUN:
     PoE: compatible 802.3af card support
 
  
-Yun dispone de un interface Ethernet y Wifi y USB Host, lo que le proporciona una conectividad extraordinaria. En breve seguro que se publican aplicaciones donde se conecta una cámara al USB pudiendo acceder a ella por Wifi.
+Yún dispone de un interface Ethernet y Wifi y USB Host, lo que le proporciona una conectividad extraordinaria. En breve seguro que se publican aplicaciones donde se conecta una cámara al USB pudiendo acceder a ella por Wifi.
 
 Dada la complejidad del equipo dispone de muchos LEDs indicadores:
 
@@ -70,12 +70,12 @@ Vamos a incluir el pinout completo de la placa
 ![Patillaje del Arduino YUN](./images/Pinout_yun.png)
 
 
-A continuación un par de vídeos sobre Yun
+A continuación un par de vídeos sobre Yún
 
-A continuación un par de vídeos sobre Yun
+A continuación un par de vídeos sobre Yún
 
-* [Primeras impresiones Arduino Yun I](https://youtu.be/i5Pzz_ENyag)
-* [Primeras impresiones Arduino Yun II](https://youtu.be/UeSwu1LSrac)
+* [Primeras impresiones Arduino Yún I](https://youtu.be/i5Pzz_ENyag)
+* [Primeras impresiones Arduino Yún II](https://youtu.be/UeSwu1LSrac)
 
 ## Arduino Uno Wifi
 
@@ -118,7 +118,7 @@ En [este vídeo veremos como usarlo](https://youtu.be/Mp81ekoXV4Y).
 
 ## Código
 
-Como siempre tenemos disponibles ejemplos al seleccionar la placa:
+Como siempre tenemos disponibles ejemplos al seleccionar la placa. Veamos algunos a continuación.
 
 ### Webserver
 
