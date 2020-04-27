@@ -3,7 +3,7 @@
 
 Para conectar con Arduino desde Java es necesario que tengamos la librería rxtxSerial.dl y el jar RXTXcomm.jar accesibles desde nuestro proyecto. Por defecto vienen en la instalación de Arduino en la carpeta lib.
 
-Podemos añadir estos ficheros al classpath o bien incluirlos en nuestro proyecto. Podemos ver detalles de cómo hacerlo en el entorno NetBeans http://kinleyphycom.blogspot.com.es/2009/04/connecting-arduino-and-java-in-windows.html
+Podemos añadir estos ficheros al classpath o bien incluirlos en nuestro proyecto. 
 
 Una vez incluidas las librerías sólo tenemos que abrir el stream del puerto serie y con un InputStream y un OutpuStream leer (read) y escribir (write) datos. Veamos un ejemplo
 
@@ -56,7 +56,7 @@ public static void main(String[] args) {
 
 ### Gráficos en tiempo real
 
-Siguiendo las indicaciones de este enlace http://panamahitek.com/2013/09/22/graficas-de-sensores-en-tiempo-real-con-arduino-java-y-jfreechart/
+Siguiendo las indicaciones de este enlace http://panamahitek.com/graficas-de-sensores-en-tiempo-real-con-arduino-java-y-jfreechart/
 
 ![Ejemplo de JavaChart](./images/javaChart.png)
 
