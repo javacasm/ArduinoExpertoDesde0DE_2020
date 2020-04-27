@@ -75,7 +75,7 @@ Veamos algunos de los proyectos en los que podríamos trabajar:
 
 ## Ejemplos sencillos
 
-[Sensores de temperatura online](http://geek.adachsoft.com/home/article/id/1/n/ESP8266-and-multiple-temperature-sensors-DS18b20-with-HTTP-server)
+[Sensores de temperatura online](https://randomnerdtutorials.com/esp8266-ds18b20-temperature-sensor-web-server-with-arduino-ide/)
 
 
 https://github.com/wemos/D1_mini_Examples/tree/master/examples/01.Basics
