@@ -20,10 +20,10 @@ Casi todas tienen una versión limitada (limitación en la frecuencia de envío 
 Además algunas nos permiten establecer disparadores (trigger) para vigilar que algún dato tome cierto valor, en cuyo caso envían un aviso a nuestro sistema.
 
 * Adafruit IO https://io.adafruit.com/
-* Blynk  https://www.blynk.cc/
+* Blynk  https://blynk.io/
 * Cayenne https://mydevices.com/ 
 * Grafana https://grafana.com/
-* Connect2me https://www.connect2.me/
+* Connect2me https://www.c2m.net
 * All Things Talk https://www.allthingstalk.com/
 * Thingspeak https://thingspeak.com/
 * Xively https://www.xively.com/
@@ -40,9 +40,9 @@ Veamos cómo acceder a este servicio:
 
 Aquí nos indica como configurar nuestra placa y descargar un ejemplo en el que cambiaremos nuestro API Key (código que obtenemos al registrarnos).
 
-Podemos encontrar más ejemplos sobre el uso de REST y HTTP en http://interactive-matter.eu/how-to/arduino-http-client-library/.
+Podemos aprender a usar REST y HTTP viendo los ejemplos de la librería HTTPClient https://github.com/interactive-matter/HTTPClient.
 
-En este otro ejemplo https://www.jotschi.de/Technik/2012/04/21/arduino-ethernet-shield-simple-rest-api-example.html podemos ver cómo puede actuar Arduino como servidor soportando peticiones REST.
+En este otro ejemplo http://jotschi.de/2012/04/21/arduino-ethernet-shield-simple-rest-api-example/ podemos ver cómo puede actuar Arduino como servidor soportando peticiones REST.
 
 Podemos encontrar alternativas a este servicio en http://forum.arduino.cc/index.php?topic=124577.15 , como por ejemplo el servicio  Opensource http://emoncms.org/ o https://parse.com/.
 
