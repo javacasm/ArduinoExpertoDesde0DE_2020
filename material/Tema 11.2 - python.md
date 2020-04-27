@@ -4,15 +4,10 @@ Python es uno de los lenguajes más usados en la actualidad en el mundo de la ha
 
 Nada más sencillo que usar Python para comunicarnos con Arduino. 
 
-En primer lugar hay que instalar pySerial http://pyserial.sourceforge.net/ . Lo descargamos y los instalamos ejecutando:
+En primer lugar hay que instalar **pySerial** https://github.com/pyserial/pyserial. Lo instalamos como nos dice la documentación https://pyserial.readthedocs.org/en/latest/ ejecutando:
 
 ```sh
-    python setup.py install
-```
-En Ubuntu podemos instalarlo haciendo 
-
-```sh
-    sudo apt-get install python-serial
+    pip3 install pyserial
 ```
 Para leer datos podemos usar este sencillo programa:
 
@@ -96,7 +91,7 @@ def enviar_correo_electronico():
 
 ![Graficos con Python](./images/GraficosPython.png)
 
-Instalando la librería matemática MathPlotLib podemos representar datos gráficamente en tiempo real. Más detalles en http://www.blendedtechnologies.com/realtime-plot-of-arduino-serial-data-using-python
+Instalando la librería matemática MathPlotLib podemos representar datos gráficamente en tiempo real. Más detalles en https://www.instructables.com/id/Plotting-real-time-data-from-Arduino-using-Python-/
 
 El código https://github.com/gregpinero/ArduinoPlot/tree/master  implementa un monitor  https://github.com/gregpinero/ArduinoPlot/blob/master/Arduino_Monitor.py de Arduino que permanentemente está recibiendo datos de Arduino vía puerto serie (por defecto por el COM4 y a 9600 pero fácilmente modificable) y código https://github.com/gregpinero/ArduinoPlot/blob/master/wx_mpl_dynamic_graph.py para ir visualizando los datos a medida que estos llegan
 
@@ -108,6 +103,6 @@ Un ejemplo para hacerlo [en windows](https://www.instructables.com/id/Using-an-A
 
 Podéis aprender mucho más sobre cómo usar Arduino y Python en estos tutoriales [Tutorial de python y arduino](http://www.toptechboy.com/using-python-with-arduino-lessons/)
 
-[Tutorial sobre lectura y escritura de datos en Python](https://engineersportal.com/blog/2018/2/25/python-datalogger-reading-the-serial-output-from-arduino-to-analyze-data-using-pyserial)
+[Tutorial sobre lectura y escritura de datos en Python](https://makersportal.com/blog/2018/2/25/python-datalogger-reading-the-serial-output-from-arduino-to-analyze-data-using-pyserial)
 
 [Curso gratuito de python by Google](https://developers.google.com/edu/python/)
