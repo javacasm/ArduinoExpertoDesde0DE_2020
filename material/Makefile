@@ -154,6 +154,17 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					"Tema 11.5 - IOT.md"
 					
 
+ApendiceComponentes:
+	pandoc --latex-engine=xelatex       \
+					-V papersize:a4paper        \
+					--template=./LaTeX_ES.latex \
+					-o "Apendice: Componentes.docx" \
+					Cabecera.md           \
+					Cabecera_latex.md \
+					keypad.md \
+					Joystick.md \
+					RTC.md
+
 clean:
 	rm $(F1) $(F2) $(F3) $(F4) $(F5) $(F6) $(F7) $(F8) $(F9) $(F10) $(F11)
 
