@@ -60,6 +60,9 @@ void loop(){
 
 * Añadir un LCD para mostrar las pulsaciones 
 * Calculadora
+
+![Ejemplo Calculadora](./images/Calculadora_bb.png)
+
 * Alarma
 
 ## Más detalles
