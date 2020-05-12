@@ -1,63 +1,66 @@
-# Arduino: Nivel avanzado 3ed
-
-
-## José Antonio Vacas @javacasm
-## Organiza: Darwin Eventur
-## BiblioMaker - Facultad de Ciencias
-## 23 al 27 de Septiembre de 2019
-
-## http://bit.ly/ArduinoAvanzado19
-
-![CC](./images/Licencia_CC_peque.png)
-
-
-
-* * *
-
-
 # Uso de teclados (Keypad)  
 
-![Teclado](https://www.prometec.net/wp-content/uploads/2014/10/Img_19_2-300x273.jpg)
+Un teclado (keypad) no es otra cosa que una matriz de pulsadores que están conectados de manera que se necesiten pocos pines para detectar cuando se ha pulsado alguno de ellos.
 
-![Teclado2](https://imgaz.staticbg.com/thumb/large/2014/xiemeijuan/01/5xSKU142881/1.jpg)
 
-Internamente son así
+Internamente son así:
 
-![Teclado interno](https://www.prometec.net/wp-content/uploads/2014/10/matrix-keypad-300x244.jpg)
+![Teclado: circuito interno](./images/KeypadInternal.jpg)
+
+![Teclado de membrana](./images/Img_19_2-300x273.jpg)
+
+![Teclado: matriz de 16 pulsadores](./images/KeypadSolectro.jpg)
+
+
 
 Conectaremos los pines, por ejemplo de esta forma
 
-![pinout](http://www.circuitbasics.com/wp-content/uploads/2017/07/Arduino-Keypad-Tutorial-4X4-and-3X4-Keypad-Connection-Diagram.png)
+![Montaje Keypad y Arduino](./images/KeypadArduino.png)
 
 Y usaremos la librería [Keypad](https://playground.arduino.cc/Code/Keypad/)
 
+```C++
 
-        #include<Keypad.h>
-        const byte filas = 4;
-        const byte columnas = 4;
-        byte pinesF[filas] = {9,8,7,6}; // Donde hemos conectado las filas
-        byte pinesC[columnas] = {5,4,3,2}; // Donde hemos conectado las columnas
-         
-        char teclas[filas][columnas] = { // Definición de las teclas
-                {'1','2','3','A'},
-                {'4','5','6','B'},
-                {'7','8','9','C'},
-                {'*','0','#','D'}
+#include <Keypad.h>
+
+const byte numRows= 4; //number of rows on the keypad
+const byte numCols= 4; //number of columns on the keypad
+
+//keymap defines the key pressed according to the row and columns just as appears on the keypad
+char keymap[numRows][numCols]= {
+                {'1', '2', '3', 'A'}, 
+                {'4', '5', '6', 'B'}, 
+                {'7', '8', '9', 'C'},
+                {'*', '0', '#', 'D'}
             };
-         
-        Keypad teclado = Keypad(makeKeymap(teclas), pinesF, pinesC, filas, columnas);
-         
-        char tecla;
 
-        void setup() {
-            Serial.begin(9600);
-        }
-        
-        void loop() {
-            tecla = teclado.getKey();
-            if (tecla != 0)
-            Serial.print(tecla);
-        }
+//Code that shows the the keypad connections to the arduino terminals
+byte rowPins[numRows] = {9,8,7,6}; //Rows 0 to 3
+byte colPins[numCols]= {5,4,3,2}; //Columns 0 to 3
+
+//initializes an instance of the Keypad class
+Keypad myKeypad= Keypad(makeKeymap(keymap), rowPins, colPins, numRows, numCols);
+
+void setup(){
+Serial.begin(9600);
+}
+
+//If key is pressed, this key is stored in 'keypressed' variable
+//If key is not equal to 'NO_KEY', then this key is printed out
+//if count=17, then count is reset back to 0 (this means no key is pressed during the whole keypad scan process
+void loop(){
+    char keypressed = myKeypad.getKey();
+    if (keypressed != NO_KEY){
+        Serial.println(keypressed);
+    }
+}
+```
+
+### Ideas
+
+* Añadir un LCD para mostrar las pulsaciones 
+* Calculadora
+* Alarma
 
 ## Más detalles
 
