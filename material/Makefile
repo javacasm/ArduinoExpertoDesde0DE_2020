@@ -158,7 +158,7 @@ ApendiceComponentes:
 	pandoc --latex-engine=xelatex       \
 					-V papersize:a4paper        \
 					--template=./LaTeX_ES.latex \
-					-o "Apendice: Componentes.docx" \
+					-o "ApendiceComponentes.docx" \
 					Cabecera.md           \
 					Cabecera_latex.md \
 					keypad.md \
