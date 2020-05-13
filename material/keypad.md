@@ -56,6 +56,8 @@ void loop(){
 }
 ```
 
+[Este proyecto](https://www.tinkercad.com/things/9UZ9Gcwy6jf) del simulador Tinkercad os permite simular un keypad, que envía al puerto serie la tecla pulsada.
+
 ### Ideas
 
 * Añadir un LCD para mostrar las pulsaciones 
