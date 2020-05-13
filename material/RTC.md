@@ -168,3 +168,9 @@ void print2digits(int number) {
 	lcd.print(number);
 }
 ```
+
+Uniendo los ejemplos de RTC, keypad y lcd podemos hacer un reloj despertador co alarma como el de este proyecto
+
+[Reloj despertador con alarma](https://www.hackster.io/SurtrTech/simple-alarm-clock-with-ds1302-rtc-a92d7b)
+
+![Montaje Reloj despertador con alarma](https://hackster.imgix.net/uploads/attachments/662150/schematic_378LzRlzTi.png)
