@@ -62,7 +62,8 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera_latex.md \
 					$(S4) \
 					"Tema 4 - sensores.md" \
-					"Tema 4 - Proyectos sencillos con sensores.md"
+					"Tema 4 - Proyectos sencillos con sensores.md" \
+					"Tema 4 - Joystick.md"
 
 
 5:
@@ -87,7 +88,9 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					Cabecera.md           \
 					Cabecera_latex.md \
 					$(S6) \
-					"Tema 6.2 - Proyectos sencillos con pantallas.md"
+					"Tema 6.2 - Proyectos sencillos con pantallas.md" \
+					"Tema 6.3 - Keypad.md"
+
 
 7:
 	pandoc --latex-engine=xelatex       \
@@ -137,7 +140,8 @@ F11="Tema 11 - Procesado de datos desde el PC.docx"
 					"Tema 10.6 - esp8266.md" \
 					"Tema 10.7 - Comunicaciones radio.md" \
 					"Tema 10.8 - GPS.md" \
-					"Tema 10.9 - rfids.md"
+					"Tema 10.9 - rfids.md" \
+					"Tema 10.10 - RTCs.md"
 
 11:
 	pandoc --latex-engine=xelatex       \
@@ -161,9 +165,9 @@ ApendiceComponentes:
 					-o "ApendiceComponentes.docx" \
 					Cabecera.md           \
 					Cabecera_latex.md \
-					keypad.md \
-					Joystick.md \
-					RTC.md
+					"Tema 6.3 - keypad.md" \
+					'Tema 4 - Joystick.md' \
+					"Tema 10.10 - RTCs.md"
 
 clean:
 	rm $(F1) $(F2) $(F3) $(F4) $(F5) $(F6) $(F7) $(F8) $(F9) $(F10) $(F11)
