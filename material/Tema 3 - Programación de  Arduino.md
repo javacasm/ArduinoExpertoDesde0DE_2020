@@ -410,7 +410,7 @@ Para afinar las frecuencias a las notas podemos consultar tablas como esta:
 
 Podemos ver cómo se usan estas funciones en el ejemplo incluido en Arduino sobre el tema. Accederemos a él según la imagen siguiente
 
-![Tabla de frecuencias](./images/frec1.jpg)
+![Tabla de frecuencias](./images/EjemploSonido.png)
 
 
 En BitBloq existen 2 formas de generar sonidos
