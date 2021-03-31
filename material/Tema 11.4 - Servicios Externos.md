@@ -26,25 +26,6 @@ Además algunas nos permiten establecer disparadores (trigger) para vigilar que 
 * Connect2me https://www.c2m.net
 * All Things Talk https://www.allthingstalk.com/
 * Thingspeak https://thingspeak.com/
-* Xively https://www.xively.com/
-
-
-## Plataforma Xively
-
-Uno de los más conocidos servicios que nos permiten gestionar y visualizar nuestros datos es el antes gratuito y conocido como Pachube, luego llamado Cosm y de momento [Xively](https://xively.com/).
-
-Veamos cómo acceder a este servicio:
-
-* Accedemos a la página de desarrolladores https://www.developerxively.com
-* Buscamos los detalles para nuestro hardware, por ejemplo para el esp8266 https://www.developerxively.com/docs/esp8266. Vemos que en el listado no aparece ninguna de las placas Arduino, eso se debe a que Google, el actual dueño de Xively considera que ninguna de las placas Arduino puede garantizar comunicaciones seguras.
-
-Aquí nos indica como configurar nuestra placa y descargar un ejemplo en el que cambiaremos nuestro API Key (código que obtenemos al registrarnos).
-
-Podemos aprender a usar REST y HTTP viendo los ejemplos de la librería HTTPClient https://github.com/interactive-matter/HTTPClient.
-
-En este otro ejemplo http://jotschi.de/2012/04/21/arduino-ethernet-shield-simple-rest-api-example/ podemos ver cómo puede actuar Arduino como servidor soportando peticiones REST.
-
-Podemos encontrar alternativas a este servicio en http://forum.arduino.cc/index.php?topic=124577.15 , como por ejemplo el servicio  Opensource http://emoncms.org/ o https://parse.com/.
 
 # Publicación en ThingSpeak
 
